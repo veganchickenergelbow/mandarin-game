@@ -69,3 +69,21 @@ test('a segment with under 5 voiced frames is heard:null, ok:false',()=>{
   const r2=scoreWord(tiny,sr,'大','dà');
   assert.equal(r2.items.length,1);
 });
+for(const [label,opt] of [['60 ms gap',{gapMs:60}],['amplitude valley only',{gapMs:0,dipMs:60}]])for(const amp of [0.3,0.05]){
+  test(`你好 as (2)(3) with 80 ms creak inside the second syllable, ${label}, amp ${amp}: 2 segments, scored 2,3`,()=>{
+    const w=word([2,3],{...opt,dur:0.4,amp,creak:{syl:1,from:0.16,to:0.24}});
+    const fr=track(w,sr);
+    assert.ok(fr.some(x=>x.creak),'the synthetic creak should show up as creak frames');
+    assert.equal(splitSyllables(fr,2).length,2);
+    const r=scoreWord(w,sr,'你好','nǐ hǎo');
+    assert.equal(r.items.length,2);
+    assert.deepEqual(heard(r),[2,3]);
+    assert.deepEqual(r.items.map(i=>i.ok),[true,true]);
+    assert.ok(r.ref>0);
+  });
+}
+test('scoreWord passes speakerRef on: a low flat syllable is heard as tone 3',()=>{
+  const w=word([1],{base:130,dur:0.4});
+  assert.equal(scoreWord(w,sr,'八','bā').items[0].heard,1);
+  assert.equal(scoreWord(w,sr,'八','bā',{speakerRef:200}).items[0].heard,3);
+});

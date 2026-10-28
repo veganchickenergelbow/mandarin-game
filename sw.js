@@ -1,5 +1,5 @@
 // Mandarin Game service worker: cache-first app shell. BUMP `VERSION` on every deploy; old caches are deleted on activate.
-const VERSION = 'mg-v1';
+const VERSION = 'mg-v2';
 const SHELL = ['./', 'index.html', 'style.css', 'manifest.webmanifest', 'tone-test.html',
   'js/main.js', 'js/store.js', 'js/speech.js', 'js/draw.js', 'js/ui.js',
   'js/screens/home.js', 'js/screens/warmup.js', 'js/screens/scene.js', 'js/screens/debrief.js',

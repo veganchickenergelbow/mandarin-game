@@ -1,11 +1,13 @@
 // Split one recording into n syllables by energy valleys, then score each tone.
-import {track,voiced,analyse} from './pitch.js';
+import {track,voiced,analyse,median} from './pitch.js';
 import {syllables,tonesOf} from './pinyin.js';
 import {surfaceTones} from './sandhi.js';
 
 const MIN_GAP=12,MIN_EDGE=8,MIN_DEPTH=0.1; // frames of 5 ms: 60 ms apart, 40 ms from the ends
 
-// frames: full track() output (voiced and unvoiced). Returns exactly n [{t0,t1,frames}], frames = voiced only.
+// frames: full track() output (voiced, unvoiced, creak). Returns exactly n [{t0,t1,frames,all}], frames = voiced only,
+// all = every track frame of the segment (creak included) from its first to its last voiced frame.
+// Creak frames (energy but no readable pitch) are part of the voice: they are never syllable-boundary gaps.
 export function splitSyllables(frames,n){
   const vi=[];frames.forEach((x,i)=>{if(x.f>0)vi.push(i)});
   if(!vi.length||n<1)return Array.from({length:Math.max(n,0)},()=>({t0:0,t1:0,frames:[]}));
@@ -17,8 +19,8 @@ export function splitSyllables(frames,n){
     const cand=new Set();
     for(let i=a+1;i<b;i++)if(sm[i]<=sm[i-1]&&sm[i]<sm[i+1])cand.add(i);
     for(let i=a;i<=b;){ // unvoiced gaps: centre of each run
-      if(frames[i].f>0){i++;continue}
-      let j=i;while(j<=b&&frames[j].f===0)j++;
+      if(frames[i].f>0||frames[i].creak){i++;continue}
+      let j=i;while(j<=b&&frames[j].f===0&&!frames[j].creak)j++;
       cand.add(Math.floor((i+j-1)/2));i=j;
     }
     const W=30,mx=(x,y)=>{let m=0;for(let k=Math.max(a,x);k<=Math.min(b,y);k++)m=Math.max(m,sm[k]);return m};
@@ -39,12 +41,14 @@ export function splitSyllables(frames,n){
   const bounds=[a,...cuts,b+1],out=[];
   for(let k=0;k<n;k++){
     const s=bounds[k],e=bounds[k+1];
-    out.push({t0:frames[s].t,t1:frames[Math.min(e,frames.length)-1].t,frames:frames.slice(s,e).filter(x=>x.f>0)});
+    const seg=frames.slice(s,e),vs=seg.filter(x=>x.f>0),all=vs.length?seg.slice(seg.indexOf(vs[0]),seg.indexOf(vs[vs.length-1])+1):[];
+    out.push({t0:frames[s].t,t1:frames[Math.min(e,frames.length)-1].t,frames:vs,all});
   }
   return out;
 }
 
-export function scoreWord(samples,sr,zh,py){
+// opts.speakerRef: the speaker's usual median pitch (Hz). Returns {ok, items, ref}: ref = median pitch of the whole word (Hz).
+export function scoreWord(samples,sr,zh,py,opts={}){
   const fr=track(samples,sr);
   if(voiced(fr).length<5)return {ok:false,why:'Too little voiced sound. Speak closer to the mic.',items:[]};
   const syl=syllables(py),n=syl.length;
@@ -52,9 +56,10 @@ export function scoreWord(samples,sr,zh,py){
   const segs=splitSyllables(fr,n);
   const items=syl.map((s,i)=>{
     const expected=exp[i],seg=segs[i];
-    const res=seg.frames.length<5?{ok:false,why:'Too little voiced sound in this syllable.'}:analyse(seg.frames);
+    const res=seg.frames.length<5?{ok:false,why:'Too little voiced sound in this syllable.'}:analyse(seg.all,{speakerRef:opts.speakerRef});
     const heard=res.ok?res.tone:null;
     return {syl:s,expected,heard,ok:expected===5?null:(heard!==null&&heard===expected),res};
   });
-  return {ok:true,items};
+  const refs=items.filter(i=>i.res.ok).map(i=>i.res.ref);
+  return {ok:true,items,ref:refs.length?median(refs):null};
 }

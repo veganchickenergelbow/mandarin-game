@@ -1,5 +1,5 @@
 // Warm-up: 6 words (2 from the review deck, then words from today's scenes). Say each one, get a tick or cross per syllable.
-import { addFish, markStep, todayKey, reviewPick, reviewMiss, reviewHit } from '../core/progress.js';
+import { addFish, markStep, todayKey, reviewPick, reviewMiss, reviewHit, voiceRef, updateVoiceRef } from '../core/progress.js';
 import { syllables } from '../core/pinyin.js';
 import { scoreWord } from '../core/syllables.js';
 import { speak, mic } from '../speech.js';
@@ -58,10 +58,11 @@ export async function render(root, ctx) {
       }
       rec.textContent = '● Record';
       const { samples, sr } = mic.stopRecord();
-      const r = scoreWord(samples, sr, it.zh, it.py);
+      const r = scoreWord(samples, sr, it.zh, it.py, { speakerRef: voiceRef(save) });
       $('#retry').disabled = false;
       if (!r.ok) { msg.textContent = r.why || 'Could not hear a voice. Try again, a bit closer to the mic.'; return; }
       last = r;
+      if (r.ref) updateVoiceRef(save, r.ref);
       const scored = r.items.filter((x) => x.ok !== null), good = scored.filter((x) => x.ok).length;
       card.querySelectorAll('.syl').forEach((s, k) => {
         const x = r.items[k]; if (!x) return;
