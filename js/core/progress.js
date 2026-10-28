@@ -1,3 +1,4 @@
+import {fromSaved} from './voice.js';
 // Save data and progression. Pure: functions take the save and mutate/return it, no storage access.
 export const newSave=()=>({v:1,fish:0,days:{},rungs:{},review:[],settings:{music:false,pinyin:true}});
 export function migrate(o){
@@ -8,7 +9,7 @@ export function migrate(o){
   if(Array.isArray(o.review))s.review=o.review.filter(x=>x&&x.key).map(x=>({key:x.key,zh:x.zh||'',py:x.py||'',en:x.en||'',streak:x.streak|0}));
   if(o.settings&&typeof o.settings==='object')s.settings={...s.settings,...o.settings};
   if(Array.isArray(o.notes))s.notes=o.notes;
-  if(o.voice&&Number.isFinite(o.voice.ref)&&o.voice.ref>0)s.voice={ref:o.voice.ref,n:o.voice.n|0};
+  const v=fromSaved(o.voice);if(v)s.voice=v; // speaker profile {p10,p50,p90,n,calibrated}; the old {ref,n} becomes an uncalibrated one
   return s;
 }
 export function todayKey(d=new Date()){
@@ -37,11 +38,3 @@ export function reviewHit(s,key){
   r.streak++;if(r.streak>=2)s.review=s.review.filter(x=>x!==r);
 }
 export const reviewPick=(s,n)=>[...s.review].sort((a,b)=>a.streak-b.streak).slice(0,n);
-// Speaker register: usual median pitch (Hz), an exponential moving average in semitone space. Lets the tone checker see lowness.
-export const voiceRef=s=>s.voice&&s.voice.ref>0?s.voice.ref:null;
-export function updateVoiceRef(s,ref,alpha=0.2){
-  if(!(ref>0)||!Number.isFinite(ref))return voiceRef(s);
-  const old=voiceRef(s);
-  s.voice={ref:old?old*Math.pow(2,alpha*Math.log2(ref/old)):ref,n:((s.voice&&s.voice.n)|0)+1};
-  return s.voice.ref;
-}

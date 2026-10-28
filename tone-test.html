@@ -49,6 +49,8 @@ pre{margin:0;white-space:pre-wrap;font-size:12px;color:var(--mut)}
   <div class="canvaswrap"><canvas id="cv"></canvas></div>
   <div class="verdict" id="verdict"></div>
   <p class="mut" id="detail"></p>
+  <div id="scores" style="display:grid;gap:4px;margin-top:6px"></div>
+  <p class="mut" id="hline"></p>
 </div>
 
 <div class="card" style="display:grid;gap:10px">
@@ -67,6 +69,18 @@ const TARGETS=[
  {h:'买',p:'mǎi',t:3},{h:'卖',p:'mài',t:4},{h:'十',p:'shí',t:2},{h:'四',p:'sì',t:4},{h:'问',p:'wèn',t:4}];
 // ---------- core (shared with the game, tested in node) ----------
 import {yin,track,analyse,toSt,median,TEMPLATES} from './js/core/pitch.js';
+// the game's speaker profile (calibrate it on the home screen); without a calibrated one the take's own default applies
+function savedProfile(){try{const v=JSON.parse(localStorage.getItem('mg.save')||'null').voice;return v&&v.calibrated&&[v.p10,v.p50,v.p90].every(Number.isFinite)?v:null}catch(e){return null}}
+function showScores(res){
+  const box=$('scores');box.innerHTML='';$('hline').textContent='';
+  if(!res||!res.ok)return;
+  for(const k of [1,2,3,4]){
+    const v=res.scores[k],row=document.createElement('div');row.style.cssText='display:flex;align-items:center;gap:8px;font-size:13px';
+    row.innerHTML='<span style="width:48px">tone '+k+'</span><span style="flex:1;height:10px;background:rgba(128,128,128,.25);border-radius:6px;overflow:hidden"><i style="display:block;height:100%;width:'+Math.round(v*100)+'%;background:'+(k===res.tone?css('--good'):css('--mut'))+'"></i></span><span style="width:34px;text-align:right">'+v.toFixed(2)+'</span>';
+    box.appendChild(row);
+  }
+  $('hline').textContent='h start '+res.hStart.toFixed(2)+' · end '+res.hEnd.toFixed(2)+' · min '+res.hMin.toFixed(2)+' · mean '+res.hMean.toFixed(2)+' · creakRatio '+res.creakRatio.toFixed(2)+(res.calibrated?' · your calibrated profile':' · no calibration: default profile');
+}
 
 // ---------- UI ----------
 const $=id=>document.getElementById(id);
@@ -81,7 +95,7 @@ function diag(){
   const ac=!!(window.AudioContext||window.webkitAudioContext);chip(ac?'Web Audio ✓':'No Web Audio ✗',ac);
   const st=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;chip(st?'Installed app':'In browser',true);
 }
-function showTarget(){const t=TARGETS[idx];$('hz').textContent=t.h;$('pyin').textContent=t.p+' · tone '+t.t;$('verdict').textContent='';$('verdict').className='verdict';$('detail').textContent='';draw(null)}
+function showTarget(){const t=TARGETS[idx];$('hz').textContent=t.h;$('pyin').textContent=t.p+' · tone '+t.t;$('verdict').textContent='';$('verdict').className='verdict';$('detail').textContent='';draw(null);showScores(null)}
 $('prev').onclick=()=>{idx=(idx+TARGETS.length-1)%TARGETS.length;showTarget()};
 $('next').onclick=()=>{idx=(idx+1)%TARGETS.length;showTarget()};
 $('rand').onclick=()=>{idx=Math.floor(Math.random()*TARGETS.length);showTarget()};
@@ -127,8 +141,8 @@ $('rec').onclick=async()=>{
     recording=false;cancelAnimationFrame(raf);$('rec').textContent='● Record';
     let n=0;for(const c of chunks)n+=c.length;const pcm=new Float32Array(n);n=0;for(const c of chunks){pcm.set(c,n);n+=c.length}chunks=[];
     frames=track(pcm,ctx.sampleRate); // full track: voiced, unvoiced and creak frames
-    const res=analyse(frames);const tone=TARGETS[idx].t;
-    draw(res);
+    const res=analyse(frames,{profile:savedProfile()});const tone=TARGETS[idx].t;
+    draw(res);showScores(res);
     if(!res.ok){$('verdict').textContent='Could not read that';$('verdict').className='verdict no';$('detail').textContent=res.why;log('fail: '+res.why);return}
     const ok=res.tone===tone;
     $('verdict').textContent=ok?'✓ Tone '+tone+' — matches':'✗ Heard tone '+res.tone+', expected '+tone;$('verdict').className='verdict '+(ok?'ok':'no');

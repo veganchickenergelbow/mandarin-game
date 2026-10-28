@@ -6,8 +6,9 @@ import * as home from './screens/home.js';
 import * as warmup from './screens/warmup.js';
 import * as scene from './screens/scene.js';
 import * as debrief from './screens/debrief.js';
+import * as calibrate from './screens/calibrate.js';
 
-const screens = { home, warmup, scene, debrief };
+const screens = { home, warmup, scene, debrief, calibrate };
 const root = document.getElementById('app');
 const scenesCache = {};
 const session = { added: [] };   // review items added this visit, shown in the debrief

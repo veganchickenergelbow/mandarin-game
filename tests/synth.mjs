@@ -37,13 +37,13 @@ const F={
   4:b=>u=>b*1.25-b*0.5*u,
 };
 // tones[] -> one continuous voice. gapMs>0: silence between syllables; gapMs=0: only an amplitude valley (dipMs wide).
-// creak: {syl,from,to} seconds inside that syllable.
-export function word(tones,{base=200,dur=0.3,gapMs=0,dipMs=60,amp=0.3,creak}={}){
+// f3: optional replacement for the tone 3 shape, b=>u=>Hz (e.g. a half-third). creak: {syl,from,to} seconds inside that syllable.
+export function word(tones,{base=200,dur=0.3,gapMs=0,dipMs=60,amp=0.3,creak,f3}={}){
   const gap=gapMs/1000,half=dipMs/2000,n=tones.length;
   const x=new Float32Array(Math.round((n*dur+(n-1)*gap+0.4)*sr));
   let ph=0;
   for(let k=0;k<n;k++){
-    const start=0.2+k*(dur+gap),fn=F[tones[k]](base);
+    const start=0.2+k*(dur+gap),fn=(tones[k]===3&&f3?f3:F[tones[k]])(base);
     const cs=creak&&creak.syl===k?Math.round((start+creak.from)*sr):0,ce=creak&&creak.syl===k?Math.round((start+creak.to)*sr):0;
     const cb=ce>cs?creakBuf(ce-cs,amp*0.47):null;
     for(let i=Math.round(start*sr);i<Math.round((start+dur)*sr);i++){

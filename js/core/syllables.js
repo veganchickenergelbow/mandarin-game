@@ -1,5 +1,5 @@
 // Split one recording into n syllables by energy valleys, then score each tone.
-import {track,voiced,analyse,median} from './pitch.js';
+import {track,voiced,analyse,median,judge} from './pitch.js';
 import {syllables,tonesOf} from './pinyin.js';
 import {surfaceTones} from './sandhi.js';
 
@@ -47,7 +47,9 @@ export function splitSyllables(frames,n){
   return out;
 }
 
-// opts.speakerRef: the speaker's usual median pitch (Hz). Returns {ok, items, ref}: ref = median pitch of the whole word (Hz).
+// opts.profile: calibrated voice profile (voice.js); opts.speakerRef: legacy bare median (Hz).
+// Returns {ok, items, ref, frames}: ref = median pitch of the word (Hz), frames = the pitch frames used (for updating the profile).
+// Each item: {syl, expected, heard, ok, close, scores, creakRatio, res}. ok uses the lenient judge(); close = passed as a near miss.
 export function scoreWord(samples,sr,zh,py,opts={}){
   const fr=track(samples,sr);
   if(voiced(fr).length<5)return {ok:false,why:'Too little voiced sound. Speak closer to the mic.',items:[]};
@@ -56,10 +58,11 @@ export function scoreWord(samples,sr,zh,py,opts={}){
   const segs=splitSyllables(fr,n);
   const items=syl.map((s,i)=>{
     const expected=exp[i],seg=segs[i];
-    const res=seg.frames.length<5?{ok:false,why:'Too little voiced sound in this syllable.'}:analyse(seg.all,{speakerRef:opts.speakerRef});
+    const res=seg.frames.length<5?{ok:false,why:'Too little voiced sound in this syllable.'}:analyse(seg.all,{speakerRef:opts.speakerRef,profile:opts.profile});
     const heard=res.ok?res.tone:null;
-    return {syl:s,expected,heard,ok:expected===5?null:(heard!==null&&heard===expected),res};
+    const j=res.ok&&expected!==5?judge(expected,res.scores):{ok:false,close:false};
+    return {syl:s,expected,heard,ok:expected===5?null:j.ok,close:!!j.close&&expected!==5,scores:res.ok?res.scores:null,creakRatio:res.ok?res.creakRatio:0,res};
   });
   const refs=items.filter(i=>i.res.ok).map(i=>i.res.ref);
-  return {ok:true,items,ref:refs.length?median(refs):null};
+  return {ok:true,items,ref:refs.length?median(refs):null,frames:items.flatMap(i=>i.res.ok?i.res.pts:[])};
 }

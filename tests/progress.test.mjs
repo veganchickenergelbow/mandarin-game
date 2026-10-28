@@ -60,17 +60,14 @@ test('reviewPick returns up to n, weakest first',()=>{
   assert.equal(p.length,2);assert.ok(!p.some(x=>x.key==='a'));
   assert.equal(P.reviewPick(s,10).length,3);
 });
-test('voiceRef: first value is taken as is, then an EMA (alpha 0.2) in semitone space, kept by migrate',()=>{
-  const s=P.newSave();
-  assert.equal(P.voiceRef(s),null);
-  P.updateVoiceRef(s,200);assert.equal(P.voiceRef(s),200);
-  P.updateVoiceRef(s,100); // an octave down: 0.2 of 12 semitones = 2.4 st below 200
-  assert.ok(Math.abs(P.voiceRef(s)-200*Math.pow(2,-0.2))<1e-9);
-  const before=P.voiceRef(s);
-  P.updateVoiceRef(s,NaN);P.updateVoiceRef(s,0);P.updateVoiceRef(s,null);
-  assert.equal(P.voiceRef(s),before);
-  const m=P.migrate(JSON.parse(JSON.stringify(s)));
-  assert.equal(P.voiceRef(m),before);
-  assert.equal(P.voiceRef(P.migrate({voice:{ref:'x'}})),null);
-  assert.equal(P.voiceRef(P.migrate({voice:null})),null);
+test('migrate keeps a voice profile and converts the old {ref,n} shape',()=>{
+  const prof={p10:-2,p50:1,p90:6,n:4,calibrated:true};
+  assert.deepEqual(P.migrate(JSON.parse(JSON.stringify({voice:prof}))).voice,prof);
+  const old=P.migrate({voice:{ref:200,n:3}}).voice;
+  assert.ok(Math.abs(old.p50-12*Math.log2(2))<1e-9);
+  assert.ok(Math.abs(old.p10-(old.p50-5))<1e-9&&Math.abs(old.p90-(old.p50+5))<1e-9);
+  assert.equal(old.calibrated,false);assert.equal(old.n,3);
+  assert.equal(P.migrate({voice:{ref:'x'}}).voice,undefined);
+  assert.equal(P.migrate({voice:null}).voice,undefined);
+  assert.equal(P.migrate(P.newSave()).voice,undefined);
 });

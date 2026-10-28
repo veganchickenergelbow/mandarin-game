@@ -41,10 +41,12 @@ export function track(samples,sr){
 export const voiced=frames=>frames.filter(x=>x.f>0);
 export const toSt=(f,ref)=>12*Math.log2(f/ref);
 export function median(a){const s=[...a].sort((x,y)=>x-y);return s[Math.floor(s.length/2)]}
+import {st100,height,defaultProfile} from './voice.js';
 const HOP=0.005;
 // frames: track() output (voiced, unvoiced and creak frames) or just the voiced frames.
 // opts.speakerRef: the speaker's usual median pitch in Hz (lets classify see how LOW this utterance is).
-// returns {ok, st:[12 pts], ref, dur, n, creak (s of creak inside the run), tone, why}
+// opts.profile: a calibrated voice profile (see voice.js) turns on the height rules.
+// returns {ok, st:[12 pts], st100, ref, dur, n, creak, creakRatio, hStart, hEnd, hMin, hMean, scores:{1..4}, tone, pts, why}
 export function analyse(frames,opts={}){
   const vf=frames.filter(x=>x.f>0),cr=frames.filter(x=>!(x.f>0)&&x.creak);
   const crAll=[...cr]; // creak frames plus voiced frames that are junk readings inside creak
@@ -103,30 +105,69 @@ export function analyse(frames,opts={}){
     const u=b.t>a.t?Math.min(1,Math.max(0,(tt-a.t)/(b.t-a.t))):0;
     st.push(toSt(a.f+(b.f-a.f)*u,ref));
   }
-  // positive when this utterance sits below the speaker's usual pitch
-  const low=opts.speakerRef>0?toSt(opts.speakerRef,ref):0;
-  return {ok:true,st,ref,dur:span,n:fr.length,creak,tone:classify(st,{creak,low})};
+  // absolute pitch (semitones re 100 Hz) and height within the speaker's range (0 = bottom, 1 = top)
+  const prof=opts.profile&&opts.profile.calibrated?opts.profile:null,shown=prof||defaultProfile(st100(ref));
+  const st100pts=st.map(v=>v+st100(ref));
+  const hh=st100pts.map(v=>height(v,shown)),avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+  // creak counted inside the run, as a share of (voiced + creak) frames
+  const nCreak=creakIn(fr[0].t,fr[fr.length-1].t),creakRatio=nCreak/(fr.length+nCreak);
+  const hMin=creakRatio>0.15?0:Math.min(...hh);
+  const h={hStart:avg(hh.slice(0,2)),hEnd:avg(hh.slice(-2)),hMin,hMean:avg(hh)};
+  // legacy: positive when this utterance sits below a bare speakerRef (Hz)
+  const low=!prof&&opts.speakerRef>0?toSt(opts.speakerRef,ref):0;
+  const scores=score(st,{creak,low,creakRatio,h,calibrated:!!prof});
+  return {ok:true,st,st100:st100pts,ref,dur:span,n:fr.length,creak,creakRatio,...h,scores,tone:argmax(scores),calibrated:!!prof,pts:fr.map(x=>({t:x.t,f:x.f}))};
 }
-// info.creak: seconds of creak inside the syllable. info.low: semitones the utterance sits below the speaker's usual pitch.
-export function classify(st,info={}){
+const ramp=(x,a,b)=>Math.min(1,Math.max(0,(x-a)/(b-a)));
+export const argmax=sc=>[1,2,3,4].reduce((b,k)=>sc[k]>sc[b]?k:b,1);
+// Scores 0..1 per tone. Shape rules (relative contour) give the base evidence; with a calibrated profile the height rules
+// (tone 3 is LOW, tone 1 is high and flat, tone 4 starts high) add to or scale them. Higher number = earlier in the old if-chain.
+// info: creak (s), low (st below a bare speakerRef), creakRatio, h {hStart,hEnd,hMin,hMean}, calibrated.
+export function score(st,info={}){
   const n=st.length,m=(a,b)=>st.slice(a,b).reduce((x,y)=>x+y,0)/(b-a);
   const s=m(0,4),e=m(8,n),mn=Math.min(...st),mx=Math.max(...st),range=mx-mn,minI=st.indexOf(mn)/(n-1),maxI=st.indexOf(mx)/(n-1);
-  const slope=e-s,creak=info.creak||0,low=info.low||0;
+  const slope=e-s,creak=info.creak||0,low=info.low||0,cr=info.creakRatio||0,h=info.h,cal=!!(info.calibrated&&h);
   // least-squares slope of the last 5 points, as semitones per 4 steps (the last 35% of the contour)
   const tl=st.slice(n-5),tm=(tl.length-1)/2,tail=tl.reduce((a,v,i)=>a+(i-tm)*v,0)/tl.reduce((a,_,i)=>a+(i-tm)*(i-tm),0)*4;
   const early=m(0,2)-m(6,8); // drop over roughly the first 60%
   const rise=slope>=1.8;
   const fall=slope<=-2.0&&maxI<0.6&&(s-e>=5.5||tail<=-0.9); // a sustained fall, right to the end
-  // a real tone 2 can start with a small dip; a big rise after it is still tone 2
-  if(e-s>=2.5&&s-mn<1.5)return 2;
-  if(creak>=0.03&&!rise&&!fall)return 3;     // creaky low part
-  if(low>=2&&!rise&&!fall)return 3;          // said low in the speaker's range
-  if(range<2.6&&Math.abs(slope)<1.6)return 1;
-  if(s-mn>=1.0&&e-mn>=0.7&&minI>=0.2&&minI<=0.9)return 3;                              // dip
-  if(early>=1.5&&Math.abs(tail)<0.9&&s-e<5.5&&minI>=0.45)return 3;                      // half-third: falls, then level
-  if(fall)return 4;
-  if(rise)return 2;
-  if(range<3.2)return 1;
-  return slope<0?4:2;
+  const sc={1:0,2:0,3:0,4:0},up=(k,v)=>{if(v>sc[k])sc[k]=v};
+  // soft evidence, always below any rule
+  up(1,0.3*(1-ramp(range,1,4)));up(2,0.3*ramp(slope,0,2.5));up(4,0.3*ramp(-slope,0,3));
+  up(3,0.3*ramp(s-mn,0,2)*ramp(e-mn,0,1));
+  // old fallbacks
+  if(range<3.2&&!rise)up(1,0.4);else if(!rise)up(slope<0?4:2,0.35);
+  if(rise)up(2,0.65);
+  // tone 2: a real tone 2 can start with a small dip; a big rise after it is still tone 2
+  if(e-s>=2.5&&s-mn<1.5)up(2,0.96);
+  // tone 3
+  if(creak>=0.03&&!rise&&!fall)up(3,cr>0.15?0.95:0.92);   // creaky low part
+  if(s-mn>=1.0&&e-mn>=0.7&&minI>=0.2&&minI<=0.9)up(3,0.8);                              // dip
+  if(early>=1.5&&Math.abs(tail)<0.9&&s-e<5.5&&minI>=0.45)up(3,0.75);                    // half-third: falls, then level
+  // tone 1: flat
+  const flat=range<2.6&&Math.abs(slope)<1.6;
+  if(cal){
+    const lowS=(1-ramp(h.hMin,0.15,0.4))*(1-ramp(h.hMean,0.35,0.6));                    // LOW in this speaker's range
+    const drop=m(0,2)-m(n-2,n),highFall=ramp(h.hStart,0.45,0.65)*ramp(drop,3,4.5);        // a fall from the top
+    if(!rise)up(3,0.9*lowS*(1-highFall));
+    if(flat)up(1,0.85*ramp(h.hMean,0.25,0.5));
+    if(fall)up(4,0.7*ramp(h.hStart,0.4,0.6));
+    up(4,0.95*highFall);
+  }else{
+    if(low>=2&&!rise&&!fall)up(3,0.9);                                                   // legacy: low against a bare speakerRef
+    if(flat)up(1,0.85);
+    if(fall)up(4,0.7);
+  }
+  return sc;
+}
+export const classify=(st,info={})=>argmax(score(st,info));
+// Lenient pass: the target wins, or is within 0.1 of the winner and the pair is a usual confusion (3/2, 3/4, 1/4).
+const CONFUSED=new Set(['2,3','3,4','1,4']);
+export function judge(target,scores){
+  const top=argmax(scores);
+  if(top===target)return {ok:true,close:false,top};
+  const close=scores[target]>=scores[top]-0.1&&CONFUSED.has([target,top].sort().join(','));
+  return {ok:close,close,top};
 }
 export const TEMPLATES={1:t=>0,2:t=>-2.5+5*t,3:t=>t<.45?-1-4*(t/.45)*0.9+0.0:-4.6+5.8*((t-.45)/.55),4:t=>4-8*t};

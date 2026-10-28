@@ -1,5 +1,7 @@
 // Warm-up: 6 words (2 from the review deck, then words from today's scenes). Say each one, get a tick or cross per syllable.
-import { addFish, markStep, todayKey, reviewPick, reviewMiss, reviewHit, voiceRef, updateVoiceRef } from '../core/progress.js';
+import { addFish, markStep, todayKey, reviewPick, reviewMiss, reviewHit } from '../core/progress.js';
+import { usable, update as updateVoice } from '../core/voice.js';
+import { saveTake } from '../recordings.js';
 import { syllables } from '../core/pinyin.js';
 import { scoreWord } from '../core/syllables.js';
 import { speak, mic } from '../speech.js';
@@ -45,10 +47,10 @@ export async function render(root, ctx) {
     const $ = (s) => card.querySelector(s), msg = $('.msg'), cv = $('canvas'), wrap = $('.canvaswrap'), rec = $('#rec');
     let last = null;
 
-    const draw = (k) => { const x = last.items[k]; wrap.classList.remove('hidden'); drawCurve(cv, x.res, x.expected, x.ok !== false); };
+    const draw = (k) => { const x = last.items[k]; wrap.classList.remove('hidden'); drawCurve(cv, x.res, x.expected, x.ok !== false, !!x.close); };
     $('#play').onclick = () => speak(it.zh, { rate: 0.8 });
     $('#next').onclick = () => { i++; show(); };
-    $('#retry').onclick = () => { card.querySelectorAll('.syl').forEach((s) => { s.className = 'syl'; s.querySelector('span').textContent = ''; }); wrap.classList.add('hidden'); msg.textContent = ''; $('#retry').disabled = true; };
+    $('#retry').onclick = () => { msg.className = 'msg dim small'; card.querySelectorAll('.syl').forEach((s) => { s.className = 'syl'; s.querySelector('span').textContent = ''; }); wrap.classList.add('hidden'); msg.textContent = ''; $('#retry').disabled = true; };
 
     rec.onclick = async () => {
       if (!mic.recording) {
@@ -58,29 +60,33 @@ export async function render(root, ctx) {
       }
       rec.textContent = '● Record';
       const { samples, sr } = mic.stopRecord();
-      const r = scoreWord(samples, sr, it.zh, it.py, { speakerRef: voiceRef(save) });
+      const r = scoreWord(samples, sr, it.zh, it.py, { profile: usable(save) });
       $('#retry').disabled = false;
       if (!r.ok) { msg.textContent = r.why || 'Could not hear a voice. Try again, a bit closer to the mic.'; return; }
       last = r;
-      if (r.ref) updateVoiceRef(save, r.ref);
+      if (save.voice && save.voice.calibrated && r.frames.length) save.voice = updateVoice(save.voice, r.frames);   // only calibrated profiles are used, so only they follow the voice
+      if (save.settings.keepRecordings) saveTake(samples, sr, { time: Date.now(), zh: it.zh, py: it.py, expected: r.items.map((x) => x.expected), heard: r.items.map((x) => x.heard), scores: r.items.map((x) => x.scores) });
       const scored = r.items.filter((x) => x.ok !== null), good = scored.filter((x) => x.ok).length;
       card.querySelectorAll('.syl').forEach((s, k) => {
         const x = r.items[k]; if (!x) return;
-        s.className = 'syl ' + (x.ok === null ? 'na' : x.ok ? 'ok' : 'no');
+        s.className = 'syl ' + (x.ok === null ? 'na' : x.close ? 'close' : x.ok ? 'ok' : 'no');
         s.querySelector('span').textContent = x.ok === null ? '·' : x.ok ? '✓' : '✗';
         s.onclick = () => draw(k);
       });
+      const closeOnes = r.items.filter((x) => x.close);
+      msg.className = 'msg small ' + (closeOnes.length ? 'amber' : 'dim');
       const firstBad = r.items.findIndex((x) => x.ok === false);
       draw(firstBad >= 0 ? firstBad : Math.max(0, r.items.findIndex((x) => x.ok)));
       const gain = Math.max(0, good - best[i]); best[i] = Math.max(best[i], good);
       if (gain) { addFish(save, gain); fish += gain; }
-      if (scored.length && good === scored.length) { reviewHit(save, it.key); msg.textContent = 'Lovely! Every tone landed.' + (gain ? ` +${gain} fish` : ''); }
+      if (scored.length && good === scored.length) { reviewHit(save, it.key); msg.textContent = (closeOnes.length ? 'Every tone passed. ' : 'Lovely! Every tone landed.') + (gain ? ` +${gain} fish` : ''); }
       else {
         reviewMiss(save, it);
         if (!ctx.session.added.some((a) => a.zh === it.zh)) ctx.session.added.push(it);
         const bad = r.items[firstBad];
         msg.textContent = bad ? `Close! "${bad.syl}" should be tone ${bad.expected}, I heard tone ${bad.heard}. Tap a syllable to see its curve.` + (gain ? ` +${gain} fish` : '') : 'Nearly there. Try once more.';
       }
+      if (closeOnes.length) msg.textContent += ' ' + closeOnes.map((x) => `close: sounded a bit like tone ${x.heard} (${x.syl}, wanted ${x.expected})`).join('; ') + '.';
       ctx.persist();
     };
   }

@@ -1,9 +1,9 @@
 // Mandarin Game service worker: cache-first app shell. BUMP `VERSION` on every deploy; old caches are deleted on activate.
-const VERSION = 'mg-v2';
+const VERSION = 'mg-v3';
 const SHELL = ['./', 'index.html', 'style.css', 'manifest.webmanifest', 'tone-test.html',
   'js/main.js', 'js/store.js', 'js/speech.js', 'js/draw.js', 'js/ui.js',
-  'js/screens/home.js', 'js/screens/warmup.js', 'js/screens/scene.js', 'js/screens/debrief.js',
-  'js/core/pitch.js', 'js/core/pinyin.js', 'js/core/sandhi.js', 'js/core/syllables.js', 'js/core/match.js', 'js/core/progress.js',
+  'js/screens/home.js', 'js/screens/warmup.js', 'js/screens/scene.js', 'js/screens/debrief.js', 'js/screens/calibrate.js', 'js/recordings.js',
+  'js/core/pitch.js', 'js/core/pinyin.js', 'js/core/sandhi.js', 'js/core/syllables.js', 'js/core/match.js', 'js/core/progress.js', 'js/core/voice.js',
   'data/scenes/index.json', 'data/scenes/work_huang_price.json', 'data/scenes/life_hawker_chicken_rice.json'];
 
 self.addEventListener('install', (e) => {

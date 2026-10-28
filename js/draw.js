@@ -4,7 +4,7 @@ import { TEMPLATES } from './core/pitch.js';
 const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 /** Draw the dashed target tone, plus the heard curve (res from analyse()) coloured by ok. res may be null. */
-export function drawCurve(canvas, res, expectedTone, ok) {
+export function drawCurve(canvas, res, expectedTone, ok, close = false) {
   const dpr = window.devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
   if (!w || !h) return;
   canvas.width = w * dpr; canvas.height = h * dpr;
@@ -20,7 +20,7 @@ export function drawCurve(canvas, res, expectedTone, ok) {
   }
   g.fillStyle = css('--ink2'); g.font = '12px ' + css('--font'); g.fillText('dashed = target tone ' + (expectedTone || ''), 14, h - 6);
   if (res && res.ok) {
-    g.strokeStyle = ok ? css('--good') : css('--bad'); g.lineWidth = 4; g.lineJoin = 'round'; g.beginPath();
+    g.strokeStyle = close ? css('--yellow-d') : ok ? css('--good') : css('--bad'); g.lineWidth = 4; g.lineJoin = 'round'; g.beginPath();
     res.st.forEach((v, i) => { const x = X(i / (res.st.length - 1)), y = Y(Math.max(-8, Math.min(8, v))); i ? g.lineTo(x, y) : g.moveTo(x, y); });
     g.stroke();
   }
