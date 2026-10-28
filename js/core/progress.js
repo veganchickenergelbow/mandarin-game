@@ -1,6 +1,6 @@
 import {fromSaved} from './voice.js';
 // Save data and progression. Pure: functions take the save and mutate/return it, no storage access.
-export const newSave=()=>({v:1,fish:0,days:{},rungs:{},review:[],settings:{music:false,pinyin:true}});
+export const newSave=()=>({v:1,fish:0,days:{},rungs:{},review:[],settings:{music:false,pinyin:false}});
 export function migrate(o){
   const s=newSave();if(!o||typeof o!=='object')return s;
   if(Number.isFinite(o.fish))s.fish=o.fish;
@@ -8,6 +8,7 @@ export function migrate(o){
   if(o.rungs&&typeof o.rungs==='object')s.rungs=o.rungs;
   if(Array.isArray(o.review))s.review=o.review.filter(x=>x&&x.key).map(x=>({key:x.key,zh:x.zh||'',py:x.py||'',en:x.en||'',streak:x.streak|0}));
   if(o.settings&&typeof o.settings==='object')s.settings={...s.settings,...o.settings};
+  if(!s.settings.pinyinSet)s.settings.pinyin=false; // v0.2: full-line pinyin defaults off now that words are tappable
   if(Array.isArray(o.notes))s.notes=o.notes;
   const v=fromSaved(o.voice);if(v)s.voice=v; // speaker profile {p10,p50,p90,n,calibrated}; the old {ref,n} becomes an uncalibrated one
   return s;

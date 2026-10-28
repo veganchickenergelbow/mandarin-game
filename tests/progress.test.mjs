@@ -3,10 +3,11 @@ import assert from 'node:assert/strict';
 import * as P from '../js/core/progress.js';
 
 test('newSave shape and migrate fills missing fields',()=>{
-  assert.deepEqual(P.newSave(),{v:1,fish:0,days:{},rungs:{},review:[],settings:{music:false,pinyin:true}});
+  assert.deepEqual(P.newSave(),{v:1,fish:0,days:{},rungs:{},review:[],settings:{music:false,pinyin:false}});
   const m=P.migrate({fish:7,settings:{music:true},review:[{key:'a',zh:'好',py:'hǎo',en:'good'}]});
   assert.equal(m.fish,7);
-  assert.deepEqual(m.settings,{music:true,pinyin:true});
+  assert.deepEqual(m.settings,{music:true,pinyin:false});
+  assert.equal(P.migrate({settings:{pinyin:true,pinyinSet:true}}).settings.pinyin,true); // an explicit choice is kept
   assert.deepEqual(m.days,{});assert.deepEqual(m.rungs,{});
   assert.equal(m.review[0].streak,0);
   assert.deepEqual(P.migrate(null),P.newSave());

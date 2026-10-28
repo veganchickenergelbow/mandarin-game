@@ -1,8 +1,9 @@
 // Scene engine (work + life). Rung 1: pick then say. Rung 2: say it your way. Rung 3: free talk with ChatGPT voice.
-import { addFish, markStep, todayKey, rung as rungOf, recordRung } from '../core/progress.js';
+import { addFish, markStep, todayKey, rung as rungOf, recordRung, reviewMiss } from '../core/progress.js';
 import { similarity, intentCheck } from '../core/match.js';
 import { speak, listen } from '../speech.js';
 import { el, esc, pyHtml, shuffle, pickOne } from '../ui.js';
+import { zhLine } from '../ui/zh.js';
 
 const PASS = 0.7;
 const half = (n) => Math.max(1, Math.floor(n / 2));
@@ -16,6 +17,7 @@ export async function render(root, ctx, { id }) {
   const log = { kind: 'scene', id, title: sc.title, mood, twist: twist.en, rung: unlocked, turns: [], fish: 0 };
   const award = (n) => { addFish(save, n); log.fish += n; ctx.persist(); return n; };
   const rate = mood === 'hurried' ? 1.05 : 0.9;
+  const tz = (line, r = 0.9) => zhLine(line, { speak: (t) => speak(t, { rate: r }), onAddReview: (it) => { reviewMiss(save, it); ctx.persist(); } });
   const npcLine = (t, i) => { const l = i === 1 ? twist.turn2 : t.npc; return (mood === 'hurried' && l.hurried) || l; };
   const header = (back) => { const h = el('<div class="top"><button class="link" id="x">✕ Home</button></div>'); h.firstChild.onclick = () => ctx.go('home'); return h; };
 
@@ -62,14 +64,16 @@ export async function render(root, ctx, { id }) {
 
   const npcCard = (line, i, n) => {
     const c = el(`<section class="card stack"><div class="row between"><span class="chip num">Turn ${i + 1} / ${n}</span><button class="btn ghost sm" id="p">▶ Hear</button></div>
-      <div class="line-zh">${esc(line.zh)}</div>${pyHtml(line.py, py())}
+      <div id="zhs"></div>${pyHtml(line.py, py())}
       <button class="link" id="en" style="text-align:left">Tap for English</button></section>`);
+    c.querySelector('#zhs').append(tz(line, rate));
     c.querySelector('#p').onclick = () => speak(line.zh, { rate });
     const en = c.querySelector('#en'); en.onclick = () => { en.textContent = line.en; en.style.textDecoration = 'none'; en.style.color = 'inherit'; };
     speak(line.zh, { rate });
     return c;
   };
-  const replyHtml = (r) => `<div class="line-zh">${esc(r.zh)}</div>${pyHtml(r.py, py())}<p class="dim small">${esc(r.en)}</p>`;
+  const replyHtml = (r) => `<div class="rz"></div>${pyHtml(r.py, py())}<p class="dim small">${esc(r.en)}</p>`;
+  const fillReply = (card, r) => card.querySelector('.rz').append(tz(r, 0.85));
   const nextBtn = (label, fn) => { const b = el(`<button class="btn big block">${label}</button>`); b.onclick = fn; return b; };
 
   // ---------- rungs 1 and 2 ----------
@@ -92,10 +96,11 @@ export async function render(root, ctx, { id }) {
   }
 
   function rung1(t, rec, area, done) {
-    const opts = el('<div class="stack"><p class="dim small">What do you say?</p></div>');
+    const opts = el('<div class="stack"><p class="dim small">What do you say? Tap a word to see its pinyin.</p></div>');
     area.append(opts);
     const buttons = shuffle(t.options).map((o) => {
-      const b = el(`<button class="opt"><span class="line-zh">${esc(o.zh)}</span>${py() ? `<span class="dim small">${esc(o.py)}</span>` : ''}<span class="dim small">${esc(o.en)}</span></button>`);
+      const b = el(`<button class="opt"><span class="oz"></span>${py() ? `<span class="dim small">${esc(o.py)}</span>` : ''}<span class="dim small">${esc(o.en)}</span></button>`);
+      b.querySelector('.oz').replaceWith(tz(o));
       b.onclick = () => choose(o, b);
       opts.append(b); return b;
     });
@@ -106,6 +111,7 @@ export async function render(root, ctx, { id }) {
       const gain = o.type === 'fit' ? award(2) : 0;
       area.append(el(`<div class="card ${o.type === 'fit' ? 'good' : 'warn'} stack"><div class="row"><span class="chip ${o.type}">${VERDICT[o.type] || o.type}</span>${gain ? `<span class="chip">+${gain} 🐟</span>` : ''}</div><p>${esc(o.why)}</p></div>`));
       const say = el(`<section class="card stack"><h3>Now say it</h3>${replyHtml(rec.fit)}<button class="btn ghost sm" id="h">▶ Hear it</button><div class="box stack"></div></section>`);
+      fillReply(say, rec.fit);
       say.querySelector('#h').onclick = () => speak(rec.fit.zh, { rate: 0.85 });
       area.append(say);
       const box = say.querySelector('.box');
@@ -142,7 +148,8 @@ export async function render(root, ctx, { id }) {
       const ex = t.intent.example;
       const list = res ? groups.map((g, k) => `<div>${res.hit.includes(k) ? '✓' : '✗'} <span class="zh">${esc(g[0])}</span></div>`).join('') : '';
       box.replaceChildren(el(`<div class="card ${good ? 'good' : 'warn'} stack"><b>${good ? 'All the key bits landed!' : 'Some key bits are still missing.'}</b>${gained ? `<span class="chip">+${gained} 🐟</span>` : ''}${list}</div>`));
-      area.append(el(`<section class="card stack"><h3>One way to say it</h3>${replyHtml(ex)}<button class="btn ghost sm" id="h">▶ Hear it</button></section>`));
+      const exCard = el(`<section class="card stack"><h3>One way to say it</h3>${replyHtml(ex)}<button class="btn ghost sm" id="h">▶ Hear it</button></section>`);
+      fillReply(exCard, ex); area.append(exCard);
       area.querySelector('#h').onclick = () => speak(ex.zh, { rate: 0.85 });
       done(good);
     };

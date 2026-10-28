@@ -49,7 +49,7 @@ export async function render(root, ctx) {
     <div class="row"><button class="btn ghost sm spacer" id="exp">Export recordings</button><button class="btn ghost sm spacer" id="del">Delete saved recordings</button></div>
     <p class="dim small" id="recmsg" aria-live="polite"></p><div class="stack" id="links"></div>
     <a href="tone-test.html">Open the tone test</a></section>`);
-  set.querySelector('#py').onchange = (e) => { save.settings.pinyin = e.target.checked; ctx.persist(); };
+  set.querySelector('#py').onchange = (e) => { save.settings.pinyin = e.target.checked; save.settings.pinyinSet = true; ctx.persist(); };
   root.append(set);
   const $ = (q) => set.querySelector(q), rm = $('#recmsg');
   $('#recal').onclick = () => ctx.go('calibrate');

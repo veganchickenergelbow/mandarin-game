@@ -14,14 +14,14 @@
       "en": "The roasted chicken is sold out, only white chicken left.",
       "turn2": {
         "zh": "烧鸡卖完了，只有白鸡，可以吗？要辣吗？",
-        "py": "shāo jī mài wán le , zhǐ yǒu bái jī , kě yǐ ma ? yào là ma ?",
+        "py": "shāo jī mài wán le , zhǐ yǒu bái jī , kě yǐ ma ? yào là ma ?", "w": [["烧鸡","shāo jī","roast chicken"],["卖完","mài wán","sold out"],["了","le","(completed / changed)"],["，"],["只有","zhǐ yǒu","only have"],["白鸡","bái jī","white (steamed) chicken"],["，"],["可以","kě yǐ","can, okay"],["吗","ma","(question)"],["？"],["要","yào","want, need to"],["辣","là","spicy"],["吗","ma","(question)"],["？"]],
         "en": "The roasted chicken is sold out, only white chicken. Is that okay? Do you want chilli?"
       },
       "prompt": "Hidden twist: the roasted chicken is sold out and only steamed white chicken is left. Auntie wants a quick yes or no, and then asks about chilli.",
       "group": ["白鸡", "白切鸡", "没关系"],
       "example": {
         "zh": "可以，白鸡也好，少辣，谢谢阿姨。",
-        "py": "kě yǐ , bái jī yě hǎo , shǎo là , xiè xie ā yí .",
+        "py": "kě yǐ , bái jī yě hǎo , shǎo là , xiè xie ā yí .", "w": [["可以","kě yǐ","can, okay"],["，"],["白鸡","bái jī","white (steamed) chicken"],["也好","yě hǎo","is fine too"],["，"],["少辣","shǎo là","less spicy"],["，"],["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["。"]],
         "en": "Okay, white chicken is fine too, less chilli, thank you auntie."
       }
     },
@@ -30,14 +30,14 @@
       "en": "The stall only takes cash today.",
       "turn2": {
         "zh": "我们今天只收现金，可以吗？要辣吗？",
-        "py": "wǒ men jīn tiān zhǐ shōu xiàn jīn , kě yǐ ma ? yào là ma ?",
+        "py": "wǒ men jīn tiān zhǐ shōu xiàn jīn , kě yǐ ma ? yào là ma ?", "w": [["我们","wǒ men","we"],["今天","jīn tiān","today"],["只收","zhǐ shōu","only accept"],["现金","xiàn jīn","cash"],["，"],["可以","kě yǐ","can, okay"],["吗","ma","(question)"],["？"],["要","yào","want, need to"],["辣","là","spicy"],["吗","ma","(question)"],["？"]],
         "en": "We only take cash today. Is that okay? Do you want chilli?"
       },
       "prompt": "Hidden twist: the stall is cash only today (the card reader is broken). Auntie says it early and then asks about chilli. If Lucas ignores it, she reminds him again at the end.",
       "group": ["现金"],
       "example": {
         "zh": "现金可以，少辣，谢谢阿姨。",
-        "py": "xiàn jīn kě yǐ , shǎo là , xiè xie ā yí .",
+        "py": "xiàn jīn kě yǐ , shǎo là , xiè xie ā yí .", "w": [["现金","xiàn jīn","cash"],["可以","kě yǐ","can, okay"],["，"],["少辣","shǎo là","less spicy"],["，"],["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["。"]],
         "en": "Cash is fine, less chilli, thank you auntie."
       }
     }
@@ -46,39 +46,39 @@
     {
       "npc": {
         "zh": "你好，要吃什么？",
-        "py": "nǐ hǎo , yào chī shén me ?",
+        "py": "nǐ hǎo , yào chī shén me ?", "w": [["你好","nǐ hǎo","hello"],["，"],["要","yào","want, need to"],["吃","chī","eat"],["什么","shén me","what"],["？"]],
         "en": "Hello, what would you like to eat?",
         "hurried": {
           "zh": "来，要什么？快点哦，后面有人排队。",
-          "py": "lái , yào shén me ? kuài diǎn ò , hòu miàn yǒu rén pái duì .",
+          "py": "lái , yào shén me ? kuài diǎn ò , hòu miàn yǒu rén pái duì .", "w": [["来","lái","come, let's"],["，"],["要","yào","want, need to"],["什么","shén me","what"],["？"],["快点","kuài diǎn","hurry up"],["哦","ò","(friendly softener)"],["，"],["后面","hòu miàn","behind"],["有人","yǒu rén","there are people"],["排队","pái duì","queueing"],["。"]],
           "en": "Come, what do you want? Quick, there's a queue behind you."
         }
       },
       "options": [
         {
           "zh": "阿姨，我要一份鸡饭，打包。",
-          "py": "ā yí , wǒ yào yī fèn jī fàn , dǎ bāo .",
+          "py": "ā yí , wǒ yào yī fèn jī fàn , dǎ bāo .", "w": [["阿姨","ā yí","auntie (polite address)"],["，"],["我","wǒ","I, me"],["要","yào","want, need to"],["一份","yī fèn","one portion"],["鸡饭","jī fàn","chicken rice"],["，"],["打包","dǎ bāo","takeaway"],["。"]],
           "en": "Auntie, I'd like one chicken rice, to take away.",
           "type": "fit",
           "why": "Short, polite, and she knows exactly what to wrap. Auntie approves with one nod."
         },
         {
           "zh": "有什么好吃的？推荐一下吧。",
-          "py": "yǒu shén me hǎo chī de ? tuī jiàn yī xià ba .",
+          "py": "yǒu shén me hǎo chī de ? tuī jiàn yī xià ba .", "w": [["有","yǒu","have"],["什么","shén me","what"],["好吃的","hǎo chī de","something tasty"],["？"],["推荐","tuī jiàn","recommend"],["一下","yī xià","a little, once"],["吧","ba","(softener)"],["。"]],
           "en": "What's good here? Recommend something.",
           "type": "generic",
           "why": "Friendly, but the stall name is literally 'chicken rice'. The queue behind you sighs softly."
         },
         {
           "zh": "鸡饭，快点。",
-          "py": "jī fàn , kuài diǎn .",
+          "py": "jī fàn , kuài diǎn .", "w": [["鸡饭","jī fàn","chicken rice"],["，"],["快点","kuài diǎn","hurry up"],["。"]],
           "en": "Chicken rice, hurry up.",
           "type": "blunt",
           "why": "It works, but 'hurry up' to Auntie is like poking a sleeping cat. Add 阿姨 and a smile."
         },
         {
           "zh": "请问洗手间在哪里？",
-          "py": "qǐng wèn xǐ shǒu jiān zài nǎ lǐ ?",
+          "py": "qǐng wèn xǐ shǒu jiān zài nǎ lǐ ?", "w": [["请问","qǐng wèn","excuse me"],["洗手间","xǐ shǒu jiān","toilet"],["在哪里","zài nǎ lǐ","where is"],["？"]],
           "en": "Excuse me, where is the toilet?",
           "type": "off",
           "why": "A fair question, wrong stall. Auntie points left and your rice is still unordered."
@@ -89,7 +89,7 @@
         "groups": [["鸡饭", "鸡肉饭"], ["份", "个", "碗", "盘"], ["打包", "带走", "外带"]],
         "example": {
           "zh": "阿姨，我要一份鸡饭，打包。",
-          "py": "ā yí , wǒ yào yī fèn jī fàn , dǎ bāo .",
+          "py": "ā yí , wǒ yào yī fèn jī fàn , dǎ bāo .", "w": [["阿姨","ā yí","auntie (polite address)"],["，"],["我","wǒ","I, me"],["要","yào","want, need to"],["一份","yī fèn","one portion"],["鸡饭","jī fàn","chicken rice"],["，"],["打包","dǎ bāo","takeaway"],["。"]],
           "en": "Auntie, I'd like one chicken rice, to take away."
         }
       }
@@ -97,34 +97,34 @@
     {
       "npc": {
         "zh": "要辣吗？",
-        "py": "yào là ma ?",
+        "py": "yào là ma ?", "w": [["要","yào","want, need to"],["辣","là","spicy"],["吗","ma","(question)"],["？"]],
         "en": "Do you want chilli?"
       },
       "options": [
         {
           "zh": "可以，少辣，谢谢阿姨。",
-          "py": "kě yǐ , shǎo là , xiè xie ā yí .",
+          "py": "kě yǐ , shǎo là , xiè xie ā yí .", "w": [["可以","kě yǐ","can, okay"],["，"],["少辣","shǎo là","less spicy"],["，"],["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["。"]],
           "en": "Okay, less chilli, thank you auntie.",
           "type": "fit",
           "why": "You answer everything she asked and keep your tongue safe. Auntie adds a tiny extra smile."
         },
         {
           "zh": "都可以。",
-          "py": "dōu kě yǐ .",
+          "py": "dōu kě yǐ .", "w": [["都可以","dōu kě yǐ","anything is fine"],["。"]],
           "en": "Anything is fine.",
           "type": "generic",
           "why": "Easy-going, but 'anything' may arrive as 'very spicy'. Brave, but your lunch break is short."
         },
         {
           "zh": "不要辣，辣的我不吃，别放。",
-          "py": "bù yào là , là de wǒ bù chī , bié fàng .",
+          "py": "bù yào là , là de wǒ bù chī , bié fàng .", "w": [["不要","bù yào","don't want"],["辣","là","spicy"],["，"],["辣的","là de","spicy ones"],["我","wǒ","I, me"],["不","bù","not"],["吃","chī","eat"],["，"],["别放","bié fàng","don't add"],["。"]],
           "en": "No chilli, I don't eat spicy, don't put any.",
           "type": "blunt",
           "why": "Clear, but a bit of a bark. Auntie will comply, minus the warm fuzzies."
         },
         {
           "zh": "我要一杯咖啡乌。",
-          "py": "wǒ yào yī bēi kā fēi wū .",
+          "py": "wǒ yào yī bēi kā fēi wū .", "w": [["我","wǒ","I, me"],["要","yào","want, need to"],["一杯","yī bēi","one cup"],["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["。"]],
           "en": "I'd like a cup of kopi-o.",
           "type": "off",
           "why": "Eager about the drink, but she asked about chilli. Kopi has to wait its turn."
@@ -135,7 +135,7 @@
         "groups": [["可以", "好", "行", "没问题", "没关系"], ["少辣", "不要太辣", "小辣", "不辣", "不要辣", "微辣"]],
         "example": {
           "zh": "可以，少辣，谢谢阿姨。",
-          "py": "kě yǐ , shǎo là , xiè xie ā yí .",
+          "py": "kě yǐ , shǎo là , xiè xie ā yí .", "w": [["可以","kě yǐ","can, okay"],["，"],["少辣","shǎo là","less spicy"],["，"],["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["。"]],
           "en": "Okay, less chilli, thank you auntie."
         }
       }
@@ -143,39 +143,39 @@
     {
       "npc": {
         "zh": "喝什么？有咖啡乌，也有柠檬茶。",
-        "py": "hē shén me ? yǒu kā fēi wū , yě yǒu níng méng chá .",
+        "py": "hē shén me ? yǒu kā fēi wū , yě yǒu níng méng chá .", "w": [["喝","hē","drink"],["什么","shén me","what"],["？"],["有","yǒu","have"],["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["，"],["也有","yě yǒu","also have"],["柠檬茶","níng méng chá","lemon tea"],["。"]],
         "en": "What to drink? We have kopi-o and lemon tea.",
         "hurried": {
           "zh": "喝什么？快点说哦。",
-          "py": "hē shén me ? kuài diǎn shuō ò .",
+          "py": "hē shén me ? kuài diǎn shuō ò .", "w": [["喝","hē","drink"],["什么","shén me","what"],["？"],["快点","kuài diǎn","hurry up"],["说","shuō","say"],["哦","ò","(friendly softener)"],["。"]],
           "en": "What to drink? Say it quickly."
         }
       },
       "options": [
         {
           "zh": "我要一杯冰的咖啡乌，少糖，谢谢。",
-          "py": "wǒ yào yī bēi bīng de kā fēi wū , shǎo táng , xiè xie .",
+          "py": "wǒ yào yī bēi bīng de kā fēi wū , shǎo táng , xiè xie .", "w": [["我","wǒ","I, me"],["要","yào","want, need to"],["一杯","yī bēi","one cup"],["冰的","bīng de","iced kind"],["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["，"],["少糖","shǎo táng","less sugar"],["，"],["谢谢","xiè xie","thank you"],["。"]],
           "en": "I'd like an iced kopi-o with less sugar, thank you.",
           "type": "fit",
           "why": "Drink, temperature, sugar, all in one breath. Auntie is already reaching for the cup."
         },
         {
           "zh": "随便给我一杯吧。",
-          "py": "suí biàn gěi wǒ yī bēi ba .",
+          "py": "suí biàn gěi wǒ yī bēi ba .", "w": [["随便","suí biàn","whatever"],["给","gěi","give"],["我","wǒ","I, me"],["一杯","yī bēi","one cup"],["吧","ba","(softener)"],["。"]],
           "en": "Just give me any cup.",
           "type": "generic",
           "why": "She now has to guess. Hot, sweet kopi may arrive on a hot day. Surprise!"
         },
         {
           "zh": "饭里可以多放点鸡汁吗？",
-          "py": "fàn lǐ kě yǐ duō fàng diǎn jī zhī ma ?",
+          "py": "fàn lǐ kě yǐ duō fàng diǎn jī zhī ma ?", "w": [["饭","fàn","rice"],["里","lǐ","in"],["可以","kě yǐ","can, okay"],["多放点","duō fàng diǎn","add a bit more"],["鸡汁","jī zhī","chicken juices"],["吗","ma","(question)"],["？"]],
           "en": "Can you put more chicken sauce on the rice?",
           "type": "off",
           "why": "A sensible wish, but she asked about drinks. Ask for the sauce right after, with a smile."
         },
         {
           "zh": "咖啡乌，不要糖，快点。",
-          "py": "kā fēi wū , bù yào táng , kuài diǎn .",
+          "py": "kā fēi wū , bù yào táng , kuài diǎn .", "w": [["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["，"],["不要","bù yào","don't want"],["糖","táng","sugar"],["，"],["快点","kuài diǎn","hurry up"],["。"]],
           "en": "Kopi-o, no sugar, hurry.",
           "type": "blunt",
           "why": "Right drink, grumpy delivery. Add 谢谢 and the kopi tastes sweeter, even without sugar."
@@ -186,7 +186,7 @@
         "groups": [["咖啡", "柠檬茶", "茶", "美禄", "水"], ["冰", "热", "凉"], ["少糖", "无糖", "不要糖", "走糖", "少甜", "微糖"]],
         "example": {
           "zh": "我要一杯冰的咖啡乌，少糖。",
-          "py": "wǒ yào yī bēi bīng de kā fēi wū , shǎo táng .",
+          "py": "wǒ yào yī bēi bīng de kā fēi wū , shǎo táng .", "w": [["我","wǒ","I, me"],["要","yào","want, need to"],["一杯","yī bēi","one cup"],["冰的","bīng de","iced kind"],["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["，"],["少糖","shǎo táng","less sugar"],["。"]],
           "en": "I'd like an iced kopi-o with less sugar."
         }
       }
@@ -194,34 +194,34 @@
     {
       "npc": {
         "zh": "好了，鸡饭和咖啡乌都打包好了。",
-        "py": "hǎo le , jī fàn hé kā fēi wū dōu dǎ bāo hǎo le .",
+        "py": "hǎo le , jī fàn hé kā fēi wū dōu dǎ bāo hǎo le .", "w": [["好了","hǎo le","okay, done"],["，"],["鸡饭","jī fàn","chicken rice"],["和","hé","and"],["咖啡乌","kā fēi wū","kopi-o (black coffee)"],["都","dōu","all"],["打包","dǎ bāo","takeaway"],["好了","hǎo le","okay, done"],["。"]],
         "en": "Done, the chicken rice and kopi-o are both packed."
       },
       "options": [
         {
           "zh": "谢谢阿姨！一共多少钱？",
-          "py": "xiè xie ā yí ! yī gòng duō shao qián ?",
+          "py": "xiè xie ā yí ! yī gòng duō shao qián ?", "w": [["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["！"],["一共","yī gòng","in total"],["多少钱","duō shao qián","how much money"],["？"]],
           "en": "Thank you auntie! How much is it altogether?",
           "type": "fit",
           "why": "You thank her and ask the total. Smooth as warm soy sauce."
         },
         {
           "zh": "谢谢，再见。",
-          "py": "xiè xie , zài jiàn .",
+          "py": "xiè xie , zài jiàn .", "w": [["谢谢","xiè xie","thank you"],["，"],["再见","zài jiàn","goodbye"],["。"]],
           "en": "Thanks, goodbye.",
           "type": "generic",
           "why": "Polite, but you are walking off with the chicken rice unpaid. Auntie's eyebrows go up."
         },
         {
           "zh": "你说多少就多少，不用找了。",
-          "py": "nǐ shuō duō shao jiù duō shao , bù yòng zhǎo le .",
+          "py": "nǐ shuō duō shao jiù duō shao , bù yòng zhǎo le .", "w": [["你","nǐ","you"],["说","shuō","say"],["多少","duō shao","how much"],["就","jiù","then, just"],["多少","duō shao","how much"],["，"],["不用","bù yòng","no need to / not using"],["找","zhǎo","give change"],["了","le","(completed / changed)"],["。"]],
           "en": "Whatever you say, keep the change.",
           "type": "cave",
           "why": "Very generous, and a little dangerous. Always ask the price first, even at a friendly stall."
         },
         {
           "zh": "算钱。",
-          "py": "suàn qián .",
+          "py": "suàn qián .", "w": [["算钱","suàn qián","add up the bill"],["。"]],
           "en": "Bill.",
           "type": "blunt",
           "why": "Two words, zero warmth. Auntie gets the point, but the rice might cool a bit."
@@ -232,18 +232,18 @@
         "groups": [["谢谢", "多谢"], ["一共", "多少钱", "多少", "几块"]],
         "example": {
           "zh": "谢谢阿姨！一共多少钱？",
-          "py": "xiè xie ā yí ! yī gòng duō shao qián ?",
+          "py": "xiè xie ā yí ! yī gòng duō shao qián ?", "w": [["谢谢","xiè xie","thank you"],["阿姨","ā yí","auntie (polite address)"],["！"],["一共","yī gòng","in total"],["多少钱","duō shao qián","how much money"],["？"]],
           "en": "Thank you auntie! How much is it altogether?"
         }
       }
     }
   ],
   "warmup": [
-    {"zh": "打包", "py": "dǎ bāo", "en": "take away (pack it)"},
-    {"zh": "少辣", "py": "shǎo là", "en": "less spicy"},
-    {"zh": "咖啡乌", "py": "kā fēi wū", "en": "black coffee with sugar (kopi-o)"},
-    {"zh": "阿姨", "py": "ā yí", "en": "auntie"},
-    {"zh": "一共", "py": "yī gòng", "en": "altogether"},
-    {"zh": "刷卡", "py": "shuā kǎ", "en": "pay by card"}
+    {"zh": "打包", "py": "dǎ bāo", "w": [["打包","dǎ bāo","takeaway"]], "en": "take away (pack it)"},
+    {"zh": "少辣", "py": "shǎo là", "w": [["少辣","shǎo là","less spicy"]], "en": "less spicy"},
+    {"zh": "咖啡乌", "py": "kā fēi wū", "w": [["咖啡乌","kā fēi wū","kopi-o (black coffee)"]], "en": "black coffee with sugar (kopi-o)"},
+    {"zh": "阿姨", "py": "ā yí", "w": [["阿姨","ā yí","auntie (polite address)"]], "en": "auntie"},
+    {"zh": "一共", "py": "yī gòng", "w": [["一共","yī gòng","in total"]], "en": "altogether"},
+    {"zh": "刷卡", "py": "shuā kǎ", "w": [["刷卡","shuā kǎ","pay by card"]], "en": "pay by card"}
   ]
 }
