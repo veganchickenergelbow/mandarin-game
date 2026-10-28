@@ -1,6 +1,7 @@
 // Debrief: what happened this round, fish earned, review items, and a Next button.
-import { todayKey, stepsDone, reviewMiss } from '../core/progress.js';
-import { el, esc, pyHtml } from '../ui.js';
+import { dayStep, reviewMiss } from '../core/progress.js';
+import { warmupItems } from '../core/week.js';
+import { el, esc, pyHtml, hearts } from '../ui.js';
 import { zhLine } from '../ui/zh.js';
 import { speak } from '../speech.js';
 
@@ -44,18 +45,24 @@ export async function render(root, ctx, log = {}) {
     root.append(el(`<section class="card stack"><h3>Free talk</h3><p>You rated it: <b>${esc(log.rating)}</b>.</p>${log.notes ? `<p class="dim">Notes: ${esc(log.notes)}</p>` : ''}</section>`));
   }
 
+  if (isScene && log.trust) {
+    const t = log.trust, a = t.after || t.before, line = t.gained > 0 ? `${esc(log.char)} trusts you more ❤️` : t.moved < 0 ? `${esc(log.char)} trusted you a little less this time` : t.moved > 0 ? `${esc(log.char)} is warming to you` : `Trust with ${esc(log.char)}`;
+    root.append(el(`<section class="card ${t.gained > 0 ? 'good' : ''} stack center"><b>${line}</b><span class="hearts">${hearts(a.hearts)}</span><span class="dim small">${a.hearts >= 5 ? 'Fully trusted' : `${a.p} / 5 to the next heart`}</span></section>`));
+  }
+
   const rv = el('<section class="card stack"><h3>Added to review</h3></section>');
   if (added.length) added.forEach((a) => rv.append(el(`<div><span class="zh line-zh">${esc(a.zh)}</span> <span class="dim small">${esc(a.py)} · ${esc(a.en || '')}</span></div>`)));
   else rv.append(el('<p class="dim">Nothing yet. The review deck is feeling very relaxed.</p>'));
   root.append(rv);
 
-  // Next: the first undone Today step, else Home.
-  const done = stepsDone(save, todayKey());
+  // Next: the first undone step of this day, else back to the day (or Home).
+  const week = log.day ? await ctx.week() : null, dd = week && week.days.find((d) => d.day === log.day);
   const scenes = await ctx.scenes();
-  const nextStep = ['warmup', 'work', 'life'].find((k) => !done[k] && (k === 'warmup' || scenes[k][0]));
-  const label = { warmup: 'Next: tone warm-up', work: 'Next: work scene', life: 'Next: life scene' }[nextStep] || 'Back to Home';
+  const nextStep = dd && ['warmup', 'work', 'life'].find((k) => !dayStep(save, dd, k) && (k === 'warmup' || scenes.byId[dd[k]]));
+  const label = { warmup: 'Next: warm-up', work: 'Next: work scene', life: 'Next: life scene' }[nextStep] || (dd ? `Back to Day ${dd.day}` : 'Back to Home');
   const b = el(`<button class="btn big block">${label}</button>`);
-  b.onclick = () => (nextStep === 'warmup' ? ctx.go('warmup') : nextStep ? ctx.go('scene', { id: scenes[nextStep][0].id }) : ctx.go('home'));
+  b.onclick = () => (nextStep === 'warmup' ? ctx.go('warmup', { day: dd.day, items: warmupItems(save, dd, [scenes.byId[dd.work], scenes.byId[dd.life]].filter(Boolean)) })
+    : nextStep ? ctx.go('scene', { id: dd[nextStep], day: dd.day }) : dd ? ctx.go('day', { n: dd.day }) : ctx.go('home'));
   root.append(b);
-  if (nextStep) { const h = el('<button class="btn ghost block">Home</button>'); h.onclick = () => ctx.go('home'); root.append(h); }
+  if (nextStep || dd) { const h = el('<button class="btn ghost block">Home</button>'); h.onclick = () => ctx.go('home'); root.append(h); }
 }

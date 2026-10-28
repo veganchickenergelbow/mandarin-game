@@ -3,6 +3,7 @@
   "track": "life",
   "title": {"zh": "鸡饭摊", "en": "Ordering at the chicken rice stall"},
   "character": {
+    "id": "auntie",
     "name": "鸡饭阿姨",
     "role": "Chicken rice stall owner, hawker centre",
     "en": "Auntie has run this stall for twenty years. She is quick, warm and a little bossy, and the queue behind you is real. She speaks short Singapore-style Mandarin."

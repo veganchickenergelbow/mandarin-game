@@ -1,0 +1,3119 @@
+{
+ "id": "life_hdb_neighbour",
+ "track": "life",
+ "title": {
+  "zh": "邻居装修",
+  "en": "Noisy renovation next door"
+ },
+ "character": {
+  "id": "neighbour",
+  "name": "陈先生",
+  "role": "Neighbour renovating the flat next door",
+  "en": "Mr Tan is friendly but under pressure: the renovation is behind schedule and he is on site every day. He is not a bad neighbour, but he gets defensive if he feels blamed."
+ },
+ "goal": "Raise the early morning noise politely, disagree softly, hear him out, ask for a heads-up before the loud days, and end on good terms.",
+ "twists": [
+  {
+   "id": "says_nine",
+   "en": "He insists they only start at nine.",
+   "turn2": {
+    "zh": "我们都是九点才开始的啊，是不是你听错了？",
+    "py": "wǒ men dōu shì jiǔ diǎn cái kāi shǐ de a , shì bù shì nǐ tīng cuò le ?",
+    "w": [
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "都",
+      "dōu",
+      "all"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "九点",
+      "jiǔ diǎn",
+      "nine o'clock"
+     ],
+     [
+      "才",
+      "cái",
+      "only then"
+     ],
+     [
+      "开始",
+      "kāi shǐ",
+      "start"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "啊",
+      "a",
+      "(particle)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "是不是",
+      "shì bù shì",
+      "is it or not"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "听错",
+      "tīng cuò",
+      "mishear"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "We only start at nine, are you sure you heard right?"
+   },
+   "prompt": "He truly believes they follow the rules and feels accused. He softens if Lucas gives a specific time without blaming anyone.",
+   "group": [
+    "八点",
+    "八点半",
+    "昨天",
+    "点多",
+    "听到"
+   ],
+   "example": {
+    "zh": "确实大部分时间都还好，我也理解你们想早点做完，不过昨天早上八点半就有钻墙的声音了。",
+    "py": "què shí dà bù fèn shí jiān dōu hái hǎo , wǒ yě lǐ jiě nǐ men xiǎng zǎo diǎn zuò wán , bù guò zuó tiān zǎo shang bā diǎn bàn jiù yǒu zuān qiáng de shēng yīn le .",
+    "w": [
+     [
+      "确实",
+      "què shí",
+      "indeed"
+     ],
+     [
+      "大部分",
+      "dà bù fèn",
+      "most of"
+     ],
+     [
+      "时间",
+      "shí jiān",
+      "time"
+     ],
+     [
+      "都",
+      "dōu",
+      "all"
+     ],
+     [
+      "还好",
+      "hái hǎo",
+      "not bad"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "理解",
+      "lǐ jiě",
+      "understand"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "想",
+      "xiǎng",
+      "want, think"
+     ],
+     [
+      "早点",
+      "zǎo diǎn",
+      "a bit earlier"
+     ],
+     [
+      "做完",
+      "zuò wán",
+      "finish doing"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "昨天",
+      "zuó tiān",
+      "yesterday"
+     ],
+     [
+      "早上",
+      "zǎo shang",
+      "morning"
+     ],
+     [
+      "八点半",
+      "bā diǎn bàn",
+      "half past eight"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "钻墙",
+      "zuān qiáng",
+      "drill the wall"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "声音",
+      "shēng yīn",
+      "sound"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Most of the time it is fine, and I understand you want to finish early, but yesterday morning there was drilling at half past eight."
+   }
+  },
+  {
+   "id": "contractor",
+   "en": "He says it is the contractor, not him.",
+   "turn2": {
+    "zh": "那是师傅自己开工的，我也管不了。",
+    "py": "nà shì shī fu zì jǐ kāi gōng de , wǒ yě guǎn bù liǎo .",
+    "w": [
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "师傅",
+      "shī fu",
+      "driver, master (polite)"
+     ],
+     [
+      "自己",
+      "zì jǐ",
+      "oneself"
+     ],
+     [
+      "开工",
+      "kāi gōng",
+      "start work"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "管不了",
+      "guǎn bù liǎo",
+      "cannot control"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "That is the contractor starting by himself, I cannot control that."
+   },
+   "prompt": "He feels it is not really his fault. He softens if Lucas understands his position and asks him to pass on a message, not to take blame.",
+   "group": [
+    "说一下",
+    "转告",
+    "提醒",
+    "告诉",
+    "跟师傅"
+   ],
+   "example": {
+    "zh": "我理解师傅有自己的安排，确实不太好管，不过能不能麻烦您跟师傅说一下？",
+    "py": "wǒ lǐ jiě shī fu yǒu zì jǐ de ān pái , què shí bù tài hǎo guǎn , bù guò néng bù néng má fan nín gēn shī fu shuō yī xià ?",
+    "w": [
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "理解",
+      "lǐ jiě",
+      "understand"
+     ],
+     [
+      "师傅",
+      "shī fu",
+      "driver, master (polite)"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "自己",
+      "zì jǐ",
+      "oneself"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "安排",
+      "ān pái",
+      "arrange"
+     ],
+     [
+      "，"
+     ],
+     [
+      "确实",
+      "què shí",
+      "indeed"
+     ],
+     [
+      "不",
+      "bù",
+      "not"
+     ],
+     [
+      "太",
+      "tài",
+      "too"
+     ],
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "管",
+      "guǎn",
+      "manage, control"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "能不能",
+      "néng bù néng",
+      "can or not"
+     ],
+     [
+      "麻烦",
+      "má fan",
+      "trouble, bother"
+     ],
+     [
+      "您",
+      "nín",
+      "you (polite)"
+     ],
+     [
+      "跟",
+      "gēn",
+      "with"
+     ],
+     [
+      "师傅",
+      "shī fu",
+      "driver, master (polite)"
+     ],
+     [
+      "说一下",
+      "shuō yī xià",
+      "say a bit"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "I understand the contractor has his own schedule and it is not easy to control, but could you please have a word with him?"
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "你好，有什么事吗？",
+    "py": "nǐ hǎo , yǒu shén me shì ma ?",
+    "w": [
+     [
+      "你好",
+      "nǐ hǎo",
+      "hello"
+     ],
+     [
+      "，"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "什么",
+      "shén me",
+      "what"
+     ],
+     [
+      "事",
+      "shì",
+      "matter, thing"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Hello, is there something?",
+    "hurried": {
+     "zh": "你好，我在监工，有什么事吗？",
+     "py": "nǐ hǎo , wǒ zài jiān gōng , yǒu shén me shì ma ?",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "监工",
+       "jiān gōng",
+       "supervise work"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "事",
+       "shì",
+       "matter, thing"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Hello, I am supervising the work. Is there something?"
+    }
+   },
+   "options": [
+    {
+     "zh": "你好，我住隔壁。打扰一下，想跟您说装修的小事，您现在方便吗？",
+     "py": "nǐ hǎo , wǒ zhù gé bì . dǎ rǎo yī xià , xiǎng gēn nín shuō zhuāng xiū de xiǎo shì , nín xiàn zài fāng biàn ma ?",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "住",
+       "zhù",
+       "live (at)"
+      ],
+      [
+       "隔壁",
+       "gé bì",
+       "next door"
+      ],
+      [
+       "。"
+      ],
+      [
+       "打扰",
+       "dǎ rǎo",
+       "disturb"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "跟",
+       "gēn",
+       "with"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "小事",
+       "xiǎo shì",
+       "small matter"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Hello, I live next door. Sorry to disturb, I wanted to mention a small thing about the renovation. Is this a good time?",
+     "type": "fit",
+     "why": "Friendly opener, who you are, small topic, and you ask if it is a good time. He is ready to listen."
+    },
+    {
+     "zh": "你好，我是邻居。",
+     "py": "nǐ hǎo , wǒ shì lín jū .",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "邻居",
+       "lín jū",
+       "neighbour"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Hello, I am your neighbour.",
+     "type": "generic",
+     "why": "Nice, but he still does not know why you are at his door."
+    },
+    {
+     "zh": "你们太吵了，我真的受不了了！",
+     "py": "nǐ men tài chǎo le , wǒ zhēn de shòu bù liǎo le !",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "受不了",
+       "shòu bù liǎo",
+       "cannot stand"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "You are too noisy, I really cannot stand it!",
+     "type": "blunt",
+     "why": "Complaint first, greeting never. He will defend himself at once."
+    },
+    {
+     "zh": "没事没事，我只是路过，打扰了。",
+     "py": "méi shì méi shì , wǒ zhǐ shì lù guò , dǎ rǎo le .",
+     "w": [
+      [
+       "没事",
+       "méi shì",
+       "it is nothing"
+      ],
+      [
+       "没事",
+       "méi shì",
+       "it is nothing"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "只是",
+       "zhǐ shì",
+       "just, only"
+      ],
+      [
+       "路过",
+       "lù guò",
+       "pass by"
+      ],
+      [
+       "，"
+      ],
+      [
+       "打扰",
+       "dǎ rǎo",
+       "disturb"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Nothing, nothing, I am just passing by, sorry to disturb.",
+     "type": "cave",
+     "why": "You walked up to his door, then retreat. The noise starts again tomorrow."
+    }
+   ],
+   "intent": {
+    "en": "Greet him politely, say you live next door, and ask if it is a good time to mention the renovation.",
+    "groups": [
+     [
+      "你好",
+      "您好",
+      "打扰",
+      "不好意思",
+      "请问"
+     ],
+     [
+      "隔壁",
+      "邻居",
+      "住",
+      "对门"
+     ],
+     [
+      "方便",
+      "有空",
+      "一下",
+      "小事"
+     ]
+    ],
+    "example": {
+     "zh": "你好，我住隔壁。打扰一下，想跟您说装修的小事，您现在方便吗？",
+     "py": "nǐ hǎo , wǒ zhù gé bì . dǎ rǎo yī xià , xiǎng gēn nín shuō zhuāng xiū de xiǎo shì , nín xiàn zài fāng biàn ma ?",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "住",
+       "zhù",
+       "live (at)"
+      ],
+      [
+       "隔壁",
+       "gé bì",
+       "next door"
+      ],
+      [
+       "。"
+      ],
+      [
+       "打扰",
+       "dǎ rǎo",
+       "disturb"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "跟",
+       "gēn",
+       "with"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "小事",
+       "xiǎo shì",
+       "small matter"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Hello, I live next door. Sorry to disturb, I wanted to mention a small thing about the renovation. Is this a good time?"
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "哦，是装修的事吗？吵到你们了吗？",
+    "py": "ò , shì zhuāng xiū de shì ma ? chǎo dào nǐ men le ma ?",
+    "w": [
+     [
+      "哦",
+      "ò",
+      "(friendly softener)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "装修",
+      "zhuāng xiū",
+      "renovation"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "事",
+      "shì",
+      "matter, thing"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "吵到",
+      "chǎo dào",
+      "disturb with noise"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Oh, is it about the renovation? Is it disturbing you?",
+    "hurried": {
+     "zh": "装修的事吗？吵到你们了？我真的有点忙。",
+     "py": "zhuāng xiū de shì ma ? chǎo dào nǐ men le ? wǒ zhēn de yǒu diǎn máng .",
+     "w": [
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "事",
+       "shì",
+       "matter, thing"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "吵到",
+       "chǎo dào",
+       "disturb with noise"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "忙",
+       "máng",
+       "busy"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Is it about the renovation? Disturbing you? I am rather busy."
+    }
+   },
+   "options": [
+    {
+     "zh": "确实有点吵。我理解装修需要时间，不过我记得规定平时九点以后才能开工，早上能不能晚一点开始？",
+     "py": "què shí yǒu diǎn chǎo . wǒ lǐ jiě zhuāng xiū xū yào shí jiān , bù guò wǒ jì de guī dìng píng shí jiǔ diǎn yǐ hòu cái néng kāi gōng , zǎo shang néng bù néng wǎn yī diǎn kāi shǐ ?",
+     "w": [
+      [
+       "确实",
+       "què shí",
+       "indeed"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不过",
+       "bù guò",
+       "but, however"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "记得",
+       "jì de",
+       "remember"
+      ],
+      [
+       "规定",
+       "guī dìng",
+       "rule"
+      ],
+      [
+       "平时",
+       "píng shí",
+       "usually, on weekdays"
+      ],
+      [
+       "九点",
+       "jiǔ diǎn",
+       "nine o'clock"
+      ],
+      [
+       "以后",
+       "yǐ hòu",
+       "after, later"
+      ],
+      [
+       "才",
+       "cái",
+       "only then"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "开工",
+       "kāi gōng",
+       "start work"
+      ],
+      [
+       "，"
+      ],
+      [
+       "早上",
+       "zǎo shang",
+       "morning"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "晚",
+       "wǎn",
+       "late"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "It is a bit noisy. I understand renovation takes time, but I remember the rule is that work starts after nine on weekdays. Could you start a bit later in the morning?",
+     "type": "fit",
+     "why": "You admit the problem, show understanding, then ask for one small change. That is how to disagree softly."
+    },
+    {
+     "zh": "有一点吧，没关系，反正也不会很久。",
+     "py": "yǒu yī diǎn ba , méi guān xi , fǎn zhèng yě bù huì hěn jiǔ .",
+     "w": [
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没关系",
+       "méi guān xi",
+       "never mind"
+      ],
+      [
+       "，"
+      ],
+      [
+       "反正",
+       "fǎn zhèng",
+       "anyway"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "很久",
+       "hěn jiǔ",
+       "very long"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "A little, but it does not matter, it will not be long anyway.",
+     "type": "generic",
+     "why": "You say there is a problem, then wave it away. Nothing changes."
+    },
+    {
+     "zh": "你们根本不遵守规定，早上七点就开始了！",
+     "py": "nǐ men gēn běn bù zūn shǒu guī dìng , zǎo shang qī diǎn jiù kāi shǐ le !",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "根本",
+       "gēn běn",
+       "at all"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "遵守",
+       "zūn shǒu",
+       "follow (rules)"
+      ],
+      [
+       "规定",
+       "guī dìng",
+       "rule"
+      ],
+      [
+       "，"
+      ],
+      [
+       "早上",
+       "zǎo shang",
+       "morning"
+      ],
+      [
+       "七点",
+       "qī diǎn",
+       "seven o'clock"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "You do not follow the rules at all, you start at seven in the morning!",
+     "type": "blunt",
+     "why": "An accusation, and a guess. If the time is wrong, you lose all credibility."
+    },
+    {
+     "zh": "没有没有，一点都不吵，你们慢慢做。",
+     "py": "méi yǒu méi yǒu , yī diǎn dōu bù chǎo , nǐ men màn màn zuò .",
+     "w": [
+      [
+       "没有",
+       "méi yǒu",
+       "do not have"
+      ],
+      [
+       "没有",
+       "méi yǒu",
+       "do not have"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "慢慢",
+       "màn màn",
+       "slowly, take your time"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No no, not noisy at all, take your time.",
+     "type": "cave",
+     "why": "You just gave away the one thing you came to say."
+    }
+   ],
+   "intent": {
+    "en": "Agree it is noisy and show understanding, then ask, with 不过, that they start later in the morning.",
+    "groups": [
+     [
+      "确实",
+      "的确",
+      "没错",
+      "是有点",
+      "有点吵"
+     ],
+     [
+      "理解",
+      "明白",
+      "体谅",
+      "知道"
+     ],
+     [
+      "不过",
+      "但是",
+      "可是",
+      "只是"
+     ]
+    ],
+    "example": {
+     "zh": "确实有点吵。我理解装修需要时间，不过我记得规定平时九点以后才能开工，早上能不能晚一点开始？",
+     "py": "què shí yǒu diǎn chǎo . wǒ lǐ jiě zhuāng xiū xū yào shí jiān , bù guò wǒ jì de guī dìng píng shí jiǔ diǎn yǐ hòu cái néng kāi gōng , zǎo shang néng bù néng wǎn yī diǎn kāi shǐ ?",
+     "w": [
+      [
+       "确实",
+       "què shí",
+       "indeed"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不过",
+       "bù guò",
+       "but, however"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "记得",
+       "jì de",
+       "remember"
+      ],
+      [
+       "规定",
+       "guī dìng",
+       "rule"
+      ],
+      [
+       "平时",
+       "píng shí",
+       "usually, on weekdays"
+      ],
+      [
+       "九点",
+       "jiǔ diǎn",
+       "nine o'clock"
+      ],
+      [
+       "以后",
+       "yǐ hòu",
+       "after, later"
+      ],
+      [
+       "才",
+       "cái",
+       "only then"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "开工",
+       "kāi gōng",
+       "start work"
+      ],
+      [
+       "，"
+      ],
+      [
+       "早上",
+       "zǎo shang",
+       "morning"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "晚",
+       "wǎn",
+       "late"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "It is a bit noisy. I understand renovation takes time, but I remember the rule is that work starts after nine on weekdays. Could you start a bit later in the morning?"
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "唉，我知道。不过也就几个星期，很快就做完了。",
+    "py": "āi , wǒ zhī dao . bù guò yě jiù jǐ ge xīng qī , hěn kuài jiù zuò wán le .",
+    "w": [
+     [
+      "唉",
+      "āi",
+      "sigh"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "知道",
+      "zhī dao",
+      "know"
+     ],
+     [
+      "。"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "几个",
+      "jǐ ge",
+      "a few"
+     ],
+     [
+      "星期",
+      "xīng qī",
+      "week"
+     ],
+     [
+      "，"
+     ],
+     [
+      "很快",
+      "hěn kuài",
+      "very fast"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "做完",
+      "zuò wán",
+      "finish doing"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Yes, I know. But it is only a few weeks and then it will be done.",
+    "hurried": {
+     "zh": "我知道，不过就几个星期，我还要赶工。",
+     "py": "wǒ zhī dao , bù guò jiù jǐ ge xīng qī , wǒ hái yào gǎn gōng .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不过",
+       "bù guò",
+       "but, however"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "几个",
+       "jǐ ge",
+       "a few"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "还要",
+       "hái yào",
+       "still need to"
+      ],
+      [
+       "赶工",
+       "gǎn gōng",
+       "rush the work"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I know, but it is only a few weeks and I need to rush the work."
+    }
+   },
+   "options": [
+    {
+     "zh": "我明白，几个星期很快就过去了。我们只是想知道哪几天最吵。",
+     "py": "wǒ míng bai , jǐ ge xīng qī hěn kuài jiù guò qu le . wǒ men zhǐ shì xiǎng zhī dao nǎ jǐ tiān zuì chǎo .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "明白",
+       "míng bai",
+       "understood"
+      ],
+      [
+       "，"
+      ],
+      [
+       "几个",
+       "jǐ ge",
+       "a few"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "过去",
+       "guò qu",
+       "pass by"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "只是",
+       "zhǐ shì",
+       "just, only"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "哪",
+       "nǎ",
+       "which"
+      ],
+      [
+       "几天",
+       "jǐ tiān",
+       "a few days"
+      ],
+      [
+       "最",
+       "zuì",
+       "most"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I understand, a few weeks go by quickly. We just want to know which days are the loudest.",
+     "type": "fit",
+     "why": "You accept his timeline, which calms him, and you set up the next request."
+    },
+    {
+     "zh": "哦，是吗，那好吧。",
+     "py": "ò , shì ma , nà hǎo ba .",
+     "w": [
+      [
+       "哦",
+       "ò",
+       "(friendly softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "好吧",
+       "hǎo ba",
+       "okay then"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Oh, is that so, okay then.",
+     "type": "generic",
+     "why": "You close the topic with a shrug. Mention what you need."
+    },
+    {
+     "zh": "几个星期也很长，我睡不好怎么办？",
+     "py": "jǐ ge xīng qī yě hěn zhǎng , wǒ shuì bù hǎo zěn me bàn ?",
+     "w": [
+      [
+       "几个",
+       "jǐ ge",
+       "a few"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "长",
+       "zhǎng",
+       "long"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "睡不好",
+       "shuì bù hǎo",
+       "cannot sleep well"
+      ],
+      [
+       "怎么办",
+       "zěn me bàn",
+       "what to do"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "A few weeks is long too, what about my sleep?",
+     "type": "blunt",
+     "why": "A fair feeling, but it re-opens the argument he just ended."
+    },
+    {
+     "zh": "那我就忍一忍吧，不麻烦你们了。",
+     "py": "nà wǒ jiù rěn yī rěn ba , bù má fan nǐ men le .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "忍",
+       "rěn",
+       "put up with"
+      ],
+      [
+       "一忍",
+       "yī rěn",
+       "a bit of patience"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Then I will put up with it, no trouble to you.",
+     "type": "cave",
+     "why": "You choose silence. The drilling will not."
+    }
+   ],
+   "intent": {
+    "en": "Show you understand it is only a few weeks, and say you would like to know the loudest days.",
+    "groups": [
+     [
+      "明白",
+      "理解",
+      "知道",
+      "体谅"
+     ],
+     [
+      "几个星期",
+      "几周",
+      "很快",
+      "一阵子",
+      "不会很久",
+      "短",
+      "哪几天",
+      "最吵"
+     ]
+    ],
+    "example": {
+     "zh": "我明白，几个星期很快就过去了。我们只是想知道哪几天最吵。",
+     "py": "wǒ míng bai , jǐ ge xīng qī hěn kuài jiù guò qu le . wǒ men zhǐ shì xiǎng zhī dao nǎ jǐ tiān zuì chǎo .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "明白",
+       "míng bai",
+       "understood"
+      ],
+      [
+       "，"
+      ],
+      [
+       "几个",
+       "jǐ ge",
+       "a few"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "过去",
+       "guò qu",
+       "pass by"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "只是",
+       "zhǐ shì",
+       "just, only"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "哪",
+       "nǎ",
+       "which"
+      ],
+      [
+       "几天",
+       "jǐ tiān",
+       "a few days"
+      ],
+      [
+       "最",
+       "zuì",
+       "most"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I understand, a few weeks go by quickly. We just want to know which days are the loudest."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "那你想我怎么做？",
+    "py": "nà nǐ xiǎng wǒ zěn me zuò ?",
+    "w": [
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "想",
+      "xiǎng",
+      "want, think"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "So what would you like me to do?",
+    "hurried": {
+     "zh": "好啦，那你想我怎么做？",
+     "py": "hǎo la , nà nǐ xiǎng wǒ zěn me zuò ?",
+     "w": [
+      [
+       "好啦",
+       "hǎo la",
+       "okay already"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Okay, so what do you want me to do?"
+    }
+   },
+   "options": [
+    {
+     "zh": "钻墙或者敲墙的那几天，能不能提前通知我们一声？我们可以先安排出去。",
+     "py": "zuān qiáng huò zhě qiāo qiáng de nà jǐ tiān , néng bù néng tí qián tōng zhī wǒ men yī shēng ? wǒ men kě yǐ xiān ān pái chū qù .",
+     "w": [
+      [
+       "钻墙",
+       "zuān qiáng",
+       "drill the wall"
+      ],
+      [
+       "或者",
+       "huò zhě",
+       "or"
+      ],
+      [
+       "敲墙",
+       "qiāo qiáng",
+       "knock down a wall"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "几天",
+       "jǐ tiān",
+       "a few days"
+      ],
+      [
+       "，"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "提前",
+       "tí qián",
+       "in advance"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "一声",
+       "yī shēng",
+       "a word, a heads-up"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "出去",
+       "chū qù",
+       "go out"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "On the days with drilling or breaking walls, could you let us know in advance? We can plan to be out.",
+     "type": "fit",
+     "why": "A small, doable request with a reason. Easy for him to agree to."
+    },
+    {
+     "zh": "你们尽量不要太吵就好了。",
+     "py": "nǐ men jǐn liàng bù yào tài chǎo jiù hǎo le .",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "尽量",
+       "jǐn liàng",
+       "do one's best"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Just try not to be too noisy.",
+     "type": "generic",
+     "why": "Nice wish, but he cannot act on it."
+    },
+    {
+     "zh": "你们不要在早上开工，就这么简单。",
+     "py": "nǐ men bù yào zài zǎo shang kāi gōng , jiù zhè me jiǎn dān .",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "早上",
+       "zǎo shang",
+       "morning"
+      ],
+      [
+       "开工",
+       "kāi gōng",
+       "start work"
+      ],
+      [
+       "，"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "这么",
+       "zhè me",
+       "so, like this"
+      ],
+      [
+       "简单",
+       "jiǎn dān",
+       "simple"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Do not start work in the morning, it is that simple.",
+     "type": "blunt",
+     "why": "Not realistic, and it sounds like an order."
+    },
+    {
+     "zh": "不用不用，我自己想办法就好，不麻烦你们了。",
+     "py": "bù yòng bù yòng , wǒ zì jǐ xiǎng bàn fǎ jiù hǎo , bù má fan nǐ men le .",
+     "w": [
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "办法",
+       "bàn fǎ",
+       "way, method"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No no, I will manage myself, no trouble to you.",
+     "type": "cave",
+     "why": "You lose the one thing worth asking for."
+    }
+   ],
+   "intent": {
+    "en": "Ask him to let you know in advance on the days with drilling.",
+    "groups": [
+     [
+      "提前",
+      "事先",
+      "先",
+      "早点"
+     ],
+     [
+      "通知",
+      "告诉",
+      "说一声",
+      "讲一声",
+      "知会",
+      "发消息"
+     ]
+    ],
+    "example": {
+     "zh": "钻墙或者敲墙的那几天，能不能提前通知我们一声？我们可以先安排出去。",
+     "py": "zuān qiáng huò zhě qiāo qiáng de nà jǐ tiān , néng bù néng tí qián tōng zhī wǒ men yī shēng ? wǒ men kě yǐ xiān ān pái chū qù .",
+     "w": [
+      [
+       "钻墙",
+       "zuān qiáng",
+       "drill the wall"
+      ],
+      [
+       "或者",
+       "huò zhě",
+       "or"
+      ],
+      [
+       "敲墙",
+       "qiāo qiáng",
+       "knock down a wall"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "几天",
+       "jǐ tiān",
+       "a few days"
+      ],
+      [
+       "，"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "提前",
+       "tí qián",
+       "in advance"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "一声",
+       "yī shēng",
+       "a word, a heads-up"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "出去",
+       "chū qù",
+       "go out"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "On the days with drilling or breaking walls, could you let us know in advance? We can plan to be out."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "好，没问题。那几天我提前发信息给你。",
+    "py": "hǎo , méi wèn tí . nà jǐ tiān wǒ tí qián fā xìn xī gěi nǐ .",
+    "w": [
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "，"
+     ],
+     [
+      "没",
+      "méi",
+      "not have"
+     ],
+     [
+      "问题",
+      "wèn tí",
+      "questions"
+     ],
+     [
+      "。"
+     ],
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "几天",
+      "jǐ tiān",
+      "a few days"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "提前",
+      "tí qián",
+      "in advance"
+     ],
+     [
+      "发",
+      "fā",
+      "send"
+     ],
+     [
+      "信息",
+      "xìn xī",
+      "message"
+     ],
+     [
+      "给",
+      "gěi",
+      "give"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Okay, no problem. I will message you beforehand on those days.",
+    "hurried": {
+     "zh": "好，我会发信息给你。我先去忙了。",
+     "py": "hǎo , wǒ huì fā xìn xī gěi nǐ . wǒ xiān qù máng le .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "发",
+       "fā",
+       "send"
+      ],
+      [
+       "信息",
+       "xìn xī",
+       "message"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "忙",
+       "máng",
+       "busy"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, I will message you. I need to get back to work."
+    }
+   },
+   "options": [
+    {
+     "zh": "谢谢你，真的很体谅。装修辛苦了，有需要帮忙的话，随时告诉我。",
+     "py": "xiè xie nǐ , zhēn de hěn tǐ liàng . zhuāng xiū xīn kǔ le , yǒu xū yào bāng máng de huà , suí shí gào su wǒ .",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "，"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "体谅",
+       "tǐ liàng",
+       "be considerate"
+      ],
+      [
+       "。"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "辛苦",
+       "xīn kǔ",
+       "hard work"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "帮忙",
+       "bāng máng",
+       "help out"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "，"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "告诉",
+       "gào su",
+       "tell"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Thank you, that is very considerate. Renovation is hard work, tell me any time if you need help.",
+     "type": "fit",
+     "why": "Thanks, you recognise his effort and offer help. You end as neighbours, not opponents."
+    },
+    {
+     "zh": "好，那就这样吧。",
+     "py": "hǎo , nà jiù zhè yàng ba .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "这样",
+       "zhè yàng",
+       "like this"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, let us leave it there.",
+     "type": "generic",
+     "why": "Fine, but no warmth. You will meet in the lift for months."
+    },
+    {
+     "zh": "你最好说到做到，不然我会去投诉。",
+     "py": "nǐ zuì hǎo shuō dào zuò dào , bù rán wǒ huì qù tóu sù .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "最好",
+       "zuì hǎo",
+       "best, had better"
+      ],
+      [
+       "说到做到",
+       "shuō dào zuò dào",
+       "keep your word"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不然",
+       "bù rán",
+       "otherwise"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "投诉",
+       "tóu sù",
+       "complain"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You had better keep your word or I will complain.",
+     "type": "blunt",
+     "why": "A threat after he agreed. Good deal turned into a bad ending."
+    },
+    {
+     "zh": "你们不通知也可以，你们方便就好。",
+     "py": "nǐ men bù tōng zhī yě kě yǐ , nǐ men fāng biàn jiù hǎo .",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "It is also fine if you do not tell us, whatever suits you.",
+     "type": "cave",
+     "why": "You just cancelled the request you worked for."
+    }
+   ],
+   "intent": {
+    "en": "Thank him and say something kind about the renovation work.",
+    "groups": [
+     [
+      "谢谢",
+      "多谢",
+      "感谢"
+     ],
+     [
+      "辛苦",
+      "加油",
+      "体谅",
+      "顺利",
+      "随时",
+      "帮忙"
+     ]
+    ],
+    "example": {
+     "zh": "谢谢你，真的很体谅。装修辛苦了，有需要帮忙的话，随时告诉我。",
+     "py": "xiè xie nǐ , zhēn de hěn tǐ liàng . zhuāng xiū xīn kǔ le , yǒu xū yào bāng máng de huà , suí shí gào su wǒ .",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "，"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "体谅",
+       "tǐ liàng",
+       "be considerate"
+      ],
+      [
+       "。"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "辛苦",
+       "xīn kǔ",
+       "hard work"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "帮忙",
+       "bāng máng",
+       "help out"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "，"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "告诉",
+       "gào su",
+       "tell"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Thank you, that is very considerate. Renovation is hard work, tell me any time if you need help."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "邻居",
+   "py": "lín jū",
+   "w": [
+    [
+     "邻居",
+     "lín jū",
+     "neighbour"
+    ]
+   ],
+   "en": "neighbour"
+  },
+  {
+   "zh": "装修",
+   "py": "zhuāng xiū",
+   "w": [
+    [
+     "装修",
+     "zhuāng xiū",
+     "renovation"
+    ]
+   ],
+   "en": "renovation"
+  },
+  {
+   "zh": "打扰",
+   "py": "dǎ rǎo",
+   "w": [
+    [
+     "打扰",
+     "dǎ rǎo",
+     "disturb"
+    ]
+   ],
+   "en": "disturb"
+  },
+  {
+   "zh": "钻墙",
+   "py": "zuān qiáng",
+   "w": [
+    [
+     "钻墙",
+     "zuān qiáng",
+     "drill the wall"
+    ]
+   ],
+   "en": "drill the wall"
+  },
+  {
+   "zh": "提前",
+   "py": "tí qián",
+   "w": [
+    [
+     "提前",
+     "tí qián",
+     "in advance"
+    ]
+   ],
+   "en": "in advance"
+  },
+  {
+   "zh": "通知",
+   "py": "tōng zhī",
+   "w": [
+    [
+     "通知",
+     "tōng zhī",
+     "notify"
+    ]
+   ],
+   "en": "notify"
+  }
+ ]
+}

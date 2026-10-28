@@ -1,0 +1,2036 @@
+{
+ "id": "life_grab_ride",
+ "track": "life",
+ "title": {
+  "zh": "坐Grab回家",
+  "en": "Taking a Grab home"
+ },
+ "character": {
+  "id": "driver",
+  "name": "Grab师傅",
+  "role": "Grab driver",
+  "en": "The driver is middle-aged, chatty and friendly, and keeps one eye on the GPS. He speaks easy Singapore-style Mandarin and likes clear, short directions."
+ },
+ "goal": "Confirm the destination, choose the route, guide the driver with left and right turns, and say where to stop.",
+ "twists": [
+  {
+   "id": "road_closed",
+   "en": "The road ahead is closed, so a detour is needed.",
+   "turn2": {
+    "zh": "不好意思，前面的路封了，要绕路，大概多五分钟，可以吗？",
+    "py": "bù hǎo yì si , qián mian de lù fēng le , yào rào lù , dà gài duō wǔ fēn zhōng , kě yǐ ma ?",
+    "w": [
+     [
+      "不好意思",
+      "bù hǎo yì si",
+      "sorry, excuse me"
+     ],
+     [
+      "，"
+     ],
+     [
+      "前面",
+      "qián mian",
+      "ahead, in front"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "路",
+      "lù",
+      "road"
+     ],
+     [
+      "封",
+      "fēng",
+      "closed, sealed"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "绕路",
+      "rào lù",
+      "take a detour"
+     ],
+     [
+      "，"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "多",
+      "duō",
+      "many, more"
+     ],
+     [
+      "五分钟",
+      "wǔ fēn zhōng",
+      "five minutes"
+     ],
+     [
+      "，"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Sorry, the road ahead is closed so we need a detour, about five minutes extra. Is that okay?"
+   },
+   "prompt": "The driver worries you will be upset about the extra time. He relaxes if you agree calmly and say you are not in a rush.",
+   "group": [
+    "绕路",
+    "绕",
+    "多几分钟",
+    "分钟"
+   ],
+   "example": {
+    "zh": "可以，绕路吧，多几分钟没关系，我不赶时间。",
+    "py": "kě yǐ , rào lù ba , duō jǐ fēn zhōng méi guān xi , wǒ bù gǎn shí jiān .",
+    "w": [
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "，"
+     ],
+     [
+      "绕路",
+      "rào lù",
+      "take a detour"
+     ],
+     [
+      "吧",
+      "ba",
+      "(softener)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "多",
+      "duō",
+      "many, more"
+     ],
+     [
+      "几分钟",
+      "jǐ fēn zhōng",
+      "a few minutes"
+     ],
+     [
+      "没关系",
+      "méi guān xi",
+      "never mind"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "不",
+      "bù",
+      "not"
+     ],
+     [
+      "赶",
+      "gǎn",
+      "rush"
+     ],
+     [
+      "时间",
+      "shí jiān",
+      "time"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Okay, take the detour. A few extra minutes is fine, I am not in a rush."
+   }
+  },
+  {
+   "id": "missed_turn",
+   "en": "The driver missed the expressway entrance.",
+   "turn2": {
+    "zh": "哎呀，我错过高速的入口了。现在走普通路也可以吗？",
+    "py": "āi yā , wǒ cuò guò gāo sù de rù kǒu le . xiàn zài zǒu pǔ tōng lù yě kě yǐ ma ?",
+    "w": [
+     [
+      "哎呀",
+      "āi yā",
+      "oh no"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "错过",
+      "cuò guò",
+      "miss"
+     ],
+     [
+      "高速",
+      "gāo sù",
+      "expressway"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "入口",
+      "rù kǒu",
+      "entrance"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ],
+     [
+      "现在",
+      "xiàn zài",
+      "now"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "普通",
+      "pǔ tōng",
+      "ordinary"
+     ],
+     [
+      "路",
+      "lù",
+      "road"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Oh no, I missed the expressway entrance. Is it okay to take the normal roads now?"
+   },
+   "prompt": "The driver feels bad about the mistake. He relaxes if you stay calm, accept the normal road and do not blame him.",
+   "group": [
+    "普通路",
+    "小路",
+    "别的路",
+    "掉头"
+   ],
+   "example": {
+    "zh": "没关系，走普通路也可以，我不赶时间。",
+    "py": "méi guān xi , zǒu pǔ tōng lù yě kě yǐ , wǒ bù gǎn shí jiān .",
+    "w": [
+     [
+      "没关系",
+      "méi guān xi",
+      "never mind"
+     ],
+     [
+      "，"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "普通路",
+      "pǔ tōng lù",
+      "normal road"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "不",
+      "bù",
+      "not"
+     ],
+     [
+      "赶",
+      "gǎn",
+      "rush"
+     ],
+     [
+      "时间",
+      "shí jiān",
+      "time"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "No problem, normal roads are fine, I am not in a rush."
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "你好，是去宏茂桥三百五十座，对吗？",
+    "py": "nǐ hǎo , shì qù hóng mào qiáo sān bǎi wǔ shí zuò , duì ma ?",
+    "w": [
+     [
+      "你好",
+      "nǐ hǎo",
+      "hello"
+     ],
+     [
+      "，"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "去",
+      "qù",
+      "go"
+     ],
+     [
+      "宏茂桥",
+      "hóng mào qiáo",
+      "Ang Mo Kio"
+     ],
+     [
+      "三百五十座",
+      "sān bǎi wǔ shí zuò",
+      "Block 350"
+     ],
+     [
+      "，"
+     ],
+     [
+      "对",
+      "duì",
+      "right, correct"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Hello, is it to Ang Mo Kio Block 350?",
+    "hurried": {
+     "zh": "你好，宏茂桥三百五十座，对吗？我先开了。",
+     "py": "nǐ hǎo , hóng mào qiáo sān bǎi wǔ shí zuò , duì ma ? wǒ xiān kāi le .",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "宏茂桥",
+       "hóng mào qiáo",
+       "Ang Mo Kio"
+      ],
+      [
+       "三百五十座",
+       "sān bǎi wǔ shí zuò",
+       "Block 350"
+      ],
+      [
+       "，"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Hello, Ang Mo Kio Block 350, right? I will start driving."
+    }
+   },
+   "options": [
+    {
+     "zh": "对，是宏茂桥三百五十座，谢谢师傅。",
+     "py": "duì , shì hóng mào qiáo sān bǎi wǔ shí zuò , xiè xie shī fu .",
+     "w": [
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "，"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "宏茂桥",
+       "hóng mào qiáo",
+       "Ang Mo Kio"
+      ],
+      [
+       "三百五十座",
+       "sān bǎi wǔ shí zuò",
+       "Block 350"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "师傅",
+       "shī fu",
+       "driver, master (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes, Ang Mo Kio Block 350, thank you uncle.",
+     "type": "fit",
+     "why": "A clear yes with the address repeated. The driver knows you saw the right place."
+    },
+    {
+     "zh": "对，就是那里。",
+     "py": "duì , jiù shì nà li .",
+     "w": [
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "，"
+      ],
+      [
+       "就是",
+       "jiù shì",
+       "that is, simply"
+      ],
+      [
+       "那里",
+       "nà li",
+       "there"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes, that place.",
+     "type": "generic",
+     "why": "He cannot tell if you mean the same address. Repeat it back."
+    },
+    {
+     "zh": "不对，我要去机场。",
+     "py": "bù duì , wǒ yào qù jī chǎng .",
+     "w": [
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "机场",
+       "jī chǎng",
+       "airport"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No, I am going to the airport.",
+     "type": "off",
+     "why": "Wrong destination. You would be driven the wrong way."
+    },
+    {
+     "zh": "你看手机上的地址啊。",
+     "py": "nǐ kàn shǒu jī shàng de dì zhǐ a .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "手机",
+       "shǒu jī",
+       "mobile phone"
+      ],
+      [
+       "上",
+       "shàng",
+       "above, on"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "地址",
+       "dì zhǐ",
+       "address"
+      ],
+      [
+       "啊",
+       "a",
+       "(particle)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Look at the address on your phone.",
+     "type": "blunt",
+     "why": "He asked politely. It costs nothing to answer politely."
+    }
+   ],
+   "intent": {
+    "en": "Confirm the destination: yes, Ang Mo Kio Block 350.",
+    "groups": [
+     [
+      "对",
+      "是的",
+      "没错",
+      "是"
+     ],
+     [
+      "宏茂桥",
+      "三百五十",
+      "350"
+     ]
+    ],
+    "example": {
+     "zh": "对，是宏茂桥三百五十座，谢谢师傅。",
+     "py": "duì , shì hóng mào qiáo sān bǎi wǔ shí zuò , xiè xie shī fu .",
+     "w": [
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "，"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "宏茂桥",
+       "hóng mào qiáo",
+       "Ang Mo Kio"
+      ],
+      [
+       "三百五十座",
+       "sān bǎi wǔ shí zuò",
+       "Block 350"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "师傅",
+       "shī fu",
+       "driver, master (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes, Ang Mo Kio Block 350, thank you uncle."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "要走高速吗？高速快一点，不过要多付过路费。",
+    "py": "yào zǒu gāo sù ma ? gāo sù kuài yī diǎn , bù guò yào duō fù guò lù fèi .",
+    "w": [
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "高速",
+      "gāo sù",
+      "expressway"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "高速",
+      "gāo sù",
+      "expressway"
+     ],
+     [
+      "快",
+      "kuài",
+      "fast"
+     ],
+     [
+      "一点",
+      "yī diǎn",
+      "a little"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "多付",
+      "duō fù",
+      "pay extra"
+     ],
+     [
+      "过路费",
+      "guò lù fèi",
+      "toll"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Shall we take the expressway? It is faster, but you pay extra toll.",
+    "hurried": {
+     "zh": "高速还是普通路？快点决定，前面要上高速了。",
+     "py": "gāo sù hái shì pǔ tōng lù ? kuài diǎn jué dìng , qián mian yào shàng gāo sù le .",
+     "w": [
+      [
+       "高速",
+       "gāo sù",
+       "expressway"
+      ],
+      [
+       "还是",
+       "hái shì",
+       "or"
+      ],
+      [
+       "普通",
+       "pǔ tōng",
+       "ordinary"
+      ],
+      [
+       "路",
+       "lù",
+       "road"
+      ],
+      [
+       "？"
+      ],
+      [
+       "快点",
+       "kuài diǎn",
+       "hurry up"
+      ],
+      [
+       "决定",
+       "jué dìng",
+       "decide"
+      ],
+      [
+       "，"
+      ],
+      [
+       "前面",
+       "qián mian",
+       "ahead, in front"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "上",
+       "shàng",
+       "above, on"
+      ],
+      [
+       "高速",
+       "gāo sù",
+       "expressway"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Expressway or normal road? Decide quickly, the ramp is coming up."
+    }
+   },
+   "options": [
+    {
+     "zh": "走高速吧，我有点赶时间，过路费没问题。",
+     "py": "zǒu gāo sù ba , wǒ yǒu diǎn gǎn shí jiān , guò lù fèi méi wèn tí .",
+     "w": [
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "高速",
+       "gāo sù",
+       "expressway"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "赶",
+       "gǎn",
+       "rush"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "过路费",
+       "guò lù fèi",
+       "toll"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Take the expressway, I am a little short of time, the toll is fine.",
+     "type": "fit",
+     "why": "A clear decision with your reason. The driver can just go."
+    },
+    {
+     "zh": "都可以，你看着办吧。",
+     "py": "dōu kě yǐ , nǐ kàn zhe bàn ba .",
+     "w": [
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "看着办",
+       "kàn zhe bàn",
+       "use your judgement"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Either is fine, you decide.",
+     "type": "generic",
+     "why": "He asked because he wants your choice, not his own."
+    },
+    {
+     "zh": "当然走高速，你不知道哪个快吗？",
+     "py": "dāng rán zǒu gāo sù , nǐ bù zhī dao nǎ ge kuài ma ?",
+     "w": [
+      [
+       "当然",
+       "dāng rán",
+       "of course"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "高速",
+       "gāo sù",
+       "expressway"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "哪个",
+       "nǎ ge",
+       "which one"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Of course the expressway, don't you know which is faster?",
+     "type": "blunt",
+     "why": "You sound rude, and he will remember that when you ask him for favours later."
+    },
+    {
+     "zh": "你说了算，贵一点也没关系。",
+     "py": "nǐ shuō le suàn , guì yī diǎn yě méi guān xi .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "说了算",
+       "shuō le suàn",
+       "has the final say"
+      ],
+      [
+       "，"
+      ],
+      [
+       "贵",
+       "guì",
+       "expensive"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "没关系",
+       "méi guān xi",
+       "never mind"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You decide, a bit more expensive is fine.",
+     "type": "cave",
+     "why": "You hand over the choice and the bill. Say what you need."
+    }
+   ],
+   "intent": {
+    "en": "Choose a route (expressway or normal road) and say why, for example you are short of time.",
+    "groups": [
+     [
+      "高速",
+      "普通路",
+      "小路",
+      "别的路",
+      "绕路",
+      "掉头",
+      "走",
+      "行",
+      "可以",
+      "好"
+     ],
+     [
+      "时间",
+      "赶",
+      "急",
+      "快",
+      "慢",
+      "不急",
+      "过路费",
+      "分钟"
+     ]
+    ],
+    "example": {
+     "zh": "走高速吧，我有点赶时间，过路费没问题。",
+     "py": "zǒu gāo sù ba , wǒ yǒu diǎn gǎn shí jiān , guò lù fèi méi wèn tí .",
+     "w": [
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "高速",
+       "gāo sù",
+       "expressway"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "赶",
+       "gǎn",
+       "rush"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "过路费",
+       "guò lù fèi",
+       "toll"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Take the expressway, I am a little short of time, the toll is fine."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "已经到宏茂桥了，接下来怎么走？",
+    "py": "yǐ jīng dào hóng mào qiáo le , jiē xià lái zěn me zǒu ?",
+    "w": [
+     [
+      "已经",
+      "yǐ jīng",
+      "already"
+     ],
+     [
+      "到",
+      "dào",
+      "until"
+     ],
+     [
+      "宏茂桥",
+      "hóng mào qiáo",
+      "Ang Mo Kio"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "接下来",
+      "jiē xià lái",
+      "next"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "We are in Ang Mo Kio now. Which way from here?",
+    "hurried": {
+     "zh": "到宏茂桥了，快说，往哪边？",
+     "py": "dào hóng mào qiáo le , kuài shuō , wǎng nǎ bian ?",
+     "w": [
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "宏茂桥",
+       "hóng mào qiáo",
+       "Ang Mo Kio"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "，"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "哪边",
+       "nǎ bian",
+       "which side"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "We are in Ang Mo Kio, quick, which way?"
+    }
+   },
+   "options": [
+    {
+     "zh": "前面右转，然后到红绿灯再左转。",
+     "py": "qián mian yòu zhuǎn , rán hòu dào hóng lǜ dēng zài zuǒ zhuǎn .",
+     "w": [
+      [
+       "前面",
+       "qián mian",
+       "ahead, in front"
+      ],
+      [
+       "右转",
+       "yòu zhuǎn",
+       "turn right"
+      ],
+      [
+       "，"
+      ],
+      [
+       "然后",
+       "rán hòu",
+       "then"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "红绿灯",
+       "hóng lǜ dēng",
+       "traffic light"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "左转",
+       "zuǒ zhuǎn",
+       "turn left"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Turn right ahead, then turn left at the traffic light.",
+     "type": "fit",
+     "why": "Direction, landmark, direction. Short pieces a driver can follow while driving."
+    },
+    {
+     "zh": "你用导航就知道了，我不太会讲。",
+     "py": "nǐ yòng dǎo háng jiù zhī dao le , wǒ bù tài huì jiǎng .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "导航",
+       "dǎo háng",
+       "GPS navigation"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "讲",
+       "jiǎng",
+       "speak"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Just use the GPS, I am not good at explaining.",
+     "type": "generic",
+     "why": "The GPS is exactly why he asked: it only goes to the block, not to your gate."
+    },
+    {
+     "zh": "我也不确定，你自己看地图吧。",
+     "py": "wǒ yě bù què dìng , nǐ zì jǐ kàn dì tú ba .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "确定",
+       "què dìng",
+       "confirm"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "地图",
+       "dì tú",
+       "map"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I am not sure either, check the map yourself.",
+     "type": "blunt",
+     "why": "He is the driver and you are the local. Help him to help you."
+    },
+    {
+     "zh": "师傅你开吧，我也不太认识路。",
+     "py": "shī fu nǐ kāi ba , wǒ yě bù tài rèn shi lù .",
+     "w": [
+      [
+       "师傅",
+       "shī fu",
+       "driver, master (polite)"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "认识",
+       "rèn shi",
+       "know (a person, place)"
+      ],
+      [
+       "路",
+       "lù",
+       "road"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Just drive uncle, I do not know the way either.",
+     "type": "cave",
+     "why": "You are going home. You need to guide him a bit."
+    }
+   ],
+   "intent": {
+    "en": "Give clear directions: turn right ahead, then turn left at the traffic light.",
+    "groups": [
+     [
+      "右转",
+      "右边",
+      "往右"
+     ],
+     [
+      "左转",
+      "左边",
+      "往左"
+     ],
+     [
+      "前面",
+      "红绿灯",
+      "路口",
+      "然后",
+      "再"
+     ]
+    ],
+    "example": {
+     "zh": "前面右转，然后到红绿灯再左转。",
+     "py": "qián mian yòu zhuǎn , rán hòu dào hóng lǜ dēng zài zuǒ zhuǎn .",
+     "w": [
+      [
+       "前面",
+       "qián mian",
+       "ahead, in front"
+      ],
+      [
+       "右转",
+       "yòu zhuǎn",
+       "turn right"
+      ],
+      [
+       "，"
+      ],
+      [
+       "然后",
+       "rán hòu",
+       "then"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "红绿灯",
+       "hóng lǜ dēng",
+       "traffic light"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "左转",
+       "zuǒ zhuǎn",
+       "turn left"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Turn right ahead, then turn left at the traffic light."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "快到了。你在哪里下车？",
+    "py": "kuài dào le . nǐ zài nǎ li xià chē ?",
+    "w": [
+     [
+      "快",
+      "kuài",
+      "fast"
+     ],
+     [
+      "到",
+      "dào",
+      "until"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "哪里",
+      "nǎ li",
+      "where"
+     ],
+     [
+      "下车",
+      "xià chē",
+      "get off (a vehicle)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Almost there. Where do you want to get off?",
+    "hurried": {
+     "zh": "快到了，你在哪里下？这里不能停太久。",
+     "py": "kuài dào le , nǐ zài nǎ li xià ? zhè li bù néng tíng tài jiǔ .",
+     "w": [
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "哪里",
+       "nǎ li",
+       "where"
+      ],
+      [
+       "下",
+       "xià",
+       "next, down"
+      ],
+      [
+       "？"
+      ],
+      [
+       "这里",
+       "zhè li",
+       "here"
+      ],
+      [
+       "不能",
+       "bù néng",
+       "cannot"
+      ],
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "太久",
+       "tài jiǔ",
+       "too long"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Almost there, where do you get off? We cannot stop long here."
+    }
+   },
+   "options": [
+    {
+     "zh": "在门口停就可以了，谢谢师傅。",
+     "py": "zài mén kǒu tíng jiù kě yǐ le , xiè xie shī fu .",
+     "w": [
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "门口",
+       "mén kǒu",
+       "entrance, gate"
+      ],
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "师傅",
+       "shī fu",
+       "driver, master (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Stop at the gate is fine, thank you uncle.",
+     "type": "fit",
+     "why": "A clear spot, and a thank you. Quick for him to do and easy to say."
+    },
+    {
+     "zh": "就在这里随便停吧。",
+     "py": "jiù zài zhè li suí biàn tíng ba .",
+     "w": [
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "这里",
+       "zhè li",
+       "here"
+      ],
+      [
+       "随便",
+       "suí biàn",
+       "whatever"
+      ],
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Just stop anywhere here.",
+     "type": "generic",
+     "why": "\"Anywhere\" might be a no-stopping zone."
+    },
+    {
+     "zh": "怎么停都行，别问我。",
+     "py": "zěn me tíng dōu xíng , bié wèn wǒ .",
+     "w": [
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "别",
+       "bié",
+       "don't"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Any way is fine, do not ask me.",
+     "type": "blunt",
+     "why": "He is trying to drop you safely. Treat the question kindly."
+    },
+    {
+     "zh": "停哪里都可以，你方便就好。",
+     "py": "tíng nǎ li dōu kě yǐ , nǐ fāng biàn jiù hǎo .",
+     "w": [
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "哪里",
+       "nǎ li",
+       "where"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Anywhere is fine, whatever suits you.",
+     "type": "cave",
+     "why": "You walk further than needed, with your bags."
+    }
+   ],
+   "intent": {
+    "en": "Say where to stop (at the gate) and thank the driver.",
+    "groups": [
+     [
+      "门口",
+      "前面",
+      "这里",
+      "楼下",
+      "旁边",
+      "停"
+     ],
+     [
+      "谢谢",
+      "多谢",
+      "麻烦",
+      "不好意思"
+     ]
+    ],
+    "example": {
+     "zh": "在门口停就可以了，谢谢师傅。",
+     "py": "zài mén kǒu tíng jiù kě yǐ le , xiè xie shī fu .",
+     "w": [
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "门口",
+       "mén kǒu",
+       "entrance, gate"
+      ],
+      [
+       "停",
+       "tíng",
+       "stop"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "师傅",
+       "shī fu",
+       "driver, master (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Stop at the gate is fine, thank you uncle."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "高速",
+   "py": "gāo sù",
+   "w": [
+    [
+     "高速",
+     "gāo sù",
+     "expressway"
+    ]
+   ],
+   "en": "expressway"
+  },
+  {
+   "zh": "右转",
+   "py": "yòu zhuǎn",
+   "w": [
+    [
+     "右转",
+     "yòu zhuǎn",
+     "turn right"
+    ]
+   ],
+   "en": "turn right"
+  },
+  {
+   "zh": "左转",
+   "py": "zuǒ zhuǎn",
+   "w": [
+    [
+     "左转",
+     "zuǒ zhuǎn",
+     "turn left"
+    ]
+   ],
+   "en": "turn left"
+  },
+  {
+   "zh": "红绿灯",
+   "py": "hóng lǜ dēng",
+   "w": [
+    [
+     "红绿灯",
+     "hóng lǜ dēng",
+     "traffic light"
+    ]
+   ],
+   "en": "traffic light"
+  },
+  {
+   "zh": "绕路",
+   "py": "rào lù",
+   "w": [
+    [
+     "绕路",
+     "rào lù",
+     "take a detour"
+    ]
+   ],
+   "en": "take a detour"
+  },
+  {
+   "zh": "掉头",
+   "py": "diào tóu",
+   "w": [
+    [
+     "掉头",
+     "diào tóu",
+     "make a U-turn"
+    ]
+   ],
+   "en": "make a U-turn"
+  }
+ ]
+}

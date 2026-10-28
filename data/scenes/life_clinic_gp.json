@@ -1,0 +1,2518 @@
+{
+ "id": "life_clinic_gp",
+ "track": "life",
+ "title": {
+  "zh": "看医生",
+  "en": "At the GP clinic"
+ },
+ "character": {
+  "id": "gp",
+  "name": "诊所医生",
+  "role": "GP doctor, neighbourhood clinic",
+  "en": "The doctor is calm and brisk and speaks in short sentences. There is a queue outside, so she values clear, specific answers. You are the patient."
+ },
+ "goal": "See the doctor with a sore throat and fever: describe the symptoms, say how long, mention allergies, ask for an MC, and understand how to take the medicine.",
+ "twists": [
+  {
+   "id": "forgot_ic",
+   "en": "You forgot your NRIC.",
+   "turn2": {
+    "zh": "这样多久了？对了，你带身份证了吗？",
+    "py": "zhè yàng duō jiǔ le ? duì le , nǐ dài shēn fèn zhèng le ma ?",
+    "w": [
+     [
+      "这样",
+      "zhè yàng",
+      "like this"
+     ],
+     [
+      "多久",
+      "duō jiǔ",
+      "how long"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "对了",
+      "duì le",
+      "by the way"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "带",
+      "dài",
+      "bring"
+     ],
+     [
+      "身份证",
+      "shēn fèn zhèng",
+      "ID card (NRIC)"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "How long has this been going on? By the way, did you bring your NRIC?"
+   },
+   "prompt": "The nurse needs your NRIC number for the record. She relaxes if you answer the symptom question and say you forgot it but remember the number.",
+   "group": [
+    "忘了",
+    "没带",
+    "忘记",
+    "没有带"
+   ],
+   "example": {
+    "zh": "两天了，昨天量过，三十八度。我忘了带身份证，不过我记得号码。",
+    "py": "liǎng tiān le , zuó tiān liàng guo , sān shí bā dù . wǒ wàng le dài shēn fèn zhèng , bù guò wǒ jì de hào mǎ .",
+    "w": [
+     [
+      "两天",
+      "liǎng tiān",
+      "two days"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "昨天",
+      "zuó tiān",
+      "yesterday"
+     ],
+     [
+      "量",
+      "liàng",
+      "measure"
+     ],
+     [
+      "过",
+      "guo",
+      "(experience marker)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "三十八度",
+      "sān shí bā dù",
+      "38 degrees"
+     ],
+     [
+      "。"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "忘了",
+      "wàng le",
+      "forgot"
+     ],
+     [
+      "带",
+      "dài",
+      "bring"
+     ],
+     [
+      "身份证",
+      "shēn fèn zhèng",
+      "ID card (NRIC)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "记得",
+      "jì de",
+      "remember"
+     ],
+     [
+      "号码",
+      "hào mǎ",
+      "number"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Two days, I took my temperature yesterday and it was 38 degrees. I forgot my IC, but I remember the number."
+   }
+  },
+  {
+   "id": "doctor_hurry",
+   "en": "The doctor is in a hurry.",
+   "turn2": {
+    "zh": "我只有两分钟，你快说，几天了？烧到多少度？",
+    "py": "wǒ zhǐ yǒu liǎng fēn zhōng , nǐ kuài shuō , jǐ tiān le ? shāo dào duō shao dù ?",
+    "w": [
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "只有",
+      "zhǐ yǒu",
+      "only have"
+     ],
+     [
+      "两分钟",
+      "liǎng fēn zhōng",
+      "two minutes"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "快",
+      "kuài",
+      "fast"
+     ],
+     [
+      "说",
+      "shuō",
+      "say"
+     ],
+     [
+      "，"
+     ],
+     [
+      "几天",
+      "jǐ tiān",
+      "a few days"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "烧到",
+      "shāo dào",
+      "reach (a fever of)"
+     ],
+     [
+      "多少",
+      "duō shao",
+      "how much"
+     ],
+     [
+      "度",
+      "dù",
+      "degrees"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "I only have two minutes. Quick, how many days? How high is the fever?"
+   },
+   "prompt": "The queue is long and she is rushing. She appreciates a short, precise answer with a number of days and a temperature.",
+   "group": [
+    "两天",
+    "三天",
+    "一天",
+    "昨天",
+    "前天"
+   ],
+   "example": {
+    "zh": "两天了，昨天量过，三十八度。",
+    "py": "liǎng tiān le , zuó tiān liàng guo , sān shí bā dù .",
+    "w": [
+     [
+      "两天",
+      "liǎng tiān",
+      "two days"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "昨天",
+      "zuó tiān",
+      "yesterday"
+     ],
+     [
+      "量",
+      "liàng",
+      "measure"
+     ],
+     [
+      "过",
+      "guo",
+      "(experience marker)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "三十八度",
+      "sān shí bā dù",
+      "38 degrees"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Two days, I measured yesterday, 38 degrees."
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "你好，请坐。哪里不舒服？",
+    "py": "nǐ hǎo , qǐng zuò . nǎ li bù shū fu ?",
+    "w": [
+     [
+      "你好",
+      "nǐ hǎo",
+      "hello"
+     ],
+     [
+      "，"
+     ],
+     [
+      "请",
+      "qǐng",
+      "please"
+     ],
+     [
+      "坐",
+      "zuò",
+      "sit, take (a ride)"
+     ],
+     [
+      "。"
+     ],
+     [
+      "哪里",
+      "nǎ li",
+      "where"
+     ],
+     [
+      "不",
+      "bù",
+      "not"
+     ],
+     [
+      "舒服",
+      "shū fu",
+      "comfortable"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Hello, please sit. What is wrong?",
+    "hurried": {
+     "zh": "请坐。哪里不舒服？外面还有很多病人。",
+     "py": "qǐng zuò . nǎ li bù shū fu ? wài mian hái yǒu hěn duō bìng rén .",
+     "w": [
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "哪里",
+       "nǎ li",
+       "where"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "舒服",
+       "shū fu",
+       "comfortable"
+      ],
+      [
+       "？"
+      ],
+      [
+       "外面",
+       "wài mian",
+       "outside"
+      ],
+      [
+       "还有",
+       "hái yǒu",
+       "also have"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "病人",
+       "bìng rén",
+       "patient"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Please sit. What is wrong? There are many patients outside."
+    }
+   },
+   "options": [
+    {
+     "zh": "医生，我喉咙痛，昨天晚上开始发烧。",
+     "py": "yī shēng , wǒ hóu lóng tòng , zuó tiān wǎn shang kāi shǐ fā shāo .",
+     "w": [
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "喉咙",
+       "hóu lóng",
+       "throat"
+      ],
+      [
+       "痛",
+       "tòng",
+       "hurt, pain"
+      ],
+      [
+       "，"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "晚上",
+       "wǎn shang",
+       "evening, night"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "发烧",
+       "fā shāo",
+       "have a fever"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Doctor, I have a sore throat and since last night I have a fever.",
+     "type": "fit",
+     "why": "Two symptoms, plus when it started. Short and complete."
+    },
+    {
+     "zh": "我不太舒服，好像生病了。",
+     "py": "wǒ bù tài shū fu , hǎo xiàng shēng bìng le .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "舒服",
+       "shū fu",
+       "comfortable"
+      ],
+      [
+       "，"
+      ],
+      [
+       "好像",
+       "hǎo xiàng",
+       "seems"
+      ],
+      [
+       "生病",
+       "shēng bìng",
+       "fall sick"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I do not feel well, I seem to be sick.",
+     "type": "generic",
+     "why": "She can see you are unwell. She needs to know where it hurts."
+    },
+    {
+     "zh": "我要打针，你给我开最好的药。",
+     "py": "wǒ yào dǎ zhēn , nǐ gěi wǒ kāi zuì hǎo de yào .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "打针",
+       "dǎ zhēn",
+       "have an injection"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "最",
+       "zuì",
+       "most"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "药",
+       "yào",
+       "medicine"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I want an injection, give me the best medicine.",
+     "type": "blunt",
+     "why": "You are telling the doctor how to do her job. Describe, do not prescribe."
+    },
+    {
+     "zh": "我觉得是天气太热，没什么大不了。",
+     "py": "wǒ jué de shì tiān qì tài rè , méi shén me dà bù liǎo .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "觉得",
+       "jué de",
+       "feel, think"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "天气",
+       "tiān qì",
+       "weather"
+      ],
+      [
+       "太热",
+       "tài rè",
+       "too hot"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "大不了",
+       "dà bù liǎo",
+       "a big deal"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I think it is just the hot weather, nothing serious.",
+     "type": "off",
+     "why": "She asked what hurts, not what you think the cause is."
+    }
+   ],
+   "intent": {
+    "en": "Tell the doctor your symptoms: sore throat and fever.",
+    "groups": [
+     [
+      "喉咙",
+      "嗓子"
+     ],
+     [
+      "发烧",
+      "发热",
+      "烧"
+     ]
+    ],
+    "example": {
+     "zh": "医生，我喉咙痛，昨天晚上开始发烧。",
+     "py": "yī shēng , wǒ hóu lóng tòng , zuó tiān wǎn shang kāi shǐ fā shāo .",
+     "w": [
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "喉咙",
+       "hóu lóng",
+       "throat"
+      ],
+      [
+       "痛",
+       "tòng",
+       "hurt, pain"
+      ],
+      [
+       "，"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "晚上",
+       "wǎn shang",
+       "evening, night"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "发烧",
+       "fā shāo",
+       "have a fever"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Doctor, I have a sore throat and since last night I have a fever."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "这样多久了？有没有量过体温？",
+    "py": "zhè yàng duō jiǔ le ? yǒu méi yǒu liàng guo tǐ wēn ?",
+    "w": [
+     [
+      "这样",
+      "zhè yàng",
+      "like this"
+     ],
+     [
+      "多久",
+      "duō jiǔ",
+      "how long"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "有没有",
+      "yǒu méi yǒu",
+      "did you or not"
+     ],
+     [
+      "量",
+      "liàng",
+      "measure"
+     ],
+     [
+      "过",
+      "guo",
+      "(experience marker)"
+     ],
+     [
+      "体温",
+      "tǐ wēn",
+      "body temperature"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "How long has this been? Have you taken your temperature?",
+    "hurried": {
+     "zh": "多久了？量过体温吗？快说。",
+     "py": "duō jiǔ le ? liàng guo tǐ wēn ma ? kuài shuō .",
+     "w": [
+      [
+       "多久",
+       "duō jiǔ",
+       "how long"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "量",
+       "liàng",
+       "measure"
+      ],
+      [
+       "过",
+       "guo",
+       "(experience marker)"
+      ],
+      [
+       "体温",
+       "tǐ wēn",
+       "body temperature"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How long? Did you take your temperature? Quickly."
+    }
+   },
+   "options": [
+    {
+     "zh": "两天了。昨天量过体温，有三十八度。",
+     "py": "liǎng tiān le . zuó tiān liàng guo tǐ wēn , yǒu sān shí bā dù .",
+     "w": [
+      [
+       "两天",
+       "liǎng tiān",
+       "two days"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "量",
+       "liàng",
+       "measure"
+      ],
+      [
+       "过",
+       "guo",
+       "(experience marker)"
+      ],
+      [
+       "体温",
+       "tǐ wēn",
+       "body temperature"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "三十八度",
+       "sān shí bā dù",
+       "38 degrees"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Two days. I measured yesterday and it was 38 degrees.",
+     "type": "fit",
+     "why": "A number of days and a number of degrees. That is what a doctor can use."
+    },
+    {
+     "zh": "有一段时间了，我也记不清楚。",
+     "py": "yǒu yī duàn shí jiān le , wǒ yě jì bù qīng chu .",
+     "w": [
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "一段",
+       "yī duàn",
+       "a stretch of"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "记不清楚",
+       "jì bù qīng chu",
+       "cannot remember clearly"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "For a while now, I cannot remember exactly.",
+     "type": "generic",
+     "why": "\"A while\" is not useful. Give a day count even if it is rough."
+    },
+    {
+     "zh": "你问这么多干什么，快点开药吧。",
+     "py": "nǐ wèn zhè me duō gàn shén me , kuài diǎn kāi yào ba .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "这么",
+       "zhè me",
+       "so, like this"
+      ],
+      [
+       "多",
+       "duō",
+       "many, more"
+      ],
+      [
+       "干什么",
+       "gàn shén me",
+       "for what"
+      ],
+      [
+       "，"
+      ],
+      [
+       "快点",
+       "kuài diǎn",
+       "hurry up"
+      ],
+      [
+       "开药",
+       "kāi yào",
+       "prescribe medicine"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Why ask so much? Just prescribe the medicine.",
+     "type": "blunt",
+     "why": "Questions are how she picks the right medicine. Help her, do not hurry her."
+    },
+    {
+     "zh": "我昨天吃了很辣的东西，可能是上火。",
+     "py": "wǒ zuó tiān chī le hěn là de dōng xi , kě néng shì shàng huǒ .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "吃",
+       "chī",
+       "eat"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "辣",
+       "là",
+       "spicy"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "东西",
+       "dōng xi",
+       "things, stuff"
+      ],
+      [
+       "，"
+      ],
+      [
+       "可能",
+       "kě néng",
+       "maybe, possibly"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "上火",
+       "shàng huǒ",
+       "heatiness (TCM)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I ate very spicy food yesterday, maybe it is heatiness.",
+     "type": "off",
+     "why": "You guess the cause and skip the facts she asked for."
+    }
+   ],
+   "intent": {
+    "en": "Say how many days it has been and what your temperature was.",
+    "groups": [
+     [
+      "天",
+      "昨天",
+      "前天",
+      "星期",
+      "周",
+      "开始"
+     ],
+     [
+      "度",
+      "体温",
+      "量",
+      "烧",
+      "三十八",
+      "三十七",
+      "三十九"
+     ]
+    ],
+    "example": {
+     "zh": "两天了。昨天量过体温，有三十八度。",
+     "py": "liǎng tiān le . zuó tiān liàng guo tǐ wēn , yǒu sān shí bā dù .",
+     "w": [
+      [
+       "两天",
+       "liǎng tiān",
+       "two days"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "量",
+       "liàng",
+       "measure"
+      ],
+      [
+       "过",
+       "guo",
+       "(experience marker)"
+      ],
+      [
+       "体温",
+       "tǐ wēn",
+       "body temperature"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "三十八度",
+       "sān shí bā dù",
+       "38 degrees"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Two days. I measured yesterday and it was 38 degrees."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "对什么药物过敏吗？",
+    "py": "duì shén me yào wù guò mǐn ma ?",
+    "w": [
+     [
+      "对",
+      "duì",
+      "right, correct"
+     ],
+     [
+      "什么",
+      "shén me",
+      "what"
+     ],
+     [
+      "药物",
+      "yào wù",
+      "medication"
+     ],
+     [
+      "过敏",
+      "guò mǐn",
+      "allergic"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Are you allergic to any medicine?",
+    "hurried": {
+     "zh": "有药物过敏吗？没有的话我就开药了。",
+     "py": "yǒu yào wù guò mǐn ma ? méi yǒu de huà wǒ jiù kāi yào le .",
+     "w": [
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "药物",
+       "yào wù",
+       "medication"
+      ],
+      [
+       "过敏",
+       "guò mǐn",
+       "allergic"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "没有",
+       "méi yǒu",
+       "do not have"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "开药",
+       "kāi yào",
+       "prescribe medicine"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Any drug allergies? If not, I will prescribe now."
+    }
+   },
+   "options": [
+    {
+     "zh": "我对青霉素过敏，请不要开这种药。",
+     "py": "wǒ duì qīng méi sù guò mǐn , qǐng bù yào kāi zhè zhǒng yào .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "青霉素",
+       "qīng méi sù",
+       "penicillin"
+      ],
+      [
+       "过敏",
+       "guò mǐn",
+       "allergic"
+      ],
+      [
+       "，"
+      ],
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "这种",
+       "zhè zhǒng",
+       "this kind of"
+      ],
+      [
+       "药",
+       "yào",
+       "medicine"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I am allergic to penicillin, please do not prescribe it.",
+     "type": "fit",
+     "why": "Clear and safe. A named allergy beats \"I think so\"."
+    },
+    {
+     "zh": "不太清楚，可能没有吧。",
+     "py": "bù tài qīng chu , kě néng méi yǒu ba .",
+     "w": [
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "清楚",
+       "qīng chu",
+       "clear"
+      ],
+      [
+       "，"
+      ],
+      [
+       "可能",
+       "kě néng",
+       "maybe, possibly"
+      ],
+      [
+       "没有",
+       "méi yǒu",
+       "do not have"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Not sure, probably none.",
+     "type": "generic",
+     "why": "With medicine, \"probably\" is risky. Say clearly yes or no."
+    },
+    {
+     "zh": "过敏的话我自己会说。",
+     "py": "guò mǐn de huà wǒ zì jǐ huì shuō .",
+     "w": [
+      [
+       "过敏",
+       "guò mǐn",
+       "allergic"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "If I am allergic I will say so myself.",
+     "type": "blunt",
+     "why": "She is asking now, so that you do not get hurt later."
+    },
+    {
+     "zh": "你看着开吧，我都可以。",
+     "py": "nǐ kàn zhe kāi ba , wǒ dōu kě yǐ .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "看着",
+       "kàn zhe",
+       "looking at"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You decide, anything is fine.",
+     "type": "cave",
+     "why": "The one question where \"anything is fine\" is the wrong answer."
+    }
+   ],
+   "intent": {
+    "en": "Tell the doctor about your drug allergy, or say you have none.",
+    "groups": [
+     [
+      "过敏",
+      "没有",
+      "没"
+     ],
+     [
+      "药",
+      "青霉素",
+      "药物"
+     ]
+    ],
+    "example": {
+     "zh": "我对青霉素过敏，请不要开这种药。",
+     "py": "wǒ duì qīng méi sù guò mǐn , qǐng bù yào kāi zhè zhǒng yào .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "青霉素",
+       "qīng méi sù",
+       "penicillin"
+      ],
+      [
+       "过敏",
+       "guò mǐn",
+       "allergic"
+      ],
+      [
+       "，"
+      ],
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "这种",
+       "zhè zhǒng",
+       "this kind of"
+      ],
+      [
+       "药",
+       "yào",
+       "medicine"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I am allergic to penicillin, please do not prescribe it."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "你需要病假单吗？",
+    "py": "nǐ xū yào bìng jià dān ma ?",
+    "w": [
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "需要",
+      "xū yào",
+      "need"
+     ],
+     [
+      "病假单",
+      "bìng jià dān",
+      "MC (medical leave slip)"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Do you need an MC?",
+    "hurried": {
+     "zh": "要不要病假单？要的话我现在开。",
+     "py": "yào bù yào bìng jià dān ? yào de huà wǒ xiàn zài kāi .",
+     "w": [
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "病假单",
+       "bìng jià dān",
+       "MC (medical leave slip)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Do you want an MC? If so I will write it now."
+    }
+   },
+   "options": [
+    {
+     "zh": "需要，麻烦医生开两天的病假单，我要给公司。",
+     "py": "xū yào , má fan yī shēng kāi liǎng tiān de bìng jià dān , wǒ yào gěi gōng sī .",
+     "w": [
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "，"
+      ],
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "两天",
+       "liǎng tiān",
+       "two days"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "病假单",
+       "bìng jià dān",
+       "MC (medical leave slip)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes please, could you write a two-day MC, I need to give it to my company.",
+     "type": "fit",
+     "why": "You say yes, give the number of days and why. She can write it straight away."
+    },
+    {
+     "zh": "可以吧，看医生您的意思。",
+     "py": "kě yǐ ba , kàn yī shēng nín de yì si .",
+     "w": [
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "意思",
+       "yì si",
+       "meaning, wish"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Maybe, up to you doctor.",
+     "type": "generic",
+     "why": "She cannot decide for your workplace. Say whether you need one."
+    },
+    {
+     "zh": "当然要，不然老板不会相信我病了。",
+     "py": "dāng rán yào , bù rán lǎo bǎn bù huì xiāng xìn wǒ bìng le .",
+     "w": [
+      [
+       "当然",
+       "dāng rán",
+       "of course"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不然",
+       "bù rán",
+       "otherwise"
+      ],
+      [
+       "老板",
+       "lǎo bǎn",
+       "boss"
+      ],
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "相信",
+       "xiāng xìn",
+       "believe"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "病",
+       "bìng",
+       "sick"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Of course, otherwise my boss will not believe I am sick.",
+     "type": "blunt",
+     "why": "It sounds like you distrust your boss and might not be sick. Keep it simple."
+    },
+    {
+     "zh": "不用了，我休息一下就好，不想请假。",
+     "py": "bù yòng le , wǒ xiū xi yī xià jiù hǎo , bù xiǎng qǐng jià .",
+     "w": [
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "休息",
+       "xiū xi",
+       "rest"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "请假",
+       "qǐng jià",
+       "take leave"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No need, I will rest a bit, I do not want to take leave.",
+     "type": "cave",
+     "why": "With a fever, going to work helps nobody, and colleagues can catch it."
+    }
+   ],
+   "intent": {
+    "en": "Say you need an MC and for how many days.",
+    "groups": [
+     [
+      "需要",
+      "要",
+      "麻烦",
+      "请",
+      "想"
+     ],
+     [
+      "病假单",
+      "病假",
+      "假单",
+      "MC",
+      "mc"
+     ]
+    ],
+    "example": {
+     "zh": "需要，麻烦医生开两天的病假单，我要给公司。",
+     "py": "xū yào , má fan yī shēng kāi liǎng tiān de bìng jià dān , wǒ yào gěi gōng sī .",
+     "w": [
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "，"
+      ],
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "两天",
+       "liǎng tiān",
+       "two days"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "病假单",
+       "bìng jià dān",
+       "MC (medical leave slip)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes please, could you write a two-day MC, I need to give it to my company."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "药要饭后吃，一天三次。三天后如果还发烧，再来看。",
+    "py": "yào yào fàn hòu chī , yī tiān sān cì . sān tiān hòu rú guǒ hái fā shāo , zài lái kàn .",
+    "w": [
+     [
+      "药",
+      "yào",
+      "medicine"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "饭后",
+      "fàn hòu",
+      "after meals"
+     ],
+     [
+      "吃",
+      "chī",
+      "eat"
+     ],
+     [
+      "，"
+     ],
+     [
+      "一天",
+      "yī tiān",
+      "one day"
+     ],
+     [
+      "三次",
+      "sān cì",
+      "three times"
+     ],
+     [
+      "。"
+     ],
+     [
+      "三天",
+      "sān tiān",
+      "three days"
+     ],
+     [
+      "后",
+      "hòu",
+      "after"
+     ],
+     [
+      "如果",
+      "rú guǒ",
+      "if"
+     ],
+     [
+      "还",
+      "hái",
+      "still"
+     ],
+     [
+      "发烧",
+      "fā shāo",
+      "have a fever"
+     ],
+     [
+      "，"
+     ],
+     [
+      "再来",
+      "zài lái",
+      "come again"
+     ],
+     [
+      "看",
+      "kàn",
+      "look at"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Take the medicine after meals, three times a day. If you still have a fever in three days, come back.",
+    "hurried": {
+     "zh": "饭后吃，一天三次。三天后还烧就再来。",
+     "py": "fàn hòu chī , yī tiān sān cì . sān tiān hòu hái shāo jiù zài lái .",
+     "w": [
+      [
+       "饭后",
+       "fàn hòu",
+       "after meals"
+      ],
+      [
+       "吃",
+       "chī",
+       "eat"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一天",
+       "yī tiān",
+       "one day"
+      ],
+      [
+       "三次",
+       "sān cì",
+       "three times"
+      ],
+      [
+       "。"
+      ],
+      [
+       "三天",
+       "sān tiān",
+       "three days"
+      ],
+      [
+       "后",
+       "hòu",
+       "after"
+      ],
+      [
+       "还",
+       "hái",
+       "still"
+      ],
+      [
+       "烧",
+       "shāo",
+       "fever"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "再来",
+       "zài lái",
+       "come again"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "After meals, three times a day. If still feverish after three days, return."
+    }
+   },
+   "options": [
+    {
+     "zh": "好的，谢谢医生。是饭后吃，一天三次，对吗？",
+     "py": "hǎo de , xiè xie yī shēng . shì fàn hòu chī , yī tiān sān cì , duì ma ?",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "。"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "饭后",
+       "fàn hòu",
+       "after meals"
+      ],
+      [
+       "吃",
+       "chī",
+       "eat"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一天",
+       "yī tiān",
+       "one day"
+      ],
+      [
+       "三次",
+       "sān cì",
+       "three times"
+      ],
+      [
+       "，"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Okay, thank you doctor. So after meals, three times a day, right?",
+     "type": "fit",
+     "why": "Repeating the instructions back is the safest way to get them right."
+    },
+    {
+     "zh": "好的，谢谢医生。",
+     "py": "hǎo de , xiè xie yī shēng .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, thank you doctor.",
+     "type": "generic",
+     "why": "Polite, but you may leave unsure if it is before or after meals."
+    },
+    {
+     "zh": "一天三次太麻烦了，能不能一次全吃了？",
+     "py": "yī tiān sān cì tài má fan le , néng bù néng yī cì quán chī le ?",
+     "w": [
+      [
+       "一天",
+       "yī tiān",
+       "one day"
+      ],
+      [
+       "三次",
+       "sān cì",
+       "three times"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "一次",
+       "yī cì",
+       "once, one session"
+      ],
+      [
+       "全",
+       "quán",
+       "all"
+      ],
+      [
+       "吃",
+       "chī",
+       "eat"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Three times a day is troublesome, can I take it all at once?",
+     "type": "off",
+     "why": "Taking it all at once can be dangerous. Ask what to do if you forget, instead."
+    },
+    {
+     "zh": "好，我听您的，不懂也没关系。",
+     "py": "hǎo , wǒ tīng nín de , bù dǒng yě méi guān xi .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "听",
+       "tīng",
+       "listen, hear"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "懂",
+       "dǒng",
+       "understand"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "没关系",
+       "méi guān xi",
+       "never mind"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, I will follow you, it is fine if I do not understand.",
+     "type": "cave",
+     "why": "Nodding without understanding is how people take pills wrongly."
+    }
+   ],
+   "intent": {
+    "en": "Thank the doctor and repeat back how to take the medicine: after meals, three times a day.",
+    "groups": [
+     [
+      "饭后",
+      "饭以后",
+      "吃完饭"
+     ],
+     [
+      "三次",
+      "三遍",
+      "三回"
+     ],
+     [
+      "对吗",
+      "是吗",
+      "对不对",
+      "是不是",
+      "好的",
+      "明白"
+     ]
+    ],
+    "example": {
+     "zh": "好的，谢谢医生。是饭后吃，一天三次，对吗？",
+     "py": "hǎo de , xiè xie yī shēng . shì fàn hòu chī , yī tiān sān cì , duì ma ?",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "医生",
+       "yī shēng",
+       "doctor"
+      ],
+      [
+       "。"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "饭后",
+       "fàn hòu",
+       "after meals"
+      ],
+      [
+       "吃",
+       "chī",
+       "eat"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一天",
+       "yī tiān",
+       "one day"
+      ],
+      [
+       "三次",
+       "sān cì",
+       "three times"
+      ],
+      [
+       "，"
+      ],
+      [
+       "对",
+       "duì",
+       "right, correct"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Okay, thank you doctor. So after meals, three times a day, right?"
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "喉咙",
+   "py": "hóu lóng",
+   "w": [
+    [
+     "喉咙",
+     "hóu lóng",
+     "throat"
+    ]
+   ],
+   "en": "throat"
+  },
+  {
+   "zh": "发烧",
+   "py": "fā shāo",
+   "w": [
+    [
+     "发烧",
+     "fā shāo",
+     "have a fever"
+    ]
+   ],
+   "en": "have a fever"
+  },
+  {
+   "zh": "过敏",
+   "py": "guò mǐn",
+   "w": [
+    [
+     "过敏",
+     "guò mǐn",
+     "allergic"
+    ]
+   ],
+   "en": "allergic"
+  },
+  {
+   "zh": "病假单",
+   "py": "bìng jià dān",
+   "w": [
+    [
+     "病假单",
+     "bìng jià dān",
+     "MC (medical leave slip)"
+    ]
+   ],
+   "en": "MC (medical leave slip)"
+  },
+  {
+   "zh": "饭后",
+   "py": "fàn hòu",
+   "w": [
+    [
+     "饭后",
+     "fàn hòu",
+     "after meals"
+    ]
+   ],
+   "en": "after meals"
+  },
+  {
+   "zh": "身份证",
+   "py": "shēn fèn zhèng",
+   "w": [
+    [
+     "身份证",
+     "shēn fèn zhèng",
+     "ID card (NRIC)"
+    ]
+   ],
+   "en": "ID card (NRIC)"
+  }
+ ]
+}

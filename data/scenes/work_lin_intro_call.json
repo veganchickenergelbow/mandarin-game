@@ -1,0 +1,3222 @@
+{
+ "id": "work_lin_intro_call",
+ "track": "work",
+ "title": {
+  "zh": "十五分钟视频会议",
+  "en": "A 15-minute intro call"
+ },
+ "character": {
+  "id": "lin",
+  "name": "小林",
+  "role": "Data Team Lead, Lion City Logistics",
+  "en": "Lin is efficient, friendly and always between meetings. She gave you fifteen minutes on a video call, so she likes short, clear sentences and warms up to people who ask good questions."
+ },
+ "goal": "Introduce yourself in one sentence, show you heard her reporting pain, ask a polite discovery question about data volume, and get her to set up a meeting with the tech lead.",
+ "twists": [
+  {
+   "id": "already_tried",
+   "en": "She tried another solution last year and it did not work well.",
+   "turn2": {
+    "zh": "我们去年试过另一个方案，效果不太好。",
+    "py": "wǒ men qù nián shì guo lìng yī ge fāng àn , xiào guǒ bù tài hǎo .",
+    "w": [
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "去年",
+      "qù nián",
+      "last year"
+     ],
+     [
+      "试过",
+      "shì guo",
+      "have tried"
+     ],
+     [
+      "另一个",
+      "lìng yī ge",
+      "another"
+     ],
+     [
+      "方案",
+      "fāng àn",
+      "plan, proposal"
+     ],
+     [
+      "，"
+     ],
+     [
+      "效果",
+      "xiào guǒ",
+      "effect, result"
+     ],
+     [
+      "不",
+      "bù",
+      "not"
+     ],
+     [
+      "太",
+      "tài",
+      "too"
+     ],
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "We tried another solution last year and it did not work well."
+   },
+   "prompt": "Hidden objection: a previous vendor disappointed her. She opens up only if Lucas asks what went wrong instead of defending his own product.",
+   "group": [
+    "哪方面",
+    "哪里",
+    "什么问题",
+    "哪些"
+   ],
+   "example": {
+    "zh": "理解。方便问一下，当时是哪方面效果不好？你们的数据量大概有多少？",
+    "py": "lǐ jiě . fāng biàn wèn yī xià , dāng shí shì nǎ fāng miàn xiào guǒ bù hǎo ? nǐ men de shù jù liàng dà gài yǒu duō shao ?",
+    "w": [
+     [
+      "理解",
+      "lǐ jiě",
+      "understand"
+     ],
+     [
+      "。"
+     ],
+     [
+      "方便",
+      "fāng biàn",
+      "convenient"
+     ],
+     [
+      "问",
+      "wèn",
+      "ask"
+     ],
+     [
+      "一下",
+      "yī xià",
+      "a little, once"
+     ],
+     [
+      "，"
+     ],
+     [
+      "当时",
+      "dāng shí",
+      "at that time"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "哪方面",
+      "nǎ fāng miàn",
+      "which aspect"
+     ],
+     [
+      "效果",
+      "xiào guǒ",
+      "effect, result"
+     ],
+     [
+      "不好",
+      "bù hǎo",
+      "not good"
+     ],
+     [
+      "？"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "数据量",
+      "shù jù liàng",
+      "data volume"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "多少",
+      "duō shao",
+      "how much"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "I understand. May I ask, in which way did it not work? Roughly how much data do you have?"
+   }
+  },
+  {
+   "id": "ten_left",
+   "en": "She now has only ten minutes left.",
+   "turn2": {
+    "zh": "不好意思，我只剩十分钟了，你直接说重点吧。",
+    "py": "bù hǎo yì si , wǒ zhǐ shèng shí fēn zhōng le , nǐ zhí jiē shuō zhòng diǎn ba .",
+    "w": [
+     [
+      "不好意思",
+      "bù hǎo yì si",
+      "sorry, excuse me"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "只剩",
+      "zhǐ shèng",
+      "only left"
+     ],
+     [
+      "十分钟",
+      "shí fēn zhōng",
+      "ten minutes"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你",
+      "nǐ",
+      "you"
+     ],
+     [
+      "直接",
+      "zhí jiē",
+      "directly"
+     ],
+     [
+      "说",
+      "shuō",
+      "say"
+     ],
+     [
+      "重点",
+      "zhòng diǎn",
+      "main point"
+     ],
+     [
+      "吧",
+      "ba",
+      "(softener)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Sorry, I only have ten minutes left. Just give me the main point."
+   },
+   "prompt": "Hidden objection: her next meeting moved up. She relaxes only if Lucas shortens his approach and asks one clear question.",
+   "group": [
+    "长话短说",
+    "直接",
+    "简单",
+    "一个问题"
+   ],
+   "example": {
+    "zh": "明白，那我长话短说。方便问一下，你们每天的数据量大概有多少？",
+    "py": "míng bai , nà wǒ cháng huà duǎn shuō . fāng biàn wèn yī xià , nǐ men měi tiān de shù jù liàng dà gài yǒu duō shao ?",
+    "w": [
+     [
+      "明白",
+      "míng bai",
+      "understood"
+     ],
+     [
+      "，"
+     ],
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "长话短说",
+      "cháng huà duǎn shuō",
+      "cut a long story short"
+     ],
+     [
+      "。"
+     ],
+     [
+      "方便",
+      "fāng biàn",
+      "convenient"
+     ],
+     [
+      "问",
+      "wèn",
+      "ask"
+     ],
+     [
+      "一下",
+      "yī xià",
+      "a little, once"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "每天",
+      "měi tiān",
+      "every day"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "数据量",
+      "shù jù liàng",
+      "data volume"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "多少",
+      "duō shao",
+      "how much"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Understood, I will keep it short. May I ask, roughly how much data do you have each day?"
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "你好，我只有十五分钟。请简单介绍一下吧。",
+    "py": "nǐ hǎo , wǒ zhǐ yǒu shí wǔ fēn zhōng . qǐng jiǎn dān jiè shào yī xià ba .",
+    "w": [
+     [
+      "你好",
+      "nǐ hǎo",
+      "hello"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "只有",
+      "zhǐ yǒu",
+      "only have"
+     ],
+     [
+      "十五分钟",
+      "shí wǔ fēn zhōng",
+      "fifteen minutes"
+     ],
+     [
+      "。"
+     ],
+     [
+      "请",
+      "qǐng",
+      "please"
+     ],
+     [
+      "简单",
+      "jiǎn dān",
+      "simple"
+     ],
+     [
+      "介绍",
+      "jiè shào",
+      "introduce"
+     ],
+     [
+      "一下",
+      "yī xià",
+      "a little, once"
+     ],
+     [
+      "吧",
+      "ba",
+      "(softener)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Hello, I only have fifteen minutes. Please give a short introduction.",
+    "hurried": {
+     "zh": "你好，我十五分钟后还有会，直接说重点吧。",
+     "py": "nǐ hǎo , wǒ shí wǔ fēn zhōng hòu hái yǒu huì , zhí jiē shuō zhòng diǎn ba .",
+     "w": [
+      [
+       "你好",
+       "nǐ hǎo",
+       "hello"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "十五分钟",
+       "shí wǔ fēn zhōng",
+       "fifteen minutes"
+      ],
+      [
+       "后",
+       "hòu",
+       "after"
+      ],
+      [
+       "还有",
+       "hái yǒu",
+       "also have"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "，"
+      ],
+      [
+       "直接",
+       "zhí jiē",
+       "directly"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "重点",
+       "zhòng diǎn",
+       "main point"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Hello, I have another meeting in fifteen minutes. Just get to the point."
+    }
+   },
+   "options": [
+    {
+     "zh": "小林您好，我是云川数据的销售顾问，我们帮企业把数据放到云上，让报表跑得更快。",
+     "py": "xiǎo lín nín hǎo , wǒ shì yún chuān shù jù de xiāo shòu gù wèn , wǒ men bāng qǐ yè bǎ shù jù fàng dào yún shàng , ràng bào biǎo pǎo de gèng kuài .",
+     "w": [
+      [
+       "小林",
+       "xiǎo lín",
+       "Xiao Lin"
+      ],
+      [
+       "您好",
+       "nín hǎo",
+       "hello (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "云川数据",
+       "yún chuān shù jù",
+       "Yunchuan Data"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "销售顾问",
+       "xiāo shòu gù wèn",
+       "sales consultant"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "帮",
+       "bāng",
+       "help"
+      ],
+      [
+       "企业",
+       "qǐ yè",
+       "company, enterprise"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "放到",
+       "fàng dào",
+       "put onto"
+      ],
+      [
+       "云上",
+       "yún shàng",
+       "in the cloud"
+      ],
+      [
+       "，"
+      ],
+      [
+       "让",
+       "ràng",
+       "let"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "跑得更快",
+       "pǎo de gèng kuài",
+       "run faster"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Hello Lin, I am a sales consultant at Yunchuan Data. We help companies move data to the cloud so reports run faster.",
+     "type": "fit",
+     "why": "One sentence: who you are, what you do, what she gains. Short and clear for a busy person."
+    },
+    {
+     "zh": "我们公司很大，产品很多，功能也很齐全。",
+     "py": "wǒ men gōng sī hěn dà , chǎn pǐn hěn duō , gōng néng yě hěn qí quán .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "很大",
+       "hěn dà",
+       "very big"
+      ],
+      [
+       "，"
+      ],
+      [
+       "产品",
+       "chǎn pǐn",
+       "product"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "，"
+      ],
+      [
+       "功能",
+       "gōng néng",
+       "feature"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "齐全",
+       "qí quán",
+       "complete"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Our company is big, with many products and a full set of features.",
+     "type": "generic",
+     "why": "True of every vendor. She still has no idea what you do for her."
+    },
+    {
+     "zh": "我们的平台比别家好，您一定会喜欢。",
+     "py": "wǒ men de píng tái bǐ bié jiā hǎo , nín yī dìng huì xǐ huan .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "平台",
+       "píng tái",
+       "platform"
+      ],
+      [
+       "比",
+       "bǐ",
+       "than"
+      ],
+      [
+       "别家",
+       "bié jiā",
+       "other vendors"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一定",
+       "yī dìng",
+       "surely"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "喜欢",
+       "xǐ huan",
+       "like"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Our platform is better than the others, you will surely like it.",
+     "type": "blunt",
+     "why": "A big claim with no evidence. She has heard that line before."
+    },
+    {
+     "zh": "不好意思占用您时间，我很快讲完，您随便听听就好。",
+     "py": "bù hǎo yì si zhàn yòng nín shí jiān , wǒ hěn kuài jiǎng wán , nín suí biàn tīng ting jiù hǎo .",
+     "w": [
+      [
+       "不好意思",
+       "bù hǎo yì si",
+       "sorry, excuse me"
+      ],
+      [
+       "占用",
+       "zhàn yòng",
+       "take up"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "讲完",
+       "jiǎng wán",
+       "finish speaking"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "随便",
+       "suí biàn",
+       "whatever"
+      ],
+      [
+       "听听",
+       "tīng ting",
+       "listen a bit"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Sorry to take your time, I will finish soon, just listen casually.",
+     "type": "cave",
+     "why": "You apologise your pitch away before it starts. Sound like it is worth her fifteen minutes."
+    }
+   ],
+   "intent": {
+    "en": "Greet her politely and say in one sentence who you are and what you do.",
+    "groups": [
+     [
+      "您好",
+      "你好",
+      "小林"
+     ],
+     [
+      "数据",
+      "云",
+      "报表",
+      "平台"
+     ]
+    ],
+    "example": {
+     "zh": "小林您好，我是云川数据的销售顾问，我们帮企业把数据放到云上，让报表跑得更快。",
+     "py": "xiǎo lín nín hǎo , wǒ shì yún chuān shù jù de xiāo shòu gù wèn , wǒ men bāng qǐ yè bǎ shù jù fàng dào yún shàng , ràng bào biǎo pǎo de gèng kuài .",
+     "w": [
+      [
+       "小林",
+       "xiǎo lín",
+       "Xiao Lin"
+      ],
+      [
+       "您好",
+       "nín hǎo",
+       "hello (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "云川数据",
+       "yún chuān shù jù",
+       "Yunchuan Data"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "销售顾问",
+       "xiāo shòu gù wèn",
+       "sales consultant"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "帮",
+       "bāng",
+       "help"
+      ],
+      [
+       "企业",
+       "qǐ yè",
+       "company, enterprise"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "放到",
+       "fàng dào",
+       "put onto"
+      ],
+      [
+       "云上",
+       "yún shàng",
+       "in the cloud"
+      ],
+      [
+       "，"
+      ],
+      [
+       "让",
+       "ràng",
+       "let"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "跑得更快",
+       "pǎo de gèng kuài",
+       "run faster"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Hello Lin, I am a sales consultant at Yunchuan Data. We help companies move data to the cloud so reports run faster."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "我们现在的报表要跑一个晚上，老板每天早上都在催。",
+    "py": "wǒ men xiàn zài de bào biǎo yào pǎo yī ge wǎn shang , lǎo bǎn měi tiān zǎo shang dōu zài cuī .",
+    "w": [
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "现在",
+      "xiàn zài",
+      "now"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "报表",
+      "bào biǎo",
+      "report (data)"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "跑",
+      "pǎo",
+      "run"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "晚上",
+      "wǎn shang",
+      "evening, night"
+     ],
+     [
+      "，"
+     ],
+     [
+      "老板",
+      "lǎo bǎn",
+      "boss"
+     ],
+     [
+      "每天",
+      "měi tiān",
+      "every day"
+     ],
+     [
+      "早上",
+      "zǎo shang",
+      "morning"
+     ],
+     [
+      "都",
+      "dōu",
+      "all"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "催",
+      "cuī",
+      "chase, press"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Our reports take a whole night to run, and the boss keeps chasing us every morning.",
+    "hurried": {
+     "zh": "报表要跑一个晚上，老板天天催，我真的头疼。",
+     "py": "bào biǎo yào pǎo yī ge wǎn shang , lǎo bǎn tiān tiān cuī , wǒ zhēn de tóu téng .",
+     "w": [
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "晚上",
+       "wǎn shang",
+       "evening, night"
+      ],
+      [
+       "，"
+      ],
+      [
+       "老板",
+       "lǎo bǎn",
+       "boss"
+      ],
+      [
+       "天天",
+       "tiān tiān",
+       "every day"
+      ],
+      [
+       "催",
+       "cuī",
+       "chase, press"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "头疼",
+       "tóu téng",
+       "headache"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Reports take all night and the boss chases me daily. It is a real headache."
+    }
+   },
+   "options": [
+    {
+     "zh": "听起来真的很辛苦。方便问一下，你们每天的数据量大概有多少？",
+     "py": "tīng qǐ lái zhēn de hěn xīn kǔ . fāng biàn wèn yī xià , nǐ men měi tiān de shù jù liàng dà gài yǒu duō shao ?",
+     "w": [
+      [
+       "听起来",
+       "tīng qǐ lái",
+       "sounds like"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "辛苦",
+       "xīn kǔ",
+       "hard work"
+      ],
+      [
+       "。"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "每天",
+       "měi tiān",
+       "every day"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据量",
+       "shù jù liàng",
+       "data volume"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "多少",
+       "duō shao",
+       "how much"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "That sounds really tough. May I ask, roughly how much data do you have each day?",
+     "type": "fit",
+     "why": "You show you heard her, then ask a polite question that opens the real problem."
+    },
+    {
+     "zh": "是的，很多公司都有这个问题，我们的产品可以解决。",
+     "py": "shì de , hěn duō gōng sī dōu yǒu zhè ge wèn tí , wǒ men de chǎn pǐn kě yǐ jiě jué .",
+     "w": [
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "产品",
+       "chǎn pǐn",
+       "product"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "解决",
+       "jiě jué",
+       "solve"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes, many companies have this problem and our product can solve it.",
+     "type": "generic",
+     "why": "You promise a fix before you understand the problem."
+    },
+    {
+     "zh": "那是你们的系统太旧了，应该换掉。",
+     "py": "nà shì nǐ men de xì tǒng tài jiù le , yīng gāi huàn diào .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "旧",
+       "jiù",
+       "old"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "应该",
+       "yīng gāi",
+       "should"
+      ],
+      [
+       "换掉",
+       "huàn diào",
+       "replace"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "That is because your system is too old, you should replace it.",
+     "type": "blunt",
+     "why": "You may be right, but you just called her system old. Ask first, diagnose later."
+    },
+    {
+     "zh": "对不起，那我马上给您发一份价格表。",
+     "py": "duì bù qǐ , nà wǒ mǎ shàng gěi nín fā yī fèn jià gé biǎo .",
+     "w": [
+      [
+       "对不起",
+       "duì bù qǐ",
+       "sorry"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "马上",
+       "mǎ shàng",
+       "right away"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "发",
+       "fā",
+       "send"
+      ],
+      [
+       "一份",
+       "yī fèn",
+       "one portion"
+      ],
+      [
+       "价格表",
+       "jià gé biǎo",
+       "price list"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Sorry about that, I will send you a price list right away.",
+     "type": "cave",
+     "why": "Wrong moment for prices. She has not told you what hurts yet."
+    }
+   ],
+   "intent": {
+    "en": "Show sympathy, then politely ask a question about how much data she has.",
+    "groups": [
+     [
+      "理解",
+      "明白",
+      "辛苦",
+      "了解",
+      "听起来",
+      "难怪"
+     ],
+     [
+      "方便问",
+      "请问",
+      "想问",
+      "能不能问",
+      "可以问",
+      "问一下"
+     ],
+     [
+      "数据量",
+      "数据",
+      "多少",
+      "多大"
+     ]
+    ],
+    "example": {
+     "zh": "听起来真的很辛苦。方便问一下，你们每天的数据量大概有多少？",
+     "py": "tīng qǐ lái zhēn de hěn xīn kǔ . fāng biàn wèn yī xià , nǐ men měi tiān de shù jù liàng dà gài yǒu duō shao ?",
+     "w": [
+      [
+       "听起来",
+       "tīng qǐ lái",
+       "sounds like"
+      ],
+      [
+       "真的",
+       "zhēn de",
+       "really"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "辛苦",
+       "xīn kǔ",
+       "hard work"
+      ],
+      [
+       "。"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "每天",
+       "měi tiān",
+       "every day"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据量",
+       "shù jù liàng",
+       "data volume"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "多少",
+       "duō shao",
+       "how much"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "That sounds really tough. May I ask, roughly how much data do you have each day?"
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "每天大概几百万条。你们大概能把时间缩短多少？",
+    "py": "měi tiān dà gài jǐ bǎi wàn tiáo . nǐ men dà gài néng bǎ shí jiān suō duǎn duō shao ?",
+    "w": [
+     [
+      "每天",
+      "měi tiān",
+      "every day"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "几百万条",
+      "jǐ bǎi wàn tiáo",
+      "a few million rows"
+     ],
+     [
+      "。"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "能",
+      "néng",
+      "can"
+     ],
+     [
+      "把",
+      "bǎ",
+      "(object marker)"
+     ],
+     [
+      "时间",
+      "shí jiān",
+      "time"
+     ],
+     [
+      "缩短",
+      "suō duǎn",
+      "shorten"
+     ],
+     [
+      "多少",
+      "duō shao",
+      "how much"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "About a few million rows a day. By how much could you shorten the time?",
+    "hurried": {
+     "zh": "几百万条。你们能缩短多少？快说。",
+     "py": "jǐ bǎi wàn tiáo . nǐ men néng suō duǎn duō shao ? kuài shuō .",
+     "w": [
+      [
+       "几百万条",
+       "jǐ bǎi wàn tiáo",
+       "a few million rows"
+      ],
+      [
+       "。"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "缩短",
+       "suō duǎn",
+       "shorten"
+      ],
+      [
+       "多少",
+       "duō shao",
+       "how much"
+      ],
+      [
+       "？"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "A few million rows. How much could you cut? Quickly."
+    }
+   },
+   "options": [
+    {
+     "zh": "我们有类似的客户，报表从一个晚上缩短到一个小时左右，具体要看您的数据。",
+     "py": "wǒ men yǒu lèi sì de kè hù , bào biǎo cóng yī ge wǎn shang suō duǎn dào yī ge xiǎo shí zuǒ yòu , jù tǐ yào kàn nín de shù jù .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "类似",
+       "lèi sì",
+       "similar"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "客户",
+       "kè hù",
+       "clients"
+      ],
+      [
+       "，"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "从",
+       "cóng",
+       "from"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "晚上",
+       "wǎn shang",
+       "evening, night"
+      ],
+      [
+       "缩短",
+       "suō duǎn",
+       "shorten"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "小时",
+       "xiǎo shí",
+       "hour"
+      ],
+      [
+       "左右",
+       "zuǒ yòu",
+       "about, around"
+      ],
+      [
+       "，"
+      ],
+      [
+       "具体",
+       "jù tǐ",
+       "specific"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We have similar customers whose reports went from a whole night to about an hour, but it depends on your data.",
+     "type": "fit",
+     "why": "A concrete example, and an honest \"it depends\". That earns trust."
+    },
+    {
+     "zh": "我们的系统很快，您放心。",
+     "py": "wǒ men de xì tǒng hěn kuài , nín fàng xīn .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "放心",
+       "fàng xīn",
+       "rest assured"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Our system is very fast, do not worry.",
+     "type": "generic",
+     "why": "\"Fast\" and \"do not worry\" are claims, not numbers."
+    },
+    {
+     "zh": "几百万条？那你们现在的系统肯定很慢。",
+     "py": "jǐ bǎi wàn tiáo ? nà nǐ men xiàn zài de xì tǒng kěn dìng hěn màn .",
+     "w": [
+      [
+       "几百万条",
+       "jǐ bǎi wàn tiáo",
+       "a few million rows"
+      ],
+      [
+       "？"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "肯定",
+       "kěn dìng",
+       "definitely"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "慢",
+       "màn",
+       "slow"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "A few million rows? Then your current system must be slow.",
+     "type": "blunt",
+     "why": "Another dig at her system, and still no answer to her question."
+    },
+    {
+     "zh": "只要您愿意试，价钱我们可以再商量。",
+     "py": "zhǐ yào nín yuàn yì shì , jià qián wǒ men kě yǐ zài shāng liang .",
+     "w": [
+      [
+       "只要",
+       "zhǐ yào",
+       "as long as"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "愿意",
+       "yuàn yì",
+       "willing"
+      ],
+      [
+       "试",
+       "shì",
+       "try"
+      ],
+      [
+       "，"
+      ],
+      [
+       "价钱",
+       "jià qián",
+       "price"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "商量",
+       "shāng liang",
+       "discuss"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "As long as you are willing to try, we can talk about the price.",
+     "type": "cave",
+     "why": "She asked about speed, not price. You are discounting before being asked."
+    }
+   ],
+   "intent": {
+    "en": "Answer her question with a similar customer or a rough result, and say it depends on her data.",
+    "groups": [
+     [
+      "类似",
+      "其他客户",
+      "客户",
+      "案例"
+     ],
+     [
+      "缩短",
+      "一个小时",
+      "一小时",
+      "快很多",
+      "几个小时"
+     ],
+     [
+      "具体",
+      "要看",
+      "取决于",
+      "看您",
+      "需要看"
+     ]
+    ],
+    "example": {
+     "zh": "我们有类似的客户，报表从一个晚上缩短到一个小时左右，具体要看您的数据。",
+     "py": "wǒ men yǒu lèi sì de kè hù , bào biǎo cóng yī ge wǎn shang suō duǎn dào yī ge xiǎo shí zuǒ yòu , jù tǐ yào kàn nín de shù jù .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "类似",
+       "lèi sì",
+       "similar"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "客户",
+       "kè hù",
+       "clients"
+      ],
+      [
+       "，"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "从",
+       "cóng",
+       "from"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "晚上",
+       "wǎn shang",
+       "evening, night"
+      ],
+      [
+       "缩短",
+       "suō duǎn",
+       "shorten"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "小时",
+       "xiǎo shí",
+       "hour"
+      ],
+      [
+       "左右",
+       "zuǒ yòu",
+       "about, around"
+      ],
+      [
+       "，"
+      ],
+      [
+       "具体",
+       "jù tǐ",
+       "specific"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We have similar customers whose reports went from a whole night to about an hour, but it depends on your data."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "听起来不错，但是这件事我一个人决定不了。",
+    "py": "tīng qǐ lái bù cuò , dàn shì zhè jiàn shì wǒ yī ge rén jué dìng bù liǎo .",
+    "w": [
+     [
+      "听起来",
+      "tīng qǐ lái",
+      "sounds like"
+     ],
+     [
+      "不错",
+      "bù cuò",
+      "not bad, good"
+     ],
+     [
+      "，"
+     ],
+     [
+      "但是",
+      "dàn shì",
+      "but"
+     ],
+     [
+      "这件事",
+      "zhè jiàn shì",
+      "this matter"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "一个人",
+      "yī ge rén",
+      "alone, one person"
+     ],
+     [
+      "决定",
+      "jué dìng",
+      "decide"
+     ],
+     [
+      "不了",
+      "bù liǎo",
+      "cannot (verb ending)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Sounds good, but I cannot decide this alone.",
+    "hurried": {
+     "zh": "不错，但我一个人决定不了。我马上要开下一个会了。",
+     "py": "bù cuò , dàn wǒ yī ge rén jué dìng bù liǎo . wǒ mǎ shàng yào kāi xià yī ge huì le .",
+     "w": [
+      [
+       "不错",
+       "bù cuò",
+       "not bad, good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "但",
+       "dàn",
+       "but"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "一个人",
+       "yī ge rén",
+       "alone, one person"
+      ],
+      [
+       "决定",
+       "jué dìng",
+       "decide"
+      ],
+      [
+       "不了",
+       "bù liǎo",
+       "cannot (verb ending)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "马上",
+       "mǎ shàng",
+       "right away"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "开",
+       "kāi",
+       "open, start"
+      ],
+      [
+       "下",
+       "xià",
+       "next, down"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Good, but I cannot decide alone. My next meeting starts soon."
+    }
+   },
+   "options": [
+    {
+     "zh": "理解。能不能请您帮忙约一下王总监，我们给他做一个二十分钟的简短演示？",
+     "py": "lǐ jiě . néng bù néng qǐng nín bāng máng yuē yī xià wáng zǒng jiān , wǒ men gěi tā zuò yī ge èr shí fēn zhōng de jiǎn duǎn yǎn shì ?",
+     "w": [
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "。"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "帮忙",
+       "bāng máng",
+       "help out"
+      ],
+      [
+       "约",
+       "yuē",
+       "arrange, book"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "他",
+       "tā",
+       "he, him"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "二十分钟",
+       "èr shí fēn zhōng",
+       "twenty minutes"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "简短",
+       "jiǎn duǎn",
+       "short"
+      ],
+      [
+       "演示",
+       "yǎn shì",
+       "demo"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Understood. Could you help set up a meeting with Director Wang? We can give him a short twenty-minute demo.",
+     "type": "fit",
+     "why": "Polite ask, a named person and a small, specific offer. Easy for her to say yes."
+    },
+    {
+     "zh": "好的，那您先考虑一下，有需要再联系我。",
+     "py": "hǎo de , nà nín xiān kǎo lǜ yī xià , yǒu xū yào zài lián xì wǒ .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "考虑",
+       "kǎo lǜ",
+       "consider"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "联系",
+       "lián xì",
+       "contact"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, please think about it and contact me if needed.",
+     "type": "generic",
+     "why": "Passive. The deal now waits on her free time."
+    },
+    {
+     "zh": "那您不能决定的话，我直接去找王总监吧。",
+     "py": "nà nín bù néng jué dìng de huà , wǒ zhí jiē qù zhǎo wáng zǒng jiān ba .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "不能",
+       "bù néng",
+       "cannot"
+      ],
+      [
+       "决定",
+       "jué dìng",
+       "decide"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "直接",
+       "zhí jiē",
+       "directly"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "找",
+       "zhǎo",
+       "give change"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "If you cannot decide, I will go straight to Director Wang.",
+     "type": "blunt",
+     "why": "Going round her makes her look bad. She is your inside champion."
+    },
+    {
+     "zh": "没关系，不用见王总监了，我把资料发给您就好。",
+     "py": "méi guān xi , bù yòng jiàn wáng zǒng jiān le , wǒ bǎ zī liào fā gěi nín jiù hǎo .",
+     "w": [
+      [
+       "没关系",
+       "méi guān xi",
+       "never mind"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "见",
+       "jiàn",
+       "meet, see"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "资料",
+       "zī liào",
+       "material"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No problem, no need to meet Director Wang, I will just send you the material.",
+     "type": "cave",
+     "why": "You give up the very meeting you need. Documents do not close deals."
+    }
+   ],
+   "intent": {
+    "en": "Show understanding, then politely ask her to set up a meeting with 王总监 and offer a short demo.",
+    "groups": [
+     [
+      "王总监",
+      "技术负责人",
+      "技术主管",
+      "技术"
+     ],
+     [
+      "约",
+      "安排",
+      "见面",
+      "开会",
+      "会议",
+      "聊"
+     ],
+     [
+      "演示",
+      "demo",
+      "展示",
+      "示范"
+     ]
+    ],
+    "example": {
+     "zh": "理解。能不能请您帮忙约一下王总监，我们给他做一个二十分钟的简短演示？",
+     "py": "lǐ jiě . néng bù néng qǐng nín bāng máng yuē yī xià wáng zǒng jiān , wǒ men gěi tā zuò yī ge èr shí fēn zhōng de jiǎn duǎn yǎn shì ?",
+     "w": [
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "。"
+      ],
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "帮忙",
+       "bāng máng",
+       "help out"
+      ],
+      [
+       "约",
+       "yuē",
+       "arrange, book"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "给",
+       "gěi",
+       "give"
+      ],
+      [
+       "他",
+       "tā",
+       "he, him"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "二十分钟",
+       "èr shí fēn zhōng",
+       "twenty minutes"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "简短",
+       "jiǎn duǎn",
+       "short"
+      ],
+      [
+       "演示",
+       "yǎn shì",
+       "demo"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Understood. Could you help set up a meeting with Director Wang? We can give him a short twenty-minute demo."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "好，我去问问王总监。下周三下午可以吗？",
+    "py": "hǎo , wǒ qù wèn wen wáng zǒng jiān . xià zhōu sān xià wǔ kě yǐ ma ?",
+    "w": [
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "去",
+      "qù",
+      "go"
+     ],
+     [
+      "问问",
+      "wèn wen",
+      "ask around"
+     ],
+     [
+      "王总监",
+      "wáng zǒng jiān",
+      "Director Wang"
+     ],
+     [
+      "。"
+     ],
+     [
+      "下周三",
+      "xià zhōu sān",
+      "next Wednesday"
+     ],
+     [
+      "下午",
+      "xià wǔ",
+      "afternoon"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Okay, I will ask Director Wang. Is next Wednesday afternoon okay?",
+    "hurried": {
+     "zh": "好，我去问他。下周三下午行吗？我要下线了。",
+     "py": "hǎo , wǒ qù wèn tā . xià zhōu sān xià wǔ xíng ma ? wǒ yào xià xiàn le .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "他",
+       "tā",
+       "he, him"
+      ],
+      [
+       "。"
+      ],
+      [
+       "下周三",
+       "xià zhōu sān",
+       "next Wednesday"
+      ],
+      [
+       "下午",
+       "xià wǔ",
+       "afternoon"
+      ],
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "下线",
+       "xià xiàn",
+       "log off"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, I will ask him. Is next Wednesday afternoon fine? I have to log off."
+    }
+   },
+   "options": [
+    {
+     "zh": "可以，下周三下午没问题。我会把时间和内容用邮件发给您，谢谢小林！",
+     "py": "kě yǐ , xià zhōu sān xià wǔ méi wèn tí . wǒ huì bǎ shí jiān hé nèi róng yòng yóu jiàn fā gěi nín , xiè xie xiǎo lín !",
+     "w": [
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "下周三",
+       "xià zhōu sān",
+       "next Wednesday"
+      ],
+      [
+       "下午",
+       "xià wǔ",
+       "afternoon"
+      ],
+      [
+       "没问题",
+       "méi wèn tí",
+       "no problem"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "内容",
+       "nèi róng",
+       "content"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "邮件",
+       "yóu jiàn",
+       "email"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "小林",
+       "xiǎo lín",
+       "Xiao Lin"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "Yes, next Wednesday afternoon is fine. I will email you the time and content. Thanks, Lin!",
+     "type": "fit",
+     "why": "A clear yes, a clear next step, and thanks. She can forward the email as it is."
+    },
+    {
+     "zh": "好的，谢谢您。",
+     "py": "hǎo de , xiè xie nín .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, thank you.",
+     "type": "generic",
+     "why": "Polite but leaves everything open. Who sends what, and when?"
+    },
+    {
+     "zh": "下周三不行，我只有周五有空。",
+     "py": "xià zhōu sān bù xíng , wǒ zhǐ yǒu zhōu wǔ yǒu kòng .",
+     "w": [
+      [
+       "下周三",
+       "xià zhōu sān",
+       "next Wednesday"
+      ],
+      [
+       "不行",
+       "bù xíng",
+       "not okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "只有",
+       "zhǐ yǒu",
+       "only have"
+      ],
+      [
+       "周五",
+       "zhōu wǔ",
+       "Friday"
+      ],
+      [
+       "有空",
+       "yǒu kòng",
+       "free (time)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Next Wednesday does not work, I am only free on Friday.",
+     "type": "blunt",
+     "why": "You block the one slot she offered. Offer an alternative softly instead."
+    },
+    {
+     "zh": "您什么时候方便都可以，我随时配合，您说了算。",
+     "py": "nín shén me shí hou fāng biàn dōu kě yǐ , wǒ suí shí pèi hé , nín shuō le suàn .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "配合",
+       "pèi hé",
+       "cooperate"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "说了算",
+       "shuō le suàn",
+       "has the final say"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Whenever suits you is fine, I am always available, it is up to you.",
+     "type": "cave",
+     "why": "Too flexible. A vague time often becomes no time."
+    }
+   ],
+   "intent": {
+    "en": "Agree to the time, say you will send details by email, and thank her.",
+    "groups": [
+     [
+      "可以",
+      "没问题",
+      "好",
+      "行"
+     ],
+     [
+      "邮件",
+      "邮箱",
+      "发给您",
+      "发给你",
+      "发"
+     ],
+     [
+      "谢谢",
+      "多谢",
+      "感谢"
+     ]
+    ],
+    "example": {
+     "zh": "可以，下周三下午没问题。我会把时间和内容用邮件发给您，谢谢小林！",
+     "py": "kě yǐ , xià zhōu sān xià wǔ méi wèn tí . wǒ huì bǎ shí jiān hé nèi róng yòng yóu jiàn fā gěi nín , xiè xie xiǎo lín !",
+     "w": [
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "下周三",
+       "xià zhōu sān",
+       "next Wednesday"
+      ],
+      [
+       "下午",
+       "xià wǔ",
+       "afternoon"
+      ],
+      [
+       "没问题",
+       "méi wèn tí",
+       "no problem"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "内容",
+       "nèi róng",
+       "content"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "邮件",
+       "yóu jiàn",
+       "email"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "小林",
+       "xiǎo lín",
+       "Xiao Lin"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "Yes, next Wednesday afternoon is fine. I will email you the time and content. Thanks, Lin!"
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "报表",
+   "py": "bào biǎo",
+   "w": [
+    [
+     "报表",
+     "bào biǎo",
+     "report (data)"
+    ]
+   ],
+   "en": "report"
+  },
+  {
+   "zh": "数据量",
+   "py": "shù jù liàng",
+   "w": [
+    [
+     "数据量",
+     "shù jù liàng",
+     "data volume"
+    ]
+   ],
+   "en": "data volume"
+  },
+  {
+   "zh": "演示",
+   "py": "yǎn shì",
+   "w": [
+    [
+     "演示",
+     "yǎn shì",
+     "demo"
+    ]
+   ],
+   "en": "demo, presentation"
+  },
+  {
+   "zh": "决定",
+   "py": "jué dìng",
+   "w": [
+    [
+     "决定",
+     "jué dìng",
+     "decide"
+    ]
+   ],
+   "en": "decide"
+  },
+  {
+   "zh": "辛苦",
+   "py": "xīn kǔ",
+   "w": [
+    [
+     "辛苦",
+     "xīn kǔ",
+     "hard work"
+    ]
+   ],
+   "en": "hard work, tough"
+  },
+  {
+   "zh": "缩短",
+   "py": "suō duǎn",
+   "w": [
+    [
+     "缩短",
+     "suō duǎn",
+     "shorten"
+    ]
+   ],
+   "en": "shorten"
+  }
+ ]
+}

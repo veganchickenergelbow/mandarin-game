@@ -1,0 +1,3008 @@
+{
+ "id": "work_wang_migration",
+ "track": "work",
+ "title": {
+  "zh": "老系统迁移",
+  "en": "\"Migrating the old system is too risky\""
+ },
+ "character": {
+  "id": "wang",
+  "name": "王总监",
+  "role": "IT Director, Lion City Logistics",
+  "en": "Mr Wang built the old system himself and it has run for ten years without a major failure. He does not fear change, he fears downtime, so he trusts plans that lower risk and keep an exit."
+ },
+ "goal": "Lower the risk step by step: acknowledge ten stable years, propose a phased pilot with old and new in parallel, give a realistic timeline, explain support, and agree the pilot.",
+ "twists": [
+  {
+   "id": "data_mismatch",
+   "en": "He worries the numbers will not match.",
+   "turn2": {
+    "zh": "要是新旧系统的数字对不上怎么办？",
+    "py": "yào shì xīn jiù xì tǒng de shù zì duì bù shàng zěn me bàn ?",
+    "w": [
+     [
+      "要是",
+      "yào shì",
+      "if"
+     ],
+     [
+      "新旧",
+      "xīn jiù",
+      "new and old"
+     ],
+     [
+      "系统",
+      "xì tǒng",
+      "system"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "数字",
+      "shù zì",
+      "numbers"
+     ],
+     [
+      "对不上",
+      "duì bù shàng",
+      "do not match"
+     ],
+     [
+      "怎么办",
+      "zěn me bàn",
+      "what to do"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "What if the numbers in the old and new systems do not match?"
+   },
+   "prompt": "Hidden concern: a wrong number in a report would be a disaster. He softens if Lucas offers a daily comparison and a clear stop rule.",
+   "group": [
+    "对比",
+    "核对",
+    "对账",
+    "检查",
+    "对不上"
+   ],
+   "example": {
+    "zh": "我们先拿一个报表做试点，新旧系统并行跑，每天对比结果，对不上就停。",
+    "py": "wǒ men xiān ná yī ge bào biǎo zuò shì diǎn , xīn jiù xì tǒng bìng xíng pǎo , měi tiān duì bǐ jié guǒ , duì bù shàng jiù tíng .",
+    "w": [
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "拿",
+      "ná",
+      "take"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "报表",
+      "bào biǎo",
+      "report (data)"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "新旧",
+      "xīn jiù",
+      "new and old"
+     ],
+     [
+      "系统",
+      "xì tǒng",
+      "system"
+     ],
+     [
+      "并行",
+      "bìng xíng",
+      "in parallel"
+     ],
+     [
+      "跑",
+      "pǎo",
+      "run"
+     ],
+     [
+      "，"
+     ],
+     [
+      "每天",
+      "měi tiān",
+      "every day"
+     ],
+     [
+      "对比",
+      "duì bǐ",
+      "compare"
+     ],
+     [
+      "结果",
+      "jié guǒ",
+      "result"
+     ],
+     [
+      "，"
+     ],
+     [
+      "对不上",
+      "duì bù shàng",
+      "do not match"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "停",
+      "tíng",
+      "stop"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "We first take one report as a pilot, run old and new in parallel, compare results daily, and stop if they do not match."
+   }
+  },
+  {
+   "id": "team_busy",
+   "en": "His team is too busy to help.",
+   "turn2": {
+    "zh": "我的团队现在很忙，没时间配合你们。",
+    "py": "wǒ de tuán duì xiàn zài hěn máng , méi shí jiān pèi hé nǐ men .",
+    "w": [
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "团队",
+      "tuán duì",
+      "team"
+     ],
+     [
+      "现在",
+      "xiàn zài",
+      "now"
+     ],
+     [
+      "很",
+      "hěn",
+      "very"
+     ],
+     [
+      "忙",
+      "máng",
+      "busy"
+     ],
+     [
+      "，"
+     ],
+     [
+      "没",
+      "méi",
+      "not have"
+     ],
+     [
+      "时间",
+      "shí jiān",
+      "time"
+     ],
+     [
+      "配合",
+      "pèi hé",
+      "cooperate"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "My team is very busy right now, they have no time to work with you."
+   },
+   "prompt": "Hidden concern: his team is stretched. He softens if Lucas takes most of the work onto his own engineers and asks little of the team.",
+   "group": [
+    "工程师",
+    "我们来",
+    "我们负责",
+    "人手",
+    "不占用"
+   ],
+   "example": {
+    "zh": "没问题，我们先拿一个报表做试点，新旧系统并行，主要工作由我们的工程师来做，不会占用您太多人手。",
+    "py": "méi wèn tí , wǒ men xiān ná yī ge bào biǎo zuò shì diǎn , xīn jiù xì tǒng bìng xíng , zhǔ yào gōng zuò yóu wǒ men de gōng chéng shī lái zuò , bù huì zhàn yòng nín tài duō rén shǒu .",
+    "w": [
+     [
+      "没问题",
+      "méi wèn tí",
+      "no problem"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "拿",
+      "ná",
+      "take"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "报表",
+      "bào biǎo",
+      "report (data)"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "，"
+     ],
+     [
+      "新旧",
+      "xīn jiù",
+      "new and old"
+     ],
+     [
+      "系统",
+      "xì tǒng",
+      "system"
+     ],
+     [
+      "并行",
+      "bìng xíng",
+      "in parallel"
+     ],
+     [
+      "，"
+     ],
+     [
+      "主要",
+      "zhǔ yào",
+      "main"
+     ],
+     [
+      "工作",
+      "gōng zuò",
+      "work"
+     ],
+     [
+      "由",
+      "yóu",
+      "by"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "工程师",
+      "gōng chéng shī",
+      "engineer"
+     ],
+     [
+      "来",
+      "lái",
+      "come, let's"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不会",
+      "bù huì",
+      "won't"
+     ],
+     [
+      "占用",
+      "zhàn yòng",
+      "take up"
+     ],
+     [
+      "您",
+      "nín",
+      "you (polite)"
+     ],
+     [
+      "太多",
+      "tài duō",
+      "too many"
+     ],
+     [
+      "人手",
+      "rén shǒu",
+      "manpower"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "No problem. We start with one report as a pilot, run old and new in parallel, and our engineers do most of the work, so we will not take much of your team."
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "这套系统用了十年，迁移风险太大了。",
+    "py": "zhè tào xì tǒng yòng le shí nián , qiān yí fēng xiǎn tài dà le .",
+    "w": [
+     [
+      "这套",
+      "zhè tào",
+      "this set (of)"
+     ],
+     [
+      "系统",
+      "xì tǒng",
+      "system"
+     ],
+     [
+      "用",
+      "yòng",
+      "use"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "十年",
+      "shí nián",
+      "ten years"
+     ],
+     [
+      "，"
+     ],
+     [
+      "迁移",
+      "qiān yí",
+      "migration"
+     ],
+     [
+      "风险",
+      "fēng xiǎn",
+      "risk"
+     ],
+     [
+      "太",
+      "tài",
+      "too"
+     ],
+     [
+      "大",
+      "dà",
+      "big"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "This system has run for ten years, migration is too risky.",
+    "hurried": {
+     "zh": "系统稳定运行十年了，我不想冒险。",
+     "py": "xì tǒng wěn dìng yùn xíng shí nián le , wǒ bù xiǎng mào xiǎn .",
+     "w": [
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "稳定",
+       "wěn dìng",
+       "stable"
+      ],
+      [
+       "运行",
+       "yùn xíng",
+       "run, operate"
+      ],
+      [
+       "十年",
+       "shí nián",
+       "ten years"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "冒险",
+       "mào xiǎn",
+       "take a risk"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "The system has run stably for ten years, I do not want to risk it."
+    }
+   },
+   "options": [
+    {
+     "zh": "我理解，稳定运行十年很不容易。所以我们不建议一次全换，可以分阶段来。",
+     "py": "wǒ lǐ jiě , wěn dìng yùn xíng shí nián hěn bù róng yì . suǒ yǐ wǒ men bù jiàn yì yī cì quán huàn , kě yǐ fēn jiē duàn lái .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "，"
+      ],
+      [
+       "稳定",
+       "wěn dìng",
+       "stable"
+      ],
+      [
+       "运行",
+       "yùn xíng",
+       "run, operate"
+      ],
+      [
+       "十年",
+       "shí nián",
+       "ten years"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "不容易",
+       "bù róng yì",
+       "not easy"
+      ],
+      [
+       "。"
+      ],
+      [
+       "所以",
+       "suǒ yǐ",
+       "so, therefore"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "一次",
+       "yī cì",
+       "once, one session"
+      ],
+      [
+       "全",
+       "quán",
+       "all"
+      ],
+      [
+       "换",
+       "huàn",
+       "change"
+      ],
+      [
+       "，"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "分阶段",
+       "fēn jiē duàn",
+       "in phases"
+      ],
+      [
+       "来",
+       "lái",
+       "come, let's"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I understand, ten stable years is not easy. So we do not suggest replacing everything at once, we can go in phases.",
+     "type": "fit",
+     "why": "You respect the system first, then offer a way that fits his worry."
+    },
+    {
+     "zh": "我们有成熟的迁移经验，您放心。",
+     "py": "wǒ men yǒu chéng shú de qiān yí jīng yàn , nín fàng xīn .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "成熟",
+       "chéng shú",
+       "mature"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "迁移",
+       "qiān yí",
+       "migration"
+      ],
+      [
+       "经验",
+       "jīng yàn",
+       "experience"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "放心",
+       "fàng xīn",
+       "rest assured"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We have mature migration experience, do not worry.",
+     "type": "generic",
+     "why": "Experience in general does not calm a specific fear."
+    },
+    {
+     "zh": "不迁移的话，老系统迟早会出问题。",
+     "py": "bù qiān yí de huà , lǎo xì tǒng chí zǎo huì chū wèn tí .",
+     "w": [
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "迁移",
+       "qiān yí",
+       "migration"
+      ],
+      [
+       "的话",
+       "de huà",
+       "if"
+      ],
+      [
+       "，"
+      ],
+      [
+       "老",
+       "lǎo",
+       "old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "迟早",
+       "chí zǎo",
+       "sooner or later"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "出问题",
+       "chū wèn tí",
+       "have a problem"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "If you do not migrate, the old system will have problems sooner or later.",
+     "type": "blunt",
+     "why": "It sounds like a threat, and it criticises what he built."
+    },
+    {
+     "zh": "那我们全部帮您免费迁移，您一分钱不用出。",
+     "py": "nà wǒ men quán bù bāng nín miǎn fèi qiān yí , nín yī fēn qián bù yòng chū .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "全部",
+       "quán bù",
+       "all, everything"
+      ],
+      [
+       "帮",
+       "bāng",
+       "help"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "免费",
+       "miǎn fèi",
+       "free of charge"
+      ],
+      [
+       "迁移",
+       "qiān yí",
+       "migration"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一分钱",
+       "yī fēn qián",
+       "one cent"
+      ],
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "出",
+       "chū",
+       "out"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Then we will migrate everything for you for free.",
+     "type": "cave",
+     "why": "Panic discounting. The risk he fears is still there."
+    }
+   ],
+   "intent": {
+    "en": "Acknowledge ten stable years, then suggest going in phases instead of all at once.",
+    "groups": [
+     [
+      "理解",
+      "明白",
+      "不容易",
+      "佩服",
+      "确实"
+     ],
+     [
+      "分阶段",
+      "分步",
+      "一步一步",
+      "逐步",
+      "慢慢",
+      "先"
+     ]
+    ],
+    "example": {
+     "zh": "我理解，稳定运行十年很不容易。所以我们不建议一次全换，可以分阶段来。",
+     "py": "wǒ lǐ jiě , wěn dìng yùn xíng shí nián hěn bù róng yì . suǒ yǐ wǒ men bù jiàn yì yī cì quán huàn , kě yǐ fēn jiē duàn lái .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "，"
+      ],
+      [
+       "稳定",
+       "wěn dìng",
+       "stable"
+      ],
+      [
+       "运行",
+       "yùn xíng",
+       "run, operate"
+      ],
+      [
+       "十年",
+       "shí nián",
+       "ten years"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "不容易",
+       "bù róng yì",
+       "not easy"
+      ],
+      [
+       "。"
+      ],
+      [
+       "所以",
+       "suǒ yǐ",
+       "so, therefore"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "一次",
+       "yī cì",
+       "once, one session"
+      ],
+      [
+       "全",
+       "quán",
+       "all"
+      ],
+      [
+       "换",
+       "huàn",
+       "change"
+      ],
+      [
+       "，"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "分阶段",
+       "fēn jiē duàn",
+       "in phases"
+      ],
+      [
+       "来",
+       "lái",
+       "come, let's"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I understand, ten stable years is not easy. So we do not suggest replacing everything at once, we can go in phases."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "那具体怎么分阶段？",
+    "py": "nà jù tǐ zěn me fēn jiē duàn ?",
+    "w": [
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "具体",
+      "jù tǐ",
+      "specific"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "分阶段",
+      "fēn jiē duàn",
+      "in phases"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "So how exactly would the phases work?",
+    "hurried": {
+     "zh": "具体怎么分？说简单一点。",
+     "py": "jù tǐ zěn me fēn ? shuō jiǎn dān yī diǎn .",
+     "w": [
+      [
+       "具体",
+       "jù tǐ",
+       "specific"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "分",
+       "fēn",
+       "divide, split"
+      ],
+      [
+       "？"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "简单",
+       "jiǎn dān",
+       "simple"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How exactly? Keep it simple."
+    }
+   },
+   "options": [
+    {
+     "zh": "我们先拿一个报表做试点，新旧系统并行跑，没问题再往下走。",
+     "py": "wǒ men xiān ná yī ge bào biǎo zuò shì diǎn , xīn jiù xì tǒng bìng xíng pǎo , méi wèn tí zài wǎng xià zǒu .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "拿",
+       "ná",
+       "take"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "新旧",
+       "xīn jiù",
+       "new and old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "下",
+       "xià",
+       "next, down"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "First we take one report as a pilot and run old and new in parallel. If it is fine, we continue.",
+     "type": "fit",
+     "why": "Small first step, old system stays, then a go-or-stop point. That is what lowering risk sounds like."
+    },
+    {
+     "zh": "我们有一套成熟的方法，可以慢慢来。",
+     "py": "wǒ men yǒu yī tào chéng shú de fāng fǎ , kě yǐ màn màn lái .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "一套",
+       "yī tào",
+       "a set of"
+      ],
+      [
+       "成熟",
+       "chéng shú",
+       "mature"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "方法",
+       "fāng fǎ",
+       "method"
+      ],
+      [
+       "，"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "慢慢",
+       "màn màn",
+       "slowly, take your time"
+      ],
+      [
+       "来",
+       "lái",
+       "come, let's"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We have a mature method and can go slowly.",
+     "type": "generic",
+     "why": "\"A method\" with no content. He is an engineer, he wants the steps."
+    },
+    {
+     "zh": "你们不试怎么知道不行？",
+     "py": "nǐ men bù shì zěn me zhī dao bù xíng ?",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "试",
+       "shì",
+       "try"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "不行",
+       "bù xíng",
+       "not okay"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "How would you know it fails if you do not try?",
+     "type": "blunt",
+     "why": "Challenging him, when he fears failure, makes him dig in."
+    },
+    {
+     "zh": "您想怎么分就怎么分，我们都行。",
+     "py": "nín xiǎng zěn me fēn jiù zěn me fēn , wǒ men dōu xíng .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "分",
+       "fēn",
+       "divide, split"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "分",
+       "fēn",
+       "divide, split"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Split it however you like, we are fine either way.",
+     "type": "cave",
+     "why": "He wants a plan from you. No plan from the expert makes him more nervous."
+    }
+   ],
+   "intent": {
+    "en": "Describe the first step: one report as a pilot, with old and new systems running in parallel.",
+    "groups": [
+     [
+      "先"
+     ],
+     [
+      "试点",
+      "一个报表",
+      "小范围",
+      "试一个",
+      "试试"
+     ],
+     [
+      "并行",
+      "同时",
+      "新旧",
+      "两边",
+      "一起"
+     ]
+    ],
+    "example": {
+     "zh": "我们先拿一个报表做试点，新旧系统并行跑，没问题再往下走。",
+     "py": "wǒ men xiān ná yī ge bào biǎo zuò shì diǎn , xīn jiù xì tǒng bìng xíng pǎo , méi wèn tí zài wǎng xià zǒu .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "拿",
+       "ná",
+       "take"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "新旧",
+       "xīn jiù",
+       "new and old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "下",
+       "xià",
+       "next, down"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "First we take one report as a pilot and run old and new in parallel. If it is fine, we continue."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "试点大概要多久？",
+    "py": "shì diǎn dà gài yào duō jiǔ ?",
+    "w": [
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "大概",
+      "dà gài",
+      "roughly"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "多久",
+      "duō jiǔ",
+      "how long"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "About how long would the pilot take?",
+    "hurried": {
+     "zh": "试点要多久？我可没有几个月。",
+     "py": "shì diǎn yào duō jiǔ ? wǒ kě méi yǒu jǐ ge yuè .",
+     "w": [
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "多久",
+       "duō jiǔ",
+       "how long"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "可",
+       "kě",
+       "(emphasis)"
+      ],
+      [
+       "没有",
+       "méi yǒu",
+       "do not have"
+      ],
+      [
+       "几个月",
+       "jǐ ge yuè",
+       "a few months"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How long is the pilot? I do not have months."
+    }
+   },
+   "options": [
+    {
+     "zh": "大概四到六个星期。先花一周做准备，再并行跑几周，最后一起对比结果。",
+     "py": "dà gài sì dào liù ge xīng qī . xiān huā yī zhōu zuò zhǔn bèi , zài bìng xíng pǎo jǐ zhōu , zuì hòu yī qǐ duì bǐ jié guǒ .",
+     "w": [
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "四到六个",
+       "sì dào liù ge",
+       "four to six"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "。"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "花",
+       "huā",
+       "spend"
+      ],
+      [
+       "一周",
+       "yī zhōu",
+       "one week"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "准备",
+       "zhǔn bèi",
+       "prepare"
+      ],
+      [
+       "，"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "几周",
+       "jǐ zhōu",
+       "a few weeks"
+      ],
+      [
+       "，"
+      ],
+      [
+       "最后",
+       "zuì hòu",
+       "finally"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "对比",
+       "duì bǐ",
+       "compare"
+      ],
+      [
+       "结果",
+       "jié guǒ",
+       "result"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "About four to six weeks. First a week of preparation, then a few weeks in parallel, and finally we compare the results together.",
+     "type": "fit",
+     "why": "A range, plus the order of steps with 先…再. He can put it in his calendar."
+    },
+    {
+     "zh": "不会太久的，一定很快。",
+     "py": "bù huì tài jiǔ de , yī dìng hěn kuài .",
+     "w": [
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "太久",
+       "tài jiǔ",
+       "too long"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一定",
+       "yī dìng",
+       "surely"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Not too long, definitely quick.",
+     "type": "generic",
+     "why": "\"Quick\" has no number. He needs to plan."
+    },
+    {
+     "zh": "这要看你们团队配合得好不好。",
+     "py": "zhè yào kàn nǐ men tuán duì pèi hé děi hǎo bù hǎo .",
+     "w": [
+      [
+       "这",
+       "zhè",
+       "this"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "配合",
+       "pèi hé",
+       "cooperate"
+      ],
+      [
+       "得",
+       "děi",
+       "must"
+      ],
+      [
+       "好不好",
+       "hǎo bù hǎo",
+       "okay or not"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "It depends on whether your team cooperates well.",
+     "type": "blunt",
+     "why": "It puts the blame on his team before you start."
+    },
+    {
+     "zh": "您想要多快就多快，一个星期也可以。",
+     "py": "nín xiǎng yào duō kuài jiù duō kuài , yī ge xīng qī yě kě yǐ .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "多快",
+       "duō kuài",
+       "how fast"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "多快",
+       "duō kuài",
+       "how fast"
+      ],
+      [
+       "，"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "As fast as you like, one week works too.",
+     "type": "cave",
+     "why": "A promise you cannot keep, and it ignores the testing a safe migration needs."
+    }
+   ],
+   "intent": {
+    "en": "Give a rough timeline in weeks and the order of steps (先…再…).",
+    "groups": [
+     [
+      "周",
+      "星期",
+      "个月",
+      "月",
+      "天"
+     ],
+     [
+      "大概",
+      "大约",
+      "差不多",
+      "左右",
+      "预计",
+      "一般"
+     ],
+     [
+      "先",
+      "再",
+      "然后"
+     ]
+    ],
+    "example": {
+     "zh": "大概四到六个星期。先花一周做准备，再并行跑几周，最后一起对比结果。",
+     "py": "dà gài sì dào liù ge xīng qī . xiān huā yī zhōu zuò zhǔn bèi , zài bìng xíng pǎo jǐ zhōu , zuì hòu yī qǐ duì bǐ jié guǒ .",
+     "w": [
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "四到六个",
+       "sì dào liù ge",
+       "four to six"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "。"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "花",
+       "huā",
+       "spend"
+      ],
+      [
+       "一周",
+       "yī zhōu",
+       "one week"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "准备",
+       "zhǔn bèi",
+       "prepare"
+      ],
+      [
+       "，"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "几周",
+       "jǐ zhōu",
+       "a few weeks"
+      ],
+      [
+       "，"
+      ],
+      [
+       "最后",
+       "zuì hòu",
+       "finally"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "对比",
+       "duì bǐ",
+       "compare"
+      ],
+      [
+       "结果",
+       "jié guǒ",
+       "result"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "About four to six weeks. First a week of preparation, then a few weeks in parallel, and finally we compare the results together."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "万一出了问题，谁来负责支持？",
+    "py": "wàn yī chū le wèn tí , shéi lái fù zé zhī chí ?",
+    "w": [
+     [
+      "万一",
+      "wàn yī",
+      "what if"
+     ],
+     [
+      "出",
+      "chū",
+      "out"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "问题",
+      "wèn tí",
+      "questions"
+     ],
+     [
+      "，"
+     ],
+     [
+      "谁",
+      "shéi",
+      "who"
+     ],
+     [
+      "来",
+      "lái",
+      "come, let's"
+     ],
+     [
+      "负责",
+      "fù zé",
+      "be responsible for"
+     ],
+     [
+      "支持",
+      "zhī chí",
+      "support"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "If something breaks, who supports us?",
+    "hurried": {
+     "zh": "出了问题谁来支持？半夜也有人吗？",
+     "py": "chū le wèn tí shéi lái zhī chí ? bàn yè yě yǒu rén ma ?",
+     "w": [
+      [
+       "出",
+       "chū",
+       "out"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "来",
+       "lái",
+       "come, let's"
+      ],
+      [
+       "支持",
+       "zhī chí",
+       "support"
+      ],
+      [
+       "？"
+      ],
+      [
+       "半夜",
+       "bàn yè",
+       "midnight"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "人",
+       "rén",
+       "person"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "If something breaks, who supports us? Is anyone there at midnight?"
+    }
+   },
+   "options": [
+    {
+     "zh": "试点期间有专门的工程师负责，随时回应。而且老系统一直保留着，不行就切回去。",
+     "py": "shì diǎn qī jiān yǒu zhuān mén de gōng chéng shī fù zé , suí shí huí yìng . ér qiě lǎo xì tǒng yī zhí bǎo liú zhe , bù xíng jiù qiè huí qù .",
+     "w": [
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "期间",
+       "qī jiān",
+       "during"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "专门",
+       "zhuān mén",
+       "dedicated, specially"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "工程师",
+       "gōng chéng shī",
+       "engineer"
+      ],
+      [
+       "负责",
+       "fù zé",
+       "be responsible for"
+      ],
+      [
+       "，"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "回应",
+       "huí yìng",
+       "respond"
+      ],
+      [
+       "。"
+      ],
+      [
+       "而且",
+       "ér qiě",
+       "besides"
+      ],
+      [
+       "老",
+       "lǎo",
+       "old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "一直",
+       "yī zhí",
+       "always, all along"
+      ],
+      [
+       "保留",
+       "bǎo liú",
+       "keep, retain"
+      ],
+      [
+       "着",
+       "zhe",
+       "(continuous)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不行",
+       "bù xíng",
+       "not okay"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "切回去",
+       "qiè huí qù",
+       "switch back"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "During the pilot a dedicated engineer is responsible and responds any time. The old system also stays in place, so if needed we switch back.",
+     "type": "fit",
+     "why": "A named support and a way back. The exit is what finally lets him relax."
+    },
+    {
+     "zh": "您放心，我们有客服热线。",
+     "py": "nín fàng xīn , wǒ men yǒu kè fú rè xiàn .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "放心",
+       "fàng xīn",
+       "rest assured"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "客服",
+       "kè fú",
+       "customer service"
+      ],
+      [
+       "热线",
+       "rè xiàn",
+       "hotline"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Do not worry, we have a customer service hotline.",
+     "type": "generic",
+     "why": "A hotline is not a plan for his key reports at midnight."
+    },
+    {
+     "zh": "不会出问题的，我们做过很多次了。",
+     "py": "bù huì chū wèn tí de , wǒ men zuò guo hěn duō cì le .",
+     "w": [
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "出",
+       "chū",
+       "out"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "过",
+       "guo",
+       "(experience marker)"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "次",
+       "cì",
+       "time (count)"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "There will be no problem, we have done it many times.",
+     "type": "blunt",
+     "why": "\"It will not break\" makes him trust you less, not more."
+    },
+    {
+     "zh": "出了问题我们二十四小时都在，全部算我们的责任。",
+     "py": "chū le wèn tí wǒ men èr shí sì xiǎo shí dōu zài , quán bù suàn wǒ men de zé rèn .",
+     "w": [
+      [
+       "出",
+       "chū",
+       "out"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "二十四",
+       "èr shí sì",
+       "twenty-four"
+      ],
+      [
+       "小时",
+       "xiǎo shí",
+       "hour"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "，"
+      ],
+      [
+       "全部",
+       "quán bù",
+       "all, everything"
+      ],
+      [
+       "算",
+       "suàn",
+       "calculate"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "责任",
+       "zé rèn",
+       "responsibility"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We are here 24 hours and all problems are our responsibility.",
+     "type": "cave",
+     "why": "A huge promise that your own manager did not sign off."
+    }
+   ],
+   "intent": {
+    "en": "Say who supports him during the pilot and that the old system stays as a way back.",
+    "groups": [
+     [
+      "专人",
+      "专门",
+      "工程师",
+      "团队",
+      "支持",
+      "负责"
+     ],
+     [
+      "保留",
+      "回退",
+      "切换",
+      "切回",
+      "退回",
+      "备份",
+      "老系统"
+     ]
+    ],
+    "example": {
+     "zh": "试点期间有专门的工程师负责，随时回应。而且老系统一直保留着，不行就切回去。",
+     "py": "shì diǎn qī jiān yǒu zhuān mén de gōng chéng shī fù zé , suí shí huí yìng . ér qiě lǎo xì tǒng yī zhí bǎo liú zhe , bù xíng jiù qiè huí qù .",
+     "w": [
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "期间",
+       "qī jiān",
+       "during"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "专门",
+       "zhuān mén",
+       "dedicated, specially"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "工程师",
+       "gōng chéng shī",
+       "engineer"
+      ],
+      [
+       "负责",
+       "fù zé",
+       "be responsible for"
+      ],
+      [
+       "，"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "回应",
+       "huí yìng",
+       "respond"
+      ],
+      [
+       "。"
+      ],
+      [
+       "而且",
+       "ér qiě",
+       "besides"
+      ],
+      [
+       "老",
+       "lǎo",
+       "old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "一直",
+       "yī zhí",
+       "always, all along"
+      ],
+      [
+       "保留",
+       "bǎo liú",
+       "keep, retain"
+      ],
+      [
+       "着",
+       "zhe",
+       "(continuous)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不行",
+       "bù xíng",
+       "not okay"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "切回去",
+       "qiè huí qù",
+       "switch back"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "During the pilot a dedicated engineer is responsible and responds any time. The old system also stays in place, so if needed we switch back."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "好吧，那就先做这个试点。具体怎么安排？",
+    "py": "hǎo ba , nà jiù xiān zuò zhè ge shì diǎn . jù tǐ zěn me ān pái ?",
+    "w": [
+     [
+      "好吧",
+      "hǎo ba",
+      "okay then"
+     ],
+     [
+      "，"
+     ],
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "这个",
+      "zhè ge",
+      "this"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "。"
+     ],
+     [
+      "具体",
+      "jù tǐ",
+      "specific"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "安排",
+      "ān pái",
+      "arrange"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Okay, let us do this pilot first. How shall we arrange it?",
+    "hurried": {
+     "zh": "好，先做试点。具体怎么安排？我要开会了。",
+     "py": "hǎo , xiān zuò shì diǎn . jù tǐ zěn me ān pái ? wǒ yào kāi huì le .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "，"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "具体",
+       "jù tǐ",
+       "specific"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "开会",
+       "kāi huì",
+       "hold a meeting"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, pilot first. How do we arrange it? I have to go to a meeting."
+    }
+   },
+   "options": [
+    {
+     "zh": "谢谢王总监。我今天把方案和时间表发给您，您看完我们再确认细节。",
+     "py": "xiè xie wáng zǒng jiān . wǒ jīn tiān bǎ fāng àn hé shí jiān biǎo fā gěi nín , nín kàn wán wǒ men zài què rèn xì jié .",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "方案",
+       "fāng àn",
+       "plan, proposal"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "时间表",
+       "shí jiān biǎo",
+       "timetable"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "看完",
+       "kàn wán",
+       "finish reading"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "细节",
+       "xì jié",
+       "details"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Thank you, Director Wang. I will send you the plan and timetable today, and we confirm details once you have read it.",
+     "type": "fit",
+     "why": "Thanks, a deliverable and a date. The pilot is now real."
+    },
+    {
+     "zh": "好的，那我们再联系。",
+     "py": "hǎo de , nà wǒ men zài lián xì .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "联系",
+       "lián xì",
+       "contact"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, we will be in touch.",
+     "type": "generic",
+     "why": "Nothing is scheduled. Pilots die in the gap after a meeting."
+    },
+    {
+     "zh": "那您尽快签字吧，不然来不及。",
+     "py": "nà nín jǐn kuài qiān zì ba , bù rán lái bù jí .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "尽快",
+       "jǐn kuài",
+       "as soon as possible"
+      ],
+      [
+       "签字",
+       "qiān zì",
+       "sign (a document)"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不然",
+       "bù rán",
+       "otherwise"
+      ],
+      [
+       "来不及",
+       "lái bù jí",
+       "not in time"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Then please sign quickly, otherwise it will be too late.",
+     "type": "blunt",
+     "why": "Pushing him to sign right after he agreed to a pilot breaks the trust you built."
+    },
+    {
+     "zh": "您想怎么安排都可以，我们配合。",
+     "py": "nín xiǎng zěn me ān pái dōu kě yǐ , wǒ men pèi hé .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "配合",
+       "pèi hé",
+       "cooperate"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Arrange it however you like, we will follow.",
+     "type": "cave",
+     "why": "You hand him the planning, and a busy director will not do it."
+    }
+   ],
+   "intent": {
+    "en": "Thank him and say you will send the plan and timetable.",
+    "groups": [
+     [
+      "谢谢",
+      "感谢",
+      "多谢"
+     ],
+     [
+      "方案",
+      "时间表",
+      "计划",
+      "资料",
+      "文件"
+     ],
+     [
+      "发",
+      "发给",
+      "邮件",
+      "邮箱"
+     ]
+    ],
+    "example": {
+     "zh": "谢谢王总监。我今天把方案和时间表发给您，您看完我们再确认细节。",
+     "py": "xiè xie wáng zǒng jiān . wǒ jīn tiān bǎ fāng àn hé shí jiān biǎo fā gěi nín , nín kàn wán wǒ men zài què rèn xì jié .",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "方案",
+       "fāng àn",
+       "plan, proposal"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "时间表",
+       "shí jiān biǎo",
+       "timetable"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "看完",
+       "kàn wán",
+       "finish reading"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "细节",
+       "xì jié",
+       "details"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Thank you, Director Wang. I will send you the plan and timetable today, and we confirm details once you have read it."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "迁移",
+   "py": "qiān yí",
+   "w": [
+    [
+     "迁移",
+     "qiān yí",
+     "migration"
+    ]
+   ],
+   "en": "migrate"
+  },
+  {
+   "zh": "风险",
+   "py": "fēng xiǎn",
+   "w": [
+    [
+     "风险",
+     "fēng xiǎn",
+     "risk"
+    ]
+   ],
+   "en": "risk"
+  },
+  {
+   "zh": "分阶段",
+   "py": "fēn jiē duàn",
+   "w": [
+    [
+     "分阶段",
+     "fēn jiē duàn",
+     "in phases"
+    ]
+   ],
+   "en": "in phases"
+  },
+  {
+   "zh": "试点",
+   "py": "shì diǎn",
+   "w": [
+    [
+     "试点",
+     "shì diǎn",
+     "pilot (trial run)"
+    ]
+   ],
+   "en": "pilot"
+  },
+  {
+   "zh": "并行",
+   "py": "bìng xíng",
+   "w": [
+    [
+     "并行",
+     "bìng xíng",
+     "in parallel"
+    ]
+   ],
+   "en": "in parallel"
+  },
+  {
+   "zh": "支持",
+   "py": "zhī chí",
+   "w": [
+    [
+     "支持",
+     "zhī chí",
+     "support"
+    ]
+   ],
+   "en": "support"
+  }
+ ]
+}

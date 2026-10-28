@@ -1,25 +1,29 @@
 // Scene engine (work + life). Rung 1: pick then say. Rung 2: say it your way. Rung 3: free talk with ChatGPT voice.
-import { addFish, markStep, todayKey, rung as rungOf, recordRung, reviewMiss } from '../core/progress.js';
+import { addFish, markStep, markWeek, markPlayed, todayKey, rung as rungOf, recordRung, reviewMiss, trustOf, trustMove, trusted } from '../core/progress.js';
 import { similarity, intentCheck } from '../core/match.js';
 import { speak, listen } from '../speech.js';
-import { el, esc, pyHtml, shuffle, pickOne } from '../ui.js';
+import { el, esc, pyHtml, shuffle, pickOne, hearts } from '../ui.js';
 import { zhLine } from '../ui/zh.js';
+import { charId } from '../core/week.js';
 
 const PASS = 0.7;
 const half = (n) => Math.max(1, Math.floor(n / 2));
 const VERDICT = { fit: 'Great fit', generic: 'A bit generic', off: 'Off the mark', blunt: 'Rather blunt', cave: 'Giving in too fast' };
 
-export async function render(root, ctx, { id }) {
+export async function render(root, ctx, { id, day }) {
   const { save } = ctx;
   const sc = await (await fetch(`data/scenes/${id}.json`)).json();
-  const mood = pickOne(['patient', 'hurried']), twist = pickOne(sc.twists);
+  const cid = charId(sc), t0 = trustOf(save, cid), hard = trusted(save)(cid);
+  const mood = hard ? 'hurried' : pickOne(['patient', 'hurried']), twist = pickOne(sc.twists);
+  let week = null; try { week = await ctx.week(); } catch {}
   const unlocked = rungOf(save, id), py = () => save.settings.pinyin;
-  const log = { kind: 'scene', id, title: sc.title, mood, twist: twist.en, rung: unlocked, turns: [], fish: 0 };
+  const log = { kind: 'scene', id, day, title: sc.title, mood, twist: twist.en, rung: unlocked, turns: [], fish: 0, char: sc.character.name, trust: { before: { ...t0 }, gained: 0, moved: 0 } };
   const award = (n) => { addFish(save, n); log.fish += n; ctx.persist(); return n; };
   const rate = mood === 'hurried' ? 1.05 : 0.9;
   const tz = (line, r = 0.9) => zhLine(line, { speak: (t) => speak(t, { rate: r }), onAddReview: (it) => { reviewMiss(save, it); ctx.persist(); } });
   const npcLine = (t, i) => { const l = i === 1 ? twist.turn2 : t.npc; return (mood === 'hurried' && l.hurried) || l; };
-  const header = (back) => { const h = el('<div class="top"><button class="link" id="x">✕ Home</button></div>'); h.firstChild.onclick = () => ctx.go('home'); return h; };
+  const header = () => { const h = el(`<div class="top"><button class="link" id="x">${day ? '✕ Day ' + day : '✕ Home'}</button></div>`); h.firstChild.onclick = () => (day ? ctx.go('day', { n: day }) : ctx.go('home')); return h; };
+  const trust = (d) => { const r = trustMove(save, cid, d); log.trust.gained += r.gained; log.trust.moved += d; ctx.persist(); return r; };
 
   // ---------- intro ----------
   let chosen = unlocked;
@@ -27,6 +31,7 @@ export async function render(root, ctx, { id }) {
   root.append(el(`<section class="card stack"><div class="row"><div style="font-size:40px">${sc.track === 'work' ? '💼' : '🍜'}</div>
     <div><h2>${esc(sc.character.name)}</h2><p class="dim small">${esc(sc.character.role)}</p></div>
     <span class="spacer"></span><span class="chip">${mood === 'hurried' ? '⏱ Hurried' : '☕ Patient'}</span></div>
+    <div class="row" title="Trust"><span class="hearts" aria-label="${t0.hearts} of 5 hearts">${hearts(t0.hearts)}</span><span class="dim small">${t0.hearts >= 5 ? 'Fully trusted' : `${t0.p} / 5 to the next heart`}</span></div>
     <p>${esc(sc.character.en)}</p><p class="dim small"><b>Your goal:</b> ${esc(sc.goal)}</p></section>`));
   const pick = el('<section class="card stack"><h3>Choose your rung</h3><div class="row wrap"></div><p class="dim small" id="rd"></p></section>');
   const names = { 1: 'Pick, then say it', 2: 'Say it your way', 3: 'Free talk' };
@@ -109,6 +114,7 @@ export async function render(root, ctx, { id }) {
       b.classList.add('picked');
       rec.pick = o; rec.verdict = o.type;
       const gain = o.type === 'fit' ? award(2) : 0;
+      if (o.type === 'fit') trust(1); else if (o.type === 'blunt' || o.type === 'cave') trust(-1);
       area.append(el(`<div class="card ${o.type === 'fit' ? 'good' : 'warn'} stack"><div class="row"><span class="chip ${o.type}">${VERDICT[o.type] || o.type}</span>${gain ? `<span class="chip">+${gain} 🐟</span>` : ''}</div><p>${esc(o.why)}</p></div>`));
       const say = el(`<section class="card stack"><h3>Now say it</h3>${replyHtml(rec.fit)}<button class="btn ghost sm" id="h">▶ Hear it</button><div class="box stack"></div></section>`);
       fillReply(say, rec.fit);
@@ -195,6 +201,9 @@ export async function render(root, ctx, { id }) {
   function finish(r, ratio) {
     recordRung(save, id, r, ratio);
     markStep(save, todayKey(), sc.track);
+    markPlayed(save, id);
+    log.trust.after = { ...trustOf(save, cid) };
+    for (const d of week ? week.days : []) if (d[sc.track] === id) markWeek(save, d.day, sc.track);
     ctx.persist();
     ctx.go('debrief', log);
   }

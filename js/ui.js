@@ -20,3 +20,6 @@ export const pickOne = (a) => a[Math.floor(Math.random() * a.length)];
 
 /** Pinyin line shown only when the toggle is on. */
 export const pyHtml = (py, on) => (on && py ? `<div class="dim small">${esc(py)}</div>` : '');
+
+/** Hearts row, e.g. ❤️❤️🤍🤍🤍. */
+export const hearts = (n) => '❤️'.repeat(n) + '🤍'.repeat(5 - n);

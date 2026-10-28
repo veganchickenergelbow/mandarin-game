@@ -1,0 +1,4 @@
+{"id":"week1","title":{"zh":"第一周","en":"Week 1"},"days":[
+{"day":1,"skill":{"zh":"一","en":"One"},"phrases":[{"zh":"你好","py":"nǐ hǎo","en":"hello","w":[["你好","nǐ hǎo","hello"]]},{"zh":"谢谢","py":"xiè xie","en":"thanks"}],"work":"w1","life":"l1"},
+{"day":2,"skill":{"zh":"二","en":"Two"},"phrases":[{"zh":"再见","py":"zài jiàn","en":"bye"}],"work":"w2","life":"l2"},
+{"day":3,"skill":{"zh":"三","en":"Three"},"phrases":[],"work":"w3","life":"l3"}]}

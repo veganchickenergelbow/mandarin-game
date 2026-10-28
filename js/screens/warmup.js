@@ -1,5 +1,5 @@
-// Warm-up: 6 words (2 from the review deck, then words from today's scenes). Say each one, get a tick or cross per syllable.
-import { addFish, markStep, todayKey, reviewPick, reviewMiss, reviewHit } from '../core/progress.js';
+// Warm-up: up to 6 words, passed in by the Day screen (due reviews, day phrases, scene words). Say each one, get a tick or cross per syllable.
+import { addFish, markStep, markWeek, todayKey, reviewPick, reviewMiss, reviewHit } from '../core/progress.js';
 import { usable, update as updateVoice } from '../core/voice.js';
 import { saveTake } from '../recordings.js';
 import { syllables } from '../core/pinyin.js';
@@ -13,17 +13,17 @@ const N = 6;
 function buildItems(save, scenes) {
   const seen = new Set(), out = [];
   const add = (it) => { if (it && !seen.has(it.zh) && out.length < N) { seen.add(it.zh); out.push({ key: it.key || it.zh, zh: it.zh, py: it.py, en: it.en }); } };
-  reviewPick(save, 2).forEach(add);
+  reviewPick(save, 2).filter((x) => x.due <= todayKey()).forEach(add);
   const work = shuffle(scenes.work.flatMap((s) => s.warmup)), life = shuffle(scenes.life.flatMap((s) => s.warmup));
   // alternate work / life, topping up from whatever is left
   for (let i = 0; out.length < N && (i < work.length || i < life.length); i++) { add(work[i]); add(life[i]); }
   return out;
 }
 
-export async function render(root, ctx) {
+export async function render(root, ctx, { items: given, day } = {}) {
   const { save } = ctx;
-  const scenes = await ctx.scenes();
-  const items = buildItems(save, { work: scenes.work, life: scenes.life });
+  const back = () => (day ? ctx.go('day', { n: day }) : ctx.go('home'));
+  const items = given && given.length ? given : buildItems(save, await ctx.scenes());
   let i = 0, fish = 0;
   const best = items.map(() => 0);   // best syllable count per item, so retries cannot farm fish
 
@@ -31,8 +31,8 @@ export async function render(root, ctx) {
     root.replaceChildren();
     if (i >= items.length) return finish();
     const it = items[i], syls = syllables(it.py);
-    root.append(el(`<div class="top"><button class="link" id="x">✕ Home</button><span class="spacer"></span><span class="chip num">${i + 1} / ${items.length}</span><span class="pill num">🐟 ${fish}</span></div>`));
-    root.querySelector('#x').onclick = () => ctx.go('home');
+    root.append(el(`<div class="top"><button class="link" id="x">${day ? '✕ Day ' + day : '✕ Home'}</button><span class="spacer"></span><span class="chip num">${i + 1} / ${items.length}</span><span class="pill num">🐟 ${fish}</span></div>`));
+    root.querySelector('#x').onclick = back;
     const card = el(`<section class="card stack center">
       <div class="bigzh">${esc(it.zh)}</div>
       <div class="pys">${syls.map((s) => `<div class="syl"><b>${esc(s)}</b><span></span></div>`).join('')}</div>
@@ -93,11 +93,12 @@ export async function render(root, ctx) {
 
   function finish() {
     markStep(save, todayKey(), 'warmup');
+    if (day) markWeek(save, day, 'warmup');
     ctx.persist();
     root.append(el(`<section class="card good center stack"><div class="bigzh" style="font-size:48px">做得好!</div><h2>Warm-up done</h2>
       <p>+${fish} fish. ${ctx.session.added.length ? `${ctx.session.added.length} word${ctx.session.added.length === 1 ? '' : 's'} will come back for another go.` : fish ? 'Not a single wobble.' : 'Nothing was recorded, so the cats of Singapore are mildly curious.'}</p></section>`));
     const b = el('<button class="btn big block">Continue</button>');
-    b.onclick = () => ctx.go('debrief', { kind: 'warmup', fish });
+    b.onclick = () => ctx.go('debrief', { kind: 'warmup', fish, day });
     root.append(b);
   }
   show();

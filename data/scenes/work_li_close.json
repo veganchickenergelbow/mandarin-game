@@ -1,0 +1,3090 @@
+{
+ "id": "work_li_close",
+ "track": "work",
+ "title": {
+  "zh": "饭局上谈合作",
+  "en": "Closing the deal at dinner"
+ },
+ "character": {
+  "id": "li",
+  "name": "李总",
+  "role": "Operations Director, Lion City Logistics",
+  "en": "Mr Li is warm, relationship-first and decides by trust. He enjoys a toast and a good meal, and notices whether you are sincere. He is happy to commit, but only to someone who makes the next step easy."
+ },
+ "goal": "Close at a business dinner: a warm toast, explain the pilot scope, agree the start date, ask who signs, and confirm the next steps.",
+ "twists": [
+  {
+   "id": "wants_discount",
+   "en": "He asks for a discount on the pilot.",
+   "turn2": {
+    "zh": "试点的范围怎么定？第一次合作，价钱能不能优惠一点？",
+    "py": "shì diǎn de fàn wéi zěn me dìng ? dì yī cì hé zuò , jià qián néng bù néng yōu huì yī diǎn ?",
+    "w": [
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "范围",
+      "fàn wéi",
+      "scope"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "定",
+      "dìng",
+      "fix, set"
+     ],
+     [
+      "？"
+     ],
+     [
+      "第一次",
+      "dì yī cì",
+      "first time"
+     ],
+     [
+      "合作",
+      "hé zuò",
+      "cooperation"
+     ],
+     [
+      "，"
+     ],
+     [
+      "价钱",
+      "jià qián",
+      "price"
+     ],
+     [
+      "能不能",
+      "néng bù néng",
+      "can or not"
+     ],
+     [
+      "优惠",
+      "yōu huì",
+      "discount, special offer"
+     ],
+     [
+      "一点",
+      "yī diǎn",
+      "a little"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "How will the pilot scope be set? Since it is our first project together, can the price be a bit lower?"
+   },
+   "prompt": "He asks for a discount as a test. He respects Lucas if he offers something small in return for a clear scope, not a flat no or a deep cut.",
+   "group": [
+    "优惠",
+    "折扣",
+    "打折",
+    "价格",
+    "价钱"
+   ],
+   "example": {
+    "zh": "第一次合作我们很重视，试点可以给您一个优惠价，不过先把范围定在一个核心报表上，好吗？",
+    "py": "dì yī cì hé zuò wǒ men hěn zhòng shì , shì diǎn kě yǐ gěi nín yī ge yōu huì jià , bù guò xiān bǎ fàn wéi dìng zài yī ge hé xīn bào biǎo shàng , hǎo ma ?",
+    "w": [
+     [
+      "第一次",
+      "dì yī cì",
+      "first time"
+     ],
+     [
+      "合作",
+      "hé zuò",
+      "cooperation"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "很",
+      "hěn",
+      "very"
+     ],
+     [
+      "重视",
+      "zhòng shì",
+      "value"
+     ],
+     [
+      "，"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "给",
+      "gěi",
+      "give"
+     ],
+     [
+      "您",
+      "nín",
+      "you (polite)"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "优惠",
+      "yōu huì",
+      "discount, special offer"
+     ],
+     [
+      "价",
+      "jià",
+      "price"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "把",
+      "bǎ",
+      "(object marker)"
+     ],
+     [
+      "范围",
+      "fàn wéi",
+      "scope"
+     ],
+     [
+      "定",
+      "dìng",
+      "fix, set"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "核心",
+      "hé xīn",
+      "core"
+     ],
+     [
+      "报表",
+      "bào biǎo",
+      "report (data)"
+     ],
+     [
+      "上",
+      "shàng",
+      "above, on"
+     ],
+     [
+      "，"
+     ],
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "We value this first project. We can give a special price for the pilot, but let us first set the scope to one core report, okay?"
+   }
+  },
+  {
+   "id": "faster_start",
+   "en": "He wants to start earlier.",
+   "turn2": {
+    "zh": "试点范围怎么定？我们能不能提前，月底就开始？",
+    "py": "shì diǎn fàn wéi zěn me dìng ? wǒ men néng bù néng tí qián , yuè dǐ jiù kāi shǐ ?",
+    "w": [
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "范围",
+      "fàn wéi",
+      "scope"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "定",
+      "dìng",
+      "fix, set"
+     ],
+     [
+      "？"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "能不能",
+      "néng bù néng",
+      "can or not"
+     ],
+     [
+      "提前",
+      "tí qián",
+      "in advance"
+     ],
+     [
+      "，"
+     ],
+     [
+      "月底",
+      "yuè dǐ",
+      "end of the month"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "开始",
+      "kāi shǐ",
+      "start"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "How will the pilot scope be set? Could we start earlier, at the end of this month?"
+   },
+   "prompt": "He is eager and wants speed. He is happy if Lucas shows what is realistic and what he needs from Li's side to go fast.",
+   "group": [
+    "尽量",
+    "准备",
+    "提前",
+    "月底",
+    "需要"
+   ],
+   "example": {
+    "zh": "我们尽量配合。试点先从一个核心报表开始，不过需要贵公司先开通数据权限，月底前能不能准备好？",
+    "py": "wǒ men jǐn liàng pèi hé . shì diǎn xiān cóng yī ge hé xīn bào biǎo kāi shǐ , bù guò xū yào guì gōng sī xiān kāi tōng shù jù quán xiàn , yuè dǐ qián néng bù néng zhǔn bèi hǎo ?",
+    "w": [
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "尽量",
+      "jǐn liàng",
+      "do one's best"
+     ],
+     [
+      "配合",
+      "pèi hé",
+      "cooperate"
+     ],
+     [
+      "。"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "从",
+      "cóng",
+      "from"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "核心",
+      "hé xīn",
+      "core"
+     ],
+     [
+      "报表",
+      "bào biǎo",
+      "report (data)"
+     ],
+     [
+      "开始",
+      "kāi shǐ",
+      "start"
+     ],
+     [
+      "，"
+     ],
+     [
+      "不过",
+      "bù guò",
+      "but, however"
+     ],
+     [
+      "需要",
+      "xū yào",
+      "need"
+     ],
+     [
+      "贵公司",
+      "guì gōng sī",
+      "your company"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "开通",
+      "kāi tōng",
+      "open up, activate"
+     ],
+     [
+      "数据",
+      "shù jù",
+      "data"
+     ],
+     [
+      "权限",
+      "quán xiàn",
+      "permissions"
+     ],
+     [
+      "，"
+     ],
+     [
+      "月底",
+      "yuè dǐ",
+      "end of the month"
+     ],
+     [
+      "前",
+      "qián",
+      "front"
+     ],
+     [
+      "能不能",
+      "néng bù néng",
+      "can or not"
+     ],
+     [
+      "准备",
+      "zhǔn bèi",
+      "prepare"
+     ],
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "We will do our best. The pilot starts with one core report, but we need your company to open data access first. Can that be ready by the end of the month?"
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "来来来，今天大家轻松聊聊，先喝一杯！",
+    "py": "lái lái lái , jīn tiān dà jiā qīng sōng liáo liao , xiān hē yī bēi !",
+    "w": [
+     [
+      "来",
+      "lái",
+      "come, let's"
+     ],
+     [
+      "来",
+      "lái",
+      "come, let's"
+     ],
+     [
+      "来",
+      "lái",
+      "come, let's"
+     ],
+     [
+      "，"
+     ],
+     [
+      "今天",
+      "jīn tiān",
+      "today"
+     ],
+     [
+      "大家",
+      "dà jiā",
+      "everyone"
+     ],
+     [
+      "轻松",
+      "qīng sōng",
+      "relaxed"
+     ],
+     [
+      "聊聊",
+      "liáo liao",
+      "have a chat"
+     ],
+     [
+      "，"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "喝",
+      "hē",
+      "drink"
+     ],
+     [
+      "一杯",
+      "yī bēi",
+      "one cup"
+     ],
+     [
+      "！"
+     ]
+    ],
+    "en": "Come on, let us relax and chat tonight. First a drink!",
+    "hurried": {
+     "zh": "来，先喝一杯！吃完饭我还要赶去别的地方。",
+     "py": "lái , xiān hē yī bēi ! chī wán fàn wǒ hái yào gǎn qù bié de dì fang .",
+     "w": [
+      [
+       "来",
+       "lái",
+       "come, let's"
+      ],
+      [
+       "，"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "喝",
+       "hē",
+       "drink"
+      ],
+      [
+       "一杯",
+       "yī bēi",
+       "one cup"
+      ],
+      [
+       "！"
+      ],
+      [
+       "吃完",
+       "chī wán",
+       "finish eating"
+      ],
+      [
+       "饭",
+       "fàn",
+       "rice"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "还",
+       "hái",
+       "still"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "赶",
+       "gǎn",
+       "rush"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "别的",
+       "bié de",
+       "other"
+      ],
+      [
+       "地方",
+       "dì fang",
+       "place"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Come, first a drink! After dinner I still have to be somewhere else."
+    }
+   },
+   "options": [
+    {
+     "zh": "谢谢李总，能和您一起吃饭是我的荣幸。我敬您一杯！",
+     "py": "xiè xie lǐ zǒng , néng hé nín yī qǐ chī fàn shì wǒ de róng xìng . wǒ jìng nín yī bēi !",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "李总",
+       "lǐ zǒng",
+       "Mr Li"
+      ],
+      [
+       "，"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "吃饭",
+       "chī fàn",
+       "eat, have a meal"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "荣幸",
+       "róng xìng",
+       "honour"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "敬",
+       "jìng",
+       "toast, respectfully offer"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一杯",
+       "yī bēi",
+       "one cup"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "Thank you Mr Li, it is my honour to dine with you. I'll toast you!",
+     "type": "fit",
+     "why": "Thanks, a respectful toast, and no business yet. At a dinner, relationship first."
+    },
+    {
+     "zh": "谢谢李总，这里的菜很好吃。",
+     "py": "xiè xie lǐ zǒng , zhè li de cài hěn hǎo chī .",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "李总",
+       "lǐ zǒng",
+       "Mr Li"
+      ],
+      [
+       "，"
+      ],
+      [
+       "这里",
+       "zhè li",
+       "here"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "菜",
+       "cài",
+       "dish, food"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "好吃",
+       "hǎo chī",
+       "tasty"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Thank you Mr Li, the food here is good.",
+     "type": "generic",
+     "why": "Nice, but you did not offer him anything. A toast is the polite move."
+    },
+    {
+     "zh": "我们还是先谈正事吧，我时间不多。",
+     "py": "wǒ men hái shì xiān tán zhèng shì ba , wǒ shí jiān bù duō .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "还是",
+       "hái shì",
+       "or"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "谈",
+       "tán",
+       "talk, discuss"
+      ],
+      [
+       "正事",
+       "zhèng shì",
+       "serious business"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "不多",
+       "bù duō",
+       "not much"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Let us talk business first, I do not have much time.",
+     "type": "blunt",
+     "why": "At a dinner, rushing business feels cold. It will cost you the evening."
+    },
+    {
+     "zh": "我不会喝酒，也不太喜欢这种场合。",
+     "py": "wǒ bù huì hē jiǔ , yě bù tài xǐ huan zhè zhǒng chǎng hé .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "喝酒",
+       "hē jiǔ",
+       "drink alcohol"
+      ],
+      [
+       "，"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "喜欢",
+       "xǐ huan",
+       "like"
+      ],
+      [
+       "这种",
+       "zhè zhǒng",
+       "this kind of"
+      ],
+      [
+       "场合",
+       "chǎng hé",
+       "occasion"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I cannot drink and I do not enjoy these occasions.",
+     "type": "off",
+     "why": "Honest, but you push his hospitality away. A tea toast works fine."
+    }
+   ],
+   "intent": {
+    "en": "Thank him for the dinner and propose a toast (敬您一杯).",
+    "groups": [
+     [
+      "谢谢",
+      "多谢",
+      "感谢"
+     ],
+     [
+      "敬",
+      "干杯",
+      "一杯",
+      "荣幸",
+      "祝"
+     ]
+    ],
+    "example": {
+     "zh": "谢谢李总，能和您一起吃饭是我的荣幸。我敬您一杯！",
+     "py": "xiè xie lǐ zǒng , néng hé nín yī qǐ chī fàn shì wǒ de róng xìng . wǒ jìng nín yī bēi !",
+     "w": [
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "李总",
+       "lǐ zǒng",
+       "Mr Li"
+      ],
+      [
+       "，"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "吃饭",
+       "chī fàn",
+       "eat, have a meal"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "荣幸",
+       "róng xìng",
+       "honour"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "敬",
+       "jìng",
+       "toast, respectfully offer"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "一杯",
+       "yī bēi",
+       "one cup"
+      ],
+      [
+       "！"
+      ]
+     ],
+     "en": "Thank you Mr Li, it is my honour to dine with you. I'll toast you!"
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "对了，试点的范围，你们是怎么打算的？",
+    "py": "duì le , shì diǎn de fàn wéi , nǐ men shì zěn me dǎ suan de ?",
+    "w": [
+     [
+      "对了",
+      "duì le",
+      "by the way"
+     ],
+     [
+      "，"
+     ],
+     [
+      "试点",
+      "shì diǎn",
+      "pilot (trial run)"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "范围",
+      "fàn wéi",
+      "scope"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "打算",
+      "dǎ suan",
+      "plan"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "By the way, how do you plan the pilot scope?",
+    "hurried": {
+     "zh": "试点的范围是什么？说简单点。",
+     "py": "shì diǎn de fàn wéi shì shén me ? shuō jiǎn dān diǎn .",
+     "w": [
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "范围",
+       "fàn wéi",
+       "scope"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "？"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "简单",
+       "jiǎn dān",
+       "simple"
+      ],
+      [
+       "点",
+       "diǎn",
+       "o'clock, point"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "What is the pilot scope? Keep it simple."
+    }
+   },
+   "options": [
+    {
+     "zh": "我们建议先从物流部门的一个核心报表开始试点，四到六周跑通。",
+     "py": "wǒ men jiàn yì xiān cóng wù liú bù mén de yī ge hé xīn bào biǎo kāi shǐ shì diǎn , sì dào liù zhōu pǎo tōng .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "从",
+       "cóng",
+       "from"
+      ],
+      [
+       "物流",
+       "wù liú",
+       "logistics"
+      ],
+      [
+       "部门",
+       "bù mén",
+       "department"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "核心",
+       "hé xīn",
+       "core"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "四到六周",
+       "sì dào liù zhōu",
+       "four to six weeks"
+      ],
+      [
+       "跑通",
+       "pǎo tōng",
+       "get running end to end"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We suggest starting the pilot with one core report from logistics, running it through in four to six weeks.",
+     "type": "fit",
+     "why": "Small, specific and time-boxed. Easy for him to say yes to."
+    },
+    {
+     "zh": "范围可以很灵活，您想怎么做都行。",
+     "py": "fàn wéi kě yǐ hěn líng huó , nín xiǎng zěn me zuò dōu xíng .",
+     "w": [
+      [
+       "范围",
+       "fàn wéi",
+       "scope"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "灵活",
+       "líng huó",
+       "flexible"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "The scope is flexible, do it any way you like.",
+     "type": "generic",
+     "why": "\"Flexible\" is not a scope. He will ask again next week."
+    },
+    {
+     "zh": "你们的数据太乱了，全部做不现实。",
+     "py": "nǐ men de shù jù tài luàn le , quán bù zuò bù xiàn shí .",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "乱",
+       "luàn",
+       "messy"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "全部",
+       "quán bù",
+       "all, everything"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "现实",
+       "xiàn shí",
+       "realistic"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Your data is too messy, doing it all is not realistic.",
+     "type": "blunt",
+     "why": "At his own dinner, you called his data messy."
+    },
+    {
+     "zh": "全部部门一起做吧，这样效果最好。",
+     "py": "quán bù bù mén yī qǐ zuò ba , zhè yàng xiào guǒ zuì hǎo .",
+     "w": [
+      [
+       "全部",
+       "quán bù",
+       "all, everything"
+      ],
+      [
+       "部门",
+       "bù mén",
+       "department"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "这样",
+       "zhè yàng",
+       "like this"
+      ],
+      [
+       "效果",
+       "xiào guǒ",
+       "effect, result"
+      ],
+      [
+       "最",
+       "zuì",
+       "most"
+      ],
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Let us do all departments together, it works best.",
+     "type": "cave",
+     "why": "A giant scope for a pilot. It raises risk and kills the quick win."
+    }
+   ],
+   "intent": {
+    "en": "Explain a small pilot scope: start with one core report.",
+    "groups": [
+     [
+      "试点",
+      "先",
+      "第一阶段",
+      "第一期"
+     ],
+     [
+      "报表",
+      "部门",
+      "仓库",
+      "数据",
+      "业务",
+      "范围"
+     ]
+    ],
+    "example": {
+     "zh": "我们建议先从物流部门的一个核心报表开始试点，四到六周跑通。",
+     "py": "wǒ men jiàn yì xiān cóng wù liú bù mén de yī ge hé xīn bào biǎo kāi shǐ shì diǎn , sì dào liù zhōu pǎo tōng .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "从",
+       "cóng",
+       "from"
+      ],
+      [
+       "物流",
+       "wù liú",
+       "logistics"
+      ],
+      [
+       "部门",
+       "bù mén",
+       "department"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "核心",
+       "hé xīn",
+       "core"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "四到六周",
+       "sì dào liù zhōu",
+       "four to six weeks"
+      ],
+      [
+       "跑通",
+       "pǎo tōng",
+       "get running end to end"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "We suggest starting the pilot with one core report from logistics, running it through in four to six weeks."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "好。那什么时候可以开始？",
+    "py": "hǎo . nà shén me shí hou kě yǐ kāi shǐ ?",
+    "w": [
+     [
+      "好",
+      "hǎo",
+      "good"
+     ],
+     [
+      "。"
+     ],
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "什么",
+      "shén me",
+      "what"
+     ],
+     [
+      "时候",
+      "shí hou",
+      "time, when"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "开始",
+      "kāi shǐ",
+      "start"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Good. When can we start?",
+    "hurried": {
+     "zh": "那什么时候开始？我想早点看到结果。",
+     "py": "nà shén me shí hou kāi shǐ ? wǒ xiǎng zǎo diǎn kàn dào jié guǒ .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "早点",
+       "zǎo diǎn",
+       "a bit earlier"
+      ],
+      [
+       "看到",
+       "kàn dào",
+       "see"
+      ],
+      [
+       "结果",
+       "jié guǒ",
+       "result"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "So when do we start? I want to see results soon."
+    }
+   },
+   "options": [
+    {
+     "zh": "下个月一号开始怎么样？这样我们这个月可以先把准备工作做好。",
+     "py": "xià gè yuè yī hào kāi shǐ zěn me yàng ? zhè yàng wǒ men zhè ge yuè kě yǐ xiān bǎ zhǔn bèi gōng zuò zuò hǎo .",
+     "w": [
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "怎么样",
+       "zěn me yàng",
+       "how about"
+      ],
+      [
+       "？"
+      ],
+      [
+       "这样",
+       "zhè yàng",
+       "like this"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "月",
+       "yuè",
+       "month"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "准备",
+       "zhǔn bèi",
+       "prepare"
+      ],
+      [
+       "工作",
+       "gōng zuò",
+       "work"
+      ],
+      [
+       "做好",
+       "zuò hǎo",
+       "get done"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How about starting on the first of next month? Then we can get the preparation done this month.",
+     "type": "fit",
+     "why": "A specific date and a reason. You are asking for a yes, not waiting for one."
+    },
+    {
+     "zh": "时间由您决定，您什么时候方便？",
+     "py": "shí jiān yóu nín jué dìng , nín shén me shí hou fāng biàn ?",
+     "w": [
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "由",
+       "yóu",
+       "by"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "决定",
+       "jué dìng",
+       "decide"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "It is up to you, when is convenient for you?",
+     "type": "generic",
+     "why": "Polite, but it hands him the work. A date from you gets a yes faster."
+    },
+    {
+     "zh": "最快也得三个月以后，没办法。",
+     "py": "zuì kuài yě děi sān ge yuè yǐ hòu , méi bàn fǎ .",
+     "w": [
+      [
+       "最快",
+       "zuì kuài",
+       "fastest"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "得",
+       "děi",
+       "must"
+      ],
+      [
+       "三个月",
+       "sān ge yuè",
+       "three months"
+      ],
+      [
+       "以后",
+       "yǐ hòu",
+       "after, later"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没办法",
+       "méi bàn fǎ",
+       "no way"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Three months at the earliest, nothing I can do.",
+     "type": "blunt",
+     "why": "It sounds like a closed door. Explain what is needed, not what is impossible."
+    },
+    {
+     "zh": "您想什么时候开始都可以，我们随时配合。",
+     "py": "nín xiǎng shén me shí hou kāi shǐ dōu kě yǐ , wǒ men suí shí pèi hé .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "随时",
+       "suí shí",
+       "any time"
+      ],
+      [
+       "配合",
+       "pèi hé",
+       "cooperate"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Start whenever you like, we can adapt anytime.",
+     "type": "cave",
+     "why": "Sounds generous, but no date means no start."
+    }
+   ],
+   "intent": {
+    "en": "Suggest a start date, the first of next month, and say preparation happens this month.",
+    "groups": [
+     [
+      "下个月",
+      "一号",
+      "一日",
+      "月初"
+     ],
+     [
+      "开始",
+      "启动",
+      "动工",
+      "上线"
+     ],
+     [
+      "准备",
+      "这个月",
+      "先",
+      "之前",
+      "安排"
+     ]
+    ],
+    "example": {
+     "zh": "下个月一号开始怎么样？这样我们这个月可以先把准备工作做好。",
+     "py": "xià gè yuè yī hào kāi shǐ zěn me yàng ? zhè yàng wǒ men zhè ge yuè kě yǐ xiān bǎ zhǔn bèi gōng zuò zuò hǎo .",
+     "w": [
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "怎么样",
+       "zěn me yàng",
+       "how about"
+      ],
+      [
+       "？"
+      ],
+      [
+       "这样",
+       "zhè yàng",
+       "like this"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "月",
+       "yuè",
+       "month"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "准备",
+       "zhǔn bèi",
+       "prepare"
+      ],
+      [
+       "工作",
+       "gōng zuò",
+       "work"
+      ],
+      [
+       "做好",
+       "zuò hǎo",
+       "get done"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How about starting on the first of next month? Then we can get the preparation done this month."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "可以，下个月一号。合同你们先发给我吧。",
+    "py": "kě yǐ , xià gè yuè yī hào . hé tóng nǐ men xiān fā gěi wǒ ba .",
+    "w": [
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "，"
+     ],
+     [
+      "下个月",
+      "xià gè yuè",
+      "next month"
+     ],
+     [
+      "一号",
+      "yī hào",
+      "the 1st"
+     ],
+     [
+      "。"
+     ],
+     [
+      "合同",
+      "hé tóng",
+      "contract"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "先",
+      "xiān",
+      "first"
+     ],
+     [
+      "发给",
+      "fā gěi",
+      "send to"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "吧",
+      "ba",
+      "(softener)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Fine, the first of next month. Send me the contract first.",
+    "hurried": {
+     "zh": "行，下个月一号。合同先发我。",
+     "py": "xíng , xià gè yuè yī hào . hé tóng xiān fā wǒ .",
+     "w": [
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "。"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "发",
+       "fā",
+       "send"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Fine, the first of next month. Send me the contract."
+    }
+   },
+   "options": [
+    {
+     "zh": "好的，今天就发给您。想确认一下，除了您，还需要谁签字？",
+     "py": "hǎo de , jīn tiān jiù fā gěi nín . xiǎng què rèn yī xià , chú le nín , hái xū yào shéi qiān zì ?",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "除了",
+       "chú le",
+       "apart from"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "还",
+       "hái",
+       "still"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "签字",
+       "qiān zì",
+       "sign (a document)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Okay, I will send it today. Just to confirm, besides you, who else needs to sign?",
+     "type": "fit",
+     "why": "You promise a quick send, and ask directly who signs. No surprises later."
+    },
+    {
+     "zh": "好的，合同我们会处理，您不用担心。",
+     "py": "hǎo de , hé tóng wǒ men huì chǔ lǐ , nín bù yòng dān xīn .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "处理",
+       "chǔ lǐ",
+       "handle"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "担心",
+       "dān xīn",
+       "worry"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, we will handle the contract, you do not need to worry.",
+     "type": "generic",
+     "why": "It does not ask the one thing that stalls contracts: who signs."
+    },
+    {
+     "zh": "你们公司谁有权签字，你自己应该知道吧。",
+     "py": "nǐ men gōng sī shéi yǒu quán qiān zì , nǐ zì jǐ yīng gāi zhī dao ba .",
+     "w": [
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "权",
+       "quán",
+       "right, authority"
+      ],
+      [
+       "签字",
+       "qiān zì",
+       "sign (a document)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "应该",
+       "yīng gāi",
+       "should"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You should know yourself who is authorised to sign in your company.",
+     "type": "blunt",
+     "why": "The question is fine. The tone is not."
+    },
+    {
+     "zh": "不急，您先看看，签不签都没关系。",
+     "py": "bù jí , nín xiān kàn kan , qiān bù qiān dōu méi guān xi .",
+     "w": [
+      [
+       "不急",
+       "bù jí",
+       "no hurry"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "看看",
+       "kàn kan",
+       "take a look"
+      ],
+      [
+       "，"
+      ],
+      [
+       "签不签",
+       "qiān bù qiān",
+       "sign or not"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "没关系",
+       "méi guān xi",
+       "never mind"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No hurry, take a look first, signing or not does not matter.",
+     "type": "cave",
+     "why": "You tell him it is fine not to sign. Please do not."
+    }
+   ],
+   "intent": {
+    "en": "Say you will send the contract today and ask who else needs to sign.",
+    "groups": [
+     [
+      "谁",
+      "哪位",
+      "哪些人"
+     ],
+     [
+      "签字",
+      "签名",
+      "签",
+      "盖章",
+      "审批"
+     ]
+    ],
+    "example": {
+     "zh": "好的，今天就发给您。想确认一下，除了您，还需要谁签字？",
+     "py": "hǎo de , jīn tiān jiù fā gěi nín . xiǎng què rèn yī xià , chú le nín , hái xū yào shéi qiān zì ?",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "除了",
+       "chú le",
+       "apart from"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "还",
+       "hái",
+       "still"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "签字",
+       "qiān zì",
+       "sign (a document)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Okay, I will send it today. Just to confirm, besides you, who else needs to sign?"
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "需要黄总也签一下，我明天跟他说。",
+    "py": "xū yào huáng zǒng yě qiān yī xià , wǒ míng tiān gēn tā shuō .",
+    "w": [
+     [
+      "需要",
+      "xū yào",
+      "need"
+     ],
+     [
+      "黄总",
+      "huáng zǒng",
+      "Mr Huang"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "签",
+      "qiān",
+      "sign"
+     ],
+     [
+      "一下",
+      "yī xià",
+      "a little, once"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "明天",
+      "míng tiān",
+      "tomorrow"
+     ],
+     [
+      "跟",
+      "gēn",
+      "with"
+     ],
+     [
+      "他",
+      "tā",
+      "he, him"
+     ],
+     [
+      "说",
+      "shuō",
+      "say"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Mr Huang needs to sign too. I will tell him tomorrow.",
+    "hurried": {
+     "zh": "要黄总一起签，我明天跟他说，行吗？",
+     "py": "yào huáng zǒng yī qǐ qiān , wǒ míng tiān gēn tā shuō , xíng ma ?",
+     "w": [
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "黄总",
+       "huáng zǒng",
+       "Mr Huang"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "签",
+       "qiān",
+       "sign"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "明天",
+       "míng tiān",
+       "tomorrow"
+      ],
+      [
+       "跟",
+       "gēn",
+       "with"
+      ],
+      [
+       "他",
+       "tā",
+       "he, him"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "，"
+      ],
+      [
+       "行",
+       "xíng",
+       "okay"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Mr Huang has to sign too. I will tell him tomorrow, okay?"
+    }
+   },
+   "options": [
+    {
+     "zh": "太好了。那我们就这么定了：下个月一号开始试点，我今天发合同，您明天跟黄总确认。",
+     "py": "tài hǎo le . nà wǒ men jiù zhè me dìng le : xià gè yuè yī hào kāi shǐ shì diǎn , wǒ jīn tiān fā hé tóng , nín míng tiān gēn huáng zǒng què rèn .",
+     "w": [
+      [
+       "太好了",
+       "tài hǎo le",
+       "great"
+      ],
+      [
+       "。"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "这么",
+       "zhè me",
+       "so, like this"
+      ],
+      [
+       "定了",
+       "dìng le",
+       "settled"
+      ],
+      [
+       "："
+      ],
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "发",
+       "fā",
+       "send"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "明天",
+       "míng tiān",
+       "tomorrow"
+      ],
+      [
+       "跟",
+       "gēn",
+       "with"
+      ],
+      [
+       "黄总",
+       "huáng zǒng",
+       "Mr Huang"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Great. So it is settled: the pilot starts on the first of next month, I send the contract today, and you confirm with Mr Huang tomorrow.",
+     "type": "fit",
+     "why": "You repeat all the steps with owners and dates. That is how a verbal yes becomes real."
+    },
+    {
+     "zh": "好的，那就辛苦您了，谢谢。",
+     "py": "hǎo de , nà jiù xīn kǔ nín le , xiè xie .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "辛苦",
+       "xīn kǔ",
+       "hard work"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "谢谢",
+       "xiè xie",
+       "thank you"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, thank you for your trouble.",
+     "type": "generic",
+     "why": "Warm, but there is no summary of who does what and when."
+    },
+    {
+     "zh": "麻烦您尽量快一点，不要拖到下个月。",
+     "py": "má fan nín jǐn liàng kuài yī diǎn , bù yào tuō dào xià gè yuè .",
+     "w": [
+      [
+       "麻烦",
+       "má fan",
+       "trouble, bother"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "尽量",
+       "jǐn liàng",
+       "do one's best"
+      ],
+      [
+       "快",
+       "kuài",
+       "fast"
+      ],
+      [
+       "一点",
+       "yī diǎn",
+       "a little"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不要",
+       "bù yào",
+       "don't want"
+      ],
+      [
+       "拖到",
+       "tuō dào",
+       "drag on until"
+      ],
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Please be as quick as possible, do not drag into next month.",
+     "type": "blunt",
+     "why": "A push at the moment he just agreed. Let the clear plan do the pushing."
+    },
+    {
+     "zh": "不急不急，您什么时候方便再说吧。",
+     "py": "bù jí bù jí , nín shén me shí hou fāng biàn zài shuō ba .",
+     "w": [
+      [
+       "不急",
+       "bù jí",
+       "no hurry"
+      ],
+      [
+       "不急",
+       "bù jí",
+       "no hurry"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No hurry, tell me whenever it suits you.",
+     "type": "cave",
+     "why": "You give up the momentum right at the finish line."
+    }
+   ],
+   "intent": {
+    "en": "Confirm the next steps with a summary: start date, you send the contract, he confirms with Mr Huang.",
+    "groups": [
+     [
+      "这么定",
+      "就这样",
+      "定了",
+      "确定",
+      "说定"
+     ],
+     [
+      "合同",
+      "发",
+      "邮件"
+     ],
+     [
+      "明天",
+      "今天",
+      "黄总"
+     ]
+    ],
+    "example": {
+     "zh": "太好了。那我们就这么定了：下个月一号开始试点，我今天发合同，您明天跟黄总确认。",
+     "py": "tài hǎo le . nà wǒ men jiù zhè me dìng le : xià gè yuè yī hào kāi shǐ shì diǎn , wǒ jīn tiān fā hé tóng , nín míng tiān gēn huáng zǒng què rèn .",
+     "w": [
+      [
+       "太好了",
+       "tài hǎo le",
+       "great"
+      ],
+      [
+       "。"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "这么",
+       "zhè me",
+       "so, like this"
+      ],
+      [
+       "定了",
+       "dìng le",
+       "settled"
+      ],
+      [
+       "："
+      ],
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "今天",
+       "jīn tiān",
+       "today"
+      ],
+      [
+       "发",
+       "fā",
+       "send"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "明天",
+       "míng tiān",
+       "tomorrow"
+      ],
+      [
+       "跟",
+       "gēn",
+       "with"
+      ],
+      [
+       "黄总",
+       "huáng zǒng",
+       "Mr Huang"
+      ],
+      [
+       "确认",
+       "què rèn",
+       "confirm"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Great. So it is settled: the pilot starts on the first of next month, I send the contract today, and you confirm with Mr Huang tomorrow."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "干杯",
+   "py": "gān bēi",
+   "w": [
+    [
+     "干杯",
+     "gān bēi",
+     "cheers"
+    ]
+   ],
+   "en": "cheers"
+  },
+  {
+   "zh": "荣幸",
+   "py": "róng xìng",
+   "w": [
+    [
+     "荣幸",
+     "róng xìng",
+     "honour"
+    ]
+   ],
+   "en": "honour"
+  },
+  {
+   "zh": "范围",
+   "py": "fàn wéi",
+   "w": [
+    [
+     "范围",
+     "fàn wéi",
+     "scope"
+    ]
+   ],
+   "en": "scope"
+  },
+  {
+   "zh": "签字",
+   "py": "qiān zì",
+   "w": [
+    [
+     "签字",
+     "qiān zì",
+     "sign (a document)"
+    ]
+   ],
+   "en": "sign"
+  },
+  {
+   "zh": "合同",
+   "py": "hé tóng",
+   "w": [
+    [
+     "合同",
+     "hé tóng",
+     "contract"
+    ]
+   ],
+   "en": "contract"
+  },
+  {
+   "zh": "一号",
+   "py": "yī hào",
+   "w": [
+    [
+     "一号",
+     "yī hào",
+     "the 1st"
+    ]
+   ],
+   "en": "the 1st"
+  }
+ ]
+}

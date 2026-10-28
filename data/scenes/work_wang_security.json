@@ -1,0 +1,2846 @@
+{
+ "id": "work_wang_security",
+ "track": "work",
+ "title": {
+  "zh": "数据放在云上安全吗",
+  "en": "\"Is our data safe in the cloud?\""
+ },
+ "character": {
+  "id": "wang",
+  "name": "王总监",
+  "role": "IT Director, Lion City Logistics",
+  "en": "Mr Wang built the current system himself and is quietly proud of it. He hears every cloud pitch as criticism of his work. He wants evidence, not comfort, and softens when you respect his team."
+ },
+ "goal": "Reassure an engineer with evidence, not just \"do not worry\": encryption, permissions, certifications, an honest answer on incidents, respect for his team, and an agreed next step.",
+ "twists": [
+  {
+   "id": "data_location",
+   "en": "He asks where the data will be stored.",
+   "turn2": {
+    "zh": "还有一个问题，我们的数据会存在哪里？能不能留在新加坡？",
+    "py": "hái yǒu yī ge wèn tí , wǒ men de shù jù huì cún zài nǎ li ? néng bù néng liú zài xīn jiā pō ?",
+    "w": [
+     [
+      "还有",
+      "hái yǒu",
+      "also have"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "问题",
+      "wèn tí",
+      "questions"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "数据",
+      "shù jù",
+      "data"
+     ],
+     [
+      "会",
+      "huì",
+      "would"
+     ],
+     [
+      "存",
+      "cún",
+      "store"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "哪里",
+      "nǎ li",
+      "where"
+     ],
+     [
+      "？"
+     ],
+     [
+      "能不能",
+      "néng bù néng",
+      "can or not"
+     ],
+     [
+      "留在",
+      "liú zài",
+      "stay in"
+     ],
+     [
+      "新加坡",
+      "xīn jiā pō",
+      "Singapore"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "One more question: where will our data be stored? Can it stay in Singapore?"
+   },
+   "prompt": "Hidden concern: his data should not leave Singapore. He softens if Lucas names the location clearly and puts it in the contract.",
+   "group": [
+    "新加坡",
+    "本地",
+    "境内",
+    "留在"
+   ],
+   "example": {
+    "zh": "您问得很实际。数据可以全部留在新加坡的数据中心，也会写进合同里。",
+    "py": "nín wèn de hěn shí jì . shù jù kě yǐ quán bù liú zài xīn jiā pō de shù jù zhōng xīn , yě huì xiě jìn hé tóng lǐ .",
+    "w": [
+     [
+      "您",
+      "nín",
+      "you (polite)"
+     ],
+     [
+      "问得",
+      "wèn de",
+      "asked (so)"
+     ],
+     [
+      "很",
+      "hěn",
+      "very"
+     ],
+     [
+      "实际",
+      "shí jì",
+      "practical"
+     ],
+     [
+      "。"
+     ],
+     [
+      "数据",
+      "shù jù",
+      "data"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "全部",
+      "quán bù",
+      "all, everything"
+     ],
+     [
+      "留在",
+      "liú zài",
+      "stay in"
+     ],
+     [
+      "新加坡",
+      "xīn jiā pō",
+      "Singapore"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "数据中心",
+      "shù jù zhōng xīn",
+      "data centre"
+     ],
+     [
+      "，"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "会",
+      "huì",
+      "would"
+     ],
+     [
+      "写进",
+      "xiě jìn",
+      "write into"
+     ],
+     [
+      "合同",
+      "hé tóng",
+      "contract"
+     ],
+     [
+      "里",
+      "lǐ",
+      "in"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "A very practical question. Data can stay entirely in a Singapore data centre, and we will write it into the contract."
+   }
+  },
+  {
+   "id": "honest_record",
+   "en": "He heard that other cloud vendors had incidents.",
+   "turn2": {
+    "zh": "我听说有些云公司以前出过事，你们有没有？",
+    "py": "wǒ tīng shuō yǒu xiē yún gōng sī yǐ qián chū guo shì , nǐ men yǒu méi yǒu ?",
+    "w": [
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "听说",
+      "tīng shuō",
+      "hear (that)"
+     ],
+     [
+      "有些",
+      "yǒu xiē",
+      "some"
+     ],
+     [
+      "云",
+      "yún",
+      "cloud"
+     ],
+     [
+      "公司",
+      "gōng sī",
+      "company"
+     ],
+     [
+      "以前",
+      "yǐ qián",
+      "before, previously"
+     ],
+     [
+      "出过",
+      "chū guo",
+      "has had (an incident)"
+     ],
+     [
+      "事",
+      "shì",
+      "matter, thing"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "有没有",
+      "yǒu méi yǒu",
+      "did you or not"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "I heard some cloud companies have had incidents before. Have you?"
+   },
+   "prompt": "Hidden concern: he has heard of breaches elsewhere. He trusts Lucas more if he is honest and points to process, not a promise of \"never\".",
+   "group": [
+    "绝对",
+    "不敢说",
+    "不能保证",
+    "如实",
+    "透明"
+   ],
+   "example": {
+    "zh": "您问得很实际。我不敢说绝对不会出事，但是我们有应急流程，也会第一时间通知客户。",
+    "py": "nín wèn de hěn shí jì . wǒ bù gǎn shuō jué duì bù huì chū shì , dàn shì wǒ men yǒu yìng jí liú chéng , yě huì dì yī shí jiān tōng zhī kè hù .",
+    "w": [
+     [
+      "您",
+      "nín",
+      "you (polite)"
+     ],
+     [
+      "问得",
+      "wèn de",
+      "asked (so)"
+     ],
+     [
+      "很",
+      "hěn",
+      "very"
+     ],
+     [
+      "实际",
+      "shí jì",
+      "practical"
+     ],
+     [
+      "。"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "不敢说",
+      "bù gǎn shuō",
+      "would not dare say"
+     ],
+     [
+      "绝对",
+      "jué duì",
+      "absolutely"
+     ],
+     [
+      "不会",
+      "bù huì",
+      "won't"
+     ],
+     [
+      "出事",
+      "chū shì",
+      "have an accident"
+     ],
+     [
+      "，"
+     ],
+     [
+      "但是",
+      "dàn shì",
+      "but"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "应急",
+      "yìng jí",
+      "emergency"
+     ],
+     [
+      "流程",
+      "liú chéng",
+      "process"
+     ],
+     [
+      "，"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "会",
+      "huì",
+      "would"
+     ],
+     [
+      "第一时间",
+      "dì yī shí jiān",
+      "right away"
+     ],
+     [
+      "通知",
+      "tōng zhī",
+      "notify"
+     ],
+     [
+      "客户",
+      "kè hù",
+      "clients"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "A very practical question. I will not claim it can never happen, but we have an emergency process and tell customers right away."
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "数据放在云上，你们怎么保证安全？",
+    "py": "shù jù fàng zài yún shàng , nǐ men zěn me bǎo zhèng ān quán ?",
+    "w": [
+     [
+      "数据",
+      "shù jù",
+      "data"
+     ],
+     [
+      "放",
+      "fàng",
+      "put"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "云上",
+      "yún shàng",
+      "in the cloud"
+     ],
+     [
+      "，"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "保证",
+      "bǎo zhèng",
+      "guarantee"
+     ],
+     [
+      "安全",
+      "ān quán",
+      "safe, security"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "With data in the cloud, how do you guarantee security?",
+    "hurried": {
+     "zh": "数据放云上？安全怎么保证？简单说。",
+     "py": "shù jù fàng yún shàng ? ān quán zěn me bǎo zhèng ? jiǎn dān shuō .",
+     "w": [
+      [
+       "数据",
+       "shù jù",
+       "data"
+      ],
+      [
+       "放",
+       "fàng",
+       "put"
+      ],
+      [
+       "云上",
+       "yún shàng",
+       "in the cloud"
+      ],
+      [
+       "？"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "保证",
+       "bǎo zhèng",
+       "guarantee"
+      ],
+      [
+       "？"
+      ],
+      [
+       "简单",
+       "jiǎn dān",
+       "simple"
+      ],
+      [
+       "说",
+       "shuō",
+       "say"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Data in the cloud? How is it kept safe? Keep it brief."
+    }
+   },
+   "options": [
+    {
+     "zh": "您担心安全很合理。我们是端到端加密，权限可以细到每一列，也通过了国际认证，相关报告会后发给您。",
+     "py": "nín dān xīn ān quán hěn hé lǐ . wǒ men shì duān dào duān jiā mì , quán xiàn kě yǐ xì dào měi yī liè , yě tōng guò le guó jì rèn zhèng , xiāng guān bào gào huì hòu fā gěi nín .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "担心",
+       "dān xīn",
+       "worry"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "合理",
+       "hé lǐ",
+       "reasonable"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "端到端",
+       "duān dào duān",
+       "end to end"
+      ],
+      [
+       "加密",
+       "jiā mì",
+       "encrypt"
+      ],
+      [
+       "，"
+      ],
+      [
+       "权限",
+       "quán xiàn",
+       "permissions"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "细到",
+       "xì dào",
+       "down to the detail of"
+      ],
+      [
+       "每",
+       "měi",
+       "every"
+      ],
+      [
+       "一",
+       "yī",
+       "one"
+      ],
+      [
+       "列",
+       "liè",
+       "column"
+      ],
+      [
+       "，"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "通过",
+       "tōng guò",
+       "pass, obtain"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "国际",
+       "guó jì",
+       "international"
+      ],
+      [
+       "认证",
+       "rèn zhèng",
+       "certification"
+      ],
+      [
+       "，"
+      ],
+      [
+       "相关",
+       "xiāng guān",
+       "related"
+      ],
+      [
+       "报告",
+       "bào gào",
+       "report"
+      ],
+      [
+       "会后",
+       "huì hòu",
+       "after the meeting"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Your concern is reasonable. We use end-to-end encryption, permissions down to each column, and international certifications. We will send the reports after the meeting.",
+     "type": "fit",
+     "why": "Three concrete facts and a promise to send proof. An engineer can check every one."
+    },
+    {
+     "zh": "您放心，我们的系统非常安全，很多大公司都在用。",
+     "py": "nín fàng xīn , wǒ men de xì tǒng fēi cháng ān quán , hěn duō dà gōng sī dōu zài yòng .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "放心",
+       "fàng xīn",
+       "rest assured"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "非常",
+       "fēi cháng",
+       "very"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "，"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "大",
+       "dà",
+       "big"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Do not worry, our system is very safe and many big companies use it.",
+     "type": "generic",
+     "why": "\"Do not worry\" is exactly what an engineer does not believe."
+    },
+    {
+     "zh": "现在大家都用云，担心安全已经有点过时了。",
+     "py": "xiàn zài dà jiā dōu yòng yún , dān xīn ān quán yǐ jīng yǒu diǎn guò shí le .",
+     "w": [
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "大家",
+       "dà jiā",
+       "everyone"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "云",
+       "yún",
+       "cloud"
+      ],
+      [
+       "，"
+      ],
+      [
+       "担心",
+       "dān xīn",
+       "worry"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "已经",
+       "yǐ jīng",
+       "already"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "过时",
+       "guò shí",
+       "outdated"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Everyone uses the cloud now, worrying about security is a bit outdated.",
+     "type": "blunt",
+     "why": "You just called his main job outdated. He will stop listening."
+    },
+    {
+     "zh": "我们的报价很有竞争力，您可以先看看价格。",
+     "py": "wǒ men de bào jià hěn yǒu jìng zhēng lì , nín kě yǐ xiān kàn kan jià gé .",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "报价",
+       "bào jià",
+       "quote (price)"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "竞争力",
+       "jìng zhēng lì",
+       "competitive edge"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "看看",
+       "kàn kan",
+       "take a look"
+      ],
+      [
+       "价格",
+       "jià gé",
+       "price"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Our quote is very competitive, take a look at the price first.",
+     "type": "off",
+     "why": "He asked about security. Answering with price dodges the question."
+    }
+   ],
+   "intent": {
+    "en": "Answer with evidence: encryption, permissions, and a certification or report you will send.",
+    "groups": [
+     [
+      "加密"
+     ],
+     [
+      "权限",
+      "每一列",
+      "字段",
+      "分级"
+     ],
+     [
+      "认证",
+      "报告",
+      "证书",
+      "审计",
+      "会后",
+      "发给"
+     ]
+    ],
+    "example": {
+     "zh": "您担心安全很合理。我们是端到端加密，权限可以细到每一列，也通过了国际认证，相关报告会后发给您。",
+     "py": "nín dān xīn ān quán hěn hé lǐ . wǒ men shì duān dào duān jiā mì , quán xiàn kě yǐ xì dào měi yī liè , yě tōng guò le guó jì rèn zhèng , xiāng guān bào gào huì hòu fā gěi nín .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "担心",
+       "dān xīn",
+       "worry"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "合理",
+       "hé lǐ",
+       "reasonable"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "端到端",
+       "duān dào duān",
+       "end to end"
+      ],
+      [
+       "加密",
+       "jiā mì",
+       "encrypt"
+      ],
+      [
+       "，"
+      ],
+      [
+       "权限",
+       "quán xiàn",
+       "permissions"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "细到",
+       "xì dào",
+       "down to the detail of"
+      ],
+      [
+       "每",
+       "měi",
+       "every"
+      ],
+      [
+       "一",
+       "yī",
+       "one"
+      ],
+      [
+       "列",
+       "liè",
+       "column"
+      ],
+      [
+       "，"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "通过",
+       "tōng guò",
+       "pass, obtain"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "国际",
+       "guó jì",
+       "international"
+      ],
+      [
+       "认证",
+       "rèn zhèng",
+       "certification"
+      ],
+      [
+       "，"
+      ],
+      [
+       "相关",
+       "xiāng guān",
+       "related"
+      ],
+      [
+       "报告",
+       "bào gào",
+       "report"
+      ],
+      [
+       "会后",
+       "huì hòu",
+       "after the meeting"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Your concern is reasonable. We use end-to-end encryption, permissions down to each column, and international certifications. We will send the reports after the meeting."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "万一你们公司出了安全事故，怎么办？",
+    "py": "wàn yī nǐ men gōng sī chū le ān quán shì gù , zěn me bàn ?",
+    "w": [
+     [
+      "万一",
+      "wàn yī",
+      "what if"
+     ],
+     [
+      "你们",
+      "nǐ men",
+      "you (plural)"
+     ],
+     [
+      "公司",
+      "gōng sī",
+      "company"
+     ],
+     [
+      "出",
+      "chū",
+      "out"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "安全",
+      "ān quán",
+      "safe, security"
+     ],
+     [
+      "事故",
+      "shì gù",
+      "incident, accident"
+     ],
+     [
+      "，"
+     ],
+     [
+      "怎么办",
+      "zěn me bàn",
+      "what to do"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "What if your company has a security breach?",
+    "hurried": {
+     "zh": "万一出事了呢？谁负责？",
+     "py": "wàn yī chū shì le ne ? shéi fù zé ?",
+     "w": [
+      [
+       "万一",
+       "wàn yī",
+       "what if"
+      ],
+      [
+       "出事",
+       "chū shì",
+       "have an accident"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "呢",
+       "ne",
+       "(particle)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "负责",
+       "fù zé",
+       "be responsible for"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "What if something goes wrong? Who is responsible?"
+    }
+   },
+   "options": [
+    {
+     "zh": "您问得很实际。我们有应急流程，会第一时间通知您，责任也会写进合同里。",
+     "py": "nín wèn de hěn shí jì . wǒ men yǒu yìng jí liú chéng , huì dì yī shí jiān tōng zhī nín , zé rèn yě huì xiě jìn hé tóng lǐ .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "问得",
+       "wèn de",
+       "asked (so)"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "实际",
+       "shí jì",
+       "practical"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "应急",
+       "yìng jí",
+       "emergency"
+      ],
+      [
+       "流程",
+       "liú chéng",
+       "process"
+      ],
+      [
+       "，"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "第一时间",
+       "dì yī shí jiān",
+       "right away"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "责任",
+       "zé rèn",
+       "responsibility"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "写进",
+       "xiě jìn",
+       "write into"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "里",
+       "lǐ",
+       "in"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "A very practical question. We have an emergency process, we tell you right away, and responsibility goes into the contract.",
+     "type": "fit",
+     "why": "You name a process and a contract clause. That is evidence, not comfort."
+    },
+    {
+     "zh": "请放心，我们公司很大，很多客户都在用。",
+     "py": "qǐng fàng xīn , wǒ men gōng sī hěn dà , hěn duō kè hù dōu zài yòng .",
+     "w": [
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "放心",
+       "fàng xīn",
+       "rest assured"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "公司",
+       "gōng sī",
+       "company"
+      ],
+      [
+       "很大",
+       "hěn dà",
+       "very big"
+      ],
+      [
+       "，"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "客户",
+       "kè hù",
+       "clients"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Please do not worry, our company is big and has many customers.",
+     "type": "generic",
+     "why": "Big does not mean safe. He asked what happens after a breach."
+    },
+    {
+     "zh": "这种事情基本不会发生。",
+     "py": "zhè zhǒng shì qing jī běn bù huì fā shēng .",
+     "w": [
+      [
+       "这种",
+       "zhè zhǒng",
+       "this kind of"
+      ],
+      [
+       "事情",
+       "shì qing",
+       "matter"
+      ],
+      [
+       "基本",
+       "jī běn",
+       "basically"
+      ],
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "发生",
+       "fā shēng",
+       "happen"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "That basically never happens.",
+     "type": "blunt",
+     "why": "It sounds like you are waving his question away. Answer the \"what if\"."
+    },
+    {
+     "zh": "万一出事，我们全部赔偿，您不用担心。",
+     "py": "wàn yī chū shì , wǒ men quán bù péi cháng , nín bù yòng dān xīn .",
+     "w": [
+      [
+       "万一",
+       "wàn yī",
+       "what if"
+      ],
+      [
+       "出事",
+       "chū shì",
+       "have an accident"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "全部",
+       "quán bù",
+       "all, everything"
+      ],
+      [
+       "赔偿",
+       "péi cháng",
+       "compensate"
+      ],
+      [
+       "，"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "担心",
+       "dān xīn",
+       "worry"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "If something happens, we compensate everything, no worries.",
+     "type": "cave",
+     "why": "A promise you cannot back up. Your own legal team will not be happy."
+    }
+   ],
+   "intent": {
+    "en": "Acknowledge the question, then give a process, a notification promise, or a contract commitment.",
+    "groups": [
+     [
+      "合理",
+      "理解",
+      "明白",
+      "实际",
+      "问得好",
+      "好问题"
+     ],
+     [
+      "合同",
+      "流程",
+      "通知",
+      "责任",
+      "认证",
+      "新加坡",
+      "本地",
+      "数据中心",
+      "报告",
+      "承诺",
+      "应急"
+     ]
+    ],
+    "example": {
+     "zh": "您问得很实际。我们有应急流程，会第一时间通知您，责任也会写进合同里。",
+     "py": "nín wèn de hěn shí jì . wǒ men yǒu yìng jí liú chéng , huì dì yī shí jiān tōng zhī nín , zé rèn yě huì xiě jìn hé tóng lǐ .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "问得",
+       "wèn de",
+       "asked (so)"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "实际",
+       "shí jì",
+       "practical"
+      ],
+      [
+       "。"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "应急",
+       "yìng jí",
+       "emergency"
+      ],
+      [
+       "流程",
+       "liú chéng",
+       "process"
+      ],
+      [
+       "，"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "第一时间",
+       "dì yī shí jiān",
+       "right away"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "责任",
+       "zé rèn",
+       "responsibility"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "写进",
+       "xiě jìn",
+       "write into"
+      ],
+      [
+       "合同",
+       "hé tóng",
+       "contract"
+      ],
+      [
+       "里",
+       "lǐ",
+       "in"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "A very practical question. We have an emergency process, we tell you right away, and responsibility goes into the contract."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "其实，我们自己的团队也能做这个。",
+    "py": "qí shí , wǒ men zì jǐ de tuán duì yě néng zuò zhè ge .",
+    "w": [
+     [
+      "其实",
+      "qí shí",
+      "actually"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我们",
+      "wǒ men",
+      "we"
+     ],
+     [
+      "自己",
+      "zì jǐ",
+      "oneself"
+     ],
+     [
+      "的",
+      "de",
+      "(particle: of, 's)"
+     ],
+     [
+      "团队",
+      "tuán duì",
+      "team"
+     ],
+     [
+      "也",
+      "yě",
+      "also"
+     ],
+     [
+      "能",
+      "néng",
+      "can"
+     ],
+     [
+      "做",
+      "zuò",
+      "do, make"
+     ],
+     [
+      "这个",
+      "zhè ge",
+      "this"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Actually, our own team could build this.",
+    "hurried": {
+     "zh": "我们团队自己也能做，为什么要找你们？",
+     "py": "wǒ men tuán duì zì jǐ yě néng zuò , wèi shén me yào zhǎo nǐ men ?",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "能",
+       "néng",
+       "can"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "，"
+      ],
+      [
+       "为什么",
+       "wèi shén me",
+       "why"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "找",
+       "zhǎo",
+       "give change"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Our team can do it too. Why do we need you?"
+    }
+   },
+   "options": [
+    {
+     "zh": "我相信您的团队完全有能力，这个系统也一直很稳定。只是自己做要花很多时间，我们可以帮团队省下这些时间。",
+     "py": "wǒ xiāng xìn nín de tuán duì wán quán yǒu néng lì , zhè ge xì tǒng yě yī zhí hěn wěn dìng . zhǐ shì zì jǐ zuò yào huā hěn duō shí jiān , wǒ men kě yǐ bāng tuán duì shěng xià zhè xiē shí jiān .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "相信",
+       "xiāng xìn",
+       "believe"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "完全",
+       "wán quán",
+       "completely"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "能力",
+       "néng lì",
+       "ability"
+      ],
+      [
+       "，"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "一直",
+       "yī zhí",
+       "always, all along"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "稳定",
+       "wěn dìng",
+       "stable"
+      ],
+      [
+       "。"
+      ],
+      [
+       "只是",
+       "zhǐ shì",
+       "just, only"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "花",
+       "huā",
+       "spend"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "帮",
+       "bāng",
+       "help"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "省下",
+       "shěng xià",
+       "save"
+      ],
+      [
+       "这些",
+       "zhè xiē",
+       "these"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I believe your team is fully capable, and this system has been very stable. But building it takes a lot of time, and we can save the team that time.",
+     "type": "fit",
+     "why": "You give his team credit first, then reframe around time. He keeps his face and you keep the deal."
+    },
+    {
+     "zh": "自己做和买现成的，各有各的好处。",
+     "py": "zì jǐ zuò hé mǎi xiàn chéng de , gè yǒu gè de hǎo chu .",
+     "w": [
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "和",
+       "hé",
+       "and"
+      ],
+      [
+       "买",
+       "mǎi",
+       "buy"
+      ],
+      [
+       "现成",
+       "xiàn chéng",
+       "ready-made"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "各有",
+       "gè yǒu",
+       "each has"
+      ],
+      [
+       "各",
+       "gè",
+       "each"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "好处",
+       "hǎo chu",
+       "benefit"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Building yourself and buying ready-made both have their benefits.",
+     "type": "generic",
+     "why": "Neutral, so it moves nothing. Give him a reason to choose."
+    },
+    {
+     "zh": "自己做太慢了，而且不专业。",
+     "py": "zì jǐ zuò tài màn le , ér qiě bù zhuān yè .",
+     "w": [
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "太",
+       "tài",
+       "too"
+      ],
+      [
+       "慢",
+       "màn",
+       "slow"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "而且",
+       "ér qiě",
+       "besides"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "专业",
+       "zhuān yè",
+       "professional"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Building yourself is too slow and not professional.",
+     "type": "blunt",
+     "why": "You just said his team is not professional. That ends the meeting."
+    },
+    {
+     "zh": "您说得对，那就让您的团队做吧。",
+     "py": "nín shuō de duì , nà jiù ràng nín de tuán duì zuò ba .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "说得对",
+       "shuō de duì",
+       "you are right"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "让",
+       "ràng",
+       "let"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You are right, let your team do it then.",
+     "type": "cave",
+     "why": "You agree yourself out of the deal."
+    }
+   ],
+   "intent": {
+    "en": "Give his team credit, then reframe around saving time.",
+    "groups": [
+     [
+      "相信",
+      "佩服",
+      "能力",
+      "厉害",
+      "认可",
+      "优秀",
+      "稳定"
+     ],
+     [
+      "时间",
+      "精力",
+      "节省",
+      "省下",
+      "更快"
+     ]
+    ],
+    "example": {
+     "zh": "我相信您的团队完全有能力，这个系统也一直很稳定。只是自己做要花很多时间，我们可以帮团队省下这些时间。",
+     "py": "wǒ xiāng xìn nín de tuán duì wán quán yǒu néng lì , zhè ge xì tǒng yě yī zhí hěn wěn dìng . zhǐ shì zì jǐ zuò yào huā hěn duō shí jiān , wǒ men kě yǐ bāng tuán duì shěng xià zhè xiē shí jiān .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "相信",
+       "xiāng xìn",
+       "believe"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "完全",
+       "wán quán",
+       "completely"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "能力",
+       "néng lì",
+       "ability"
+      ],
+      [
+       "，"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "一直",
+       "yī zhí",
+       "always, all along"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "稳定",
+       "wěn dìng",
+       "stable"
+      ],
+      [
+       "。"
+      ],
+      [
+       "只是",
+       "zhǐ shì",
+       "just, only"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "花",
+       "huā",
+       "spend"
+      ],
+      [
+       "很多",
+       "hěn duō",
+       "many"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "帮",
+       "bāng",
+       "help"
+      ],
+      [
+       "团队",
+       "tuán duì",
+       "team"
+      ],
+      [
+       "省下",
+       "shěng xià",
+       "save"
+      ],
+      [
+       "这些",
+       "zhè xiē",
+       "these"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I believe your team is fully capable, and this system has been very stable. But building it takes a lot of time, and we can save the team that time."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "好吧，听起来有道理。那接下来怎么安排？",
+    "py": "hǎo ba , tīng qǐ lái yǒu dào lǐ . nà jiē xià lái zěn me ān pái ?",
+    "w": [
+     [
+      "好吧",
+      "hǎo ba",
+      "okay then"
+     ],
+     [
+      "，"
+     ],
+     [
+      "听起来",
+      "tīng qǐ lái",
+      "sounds like"
+     ],
+     [
+      "有道理",
+      "yǒu dào lǐ",
+      "makes sense"
+     ],
+     [
+      "。"
+     ],
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "接下来",
+      "jiē xià lái",
+      "next"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "安排",
+      "ān pái",
+      "arrange"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Okay, that makes sense. So what is the next step?",
+    "hurried": {
+     "zh": "有道理。下一步是什么？我下午还有会。",
+     "py": "yǒu dào lǐ . xià yī bù shì shén me ? wǒ xià wǔ hái yǒu huì .",
+     "w": [
+      [
+       "有道理",
+       "yǒu dào lǐ",
+       "makes sense"
+      ],
+      [
+       "。"
+      ],
+      [
+       "下一步",
+       "xià yī bù",
+       "next step"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "下午",
+       "xià wǔ",
+       "afternoon"
+      ],
+      [
+       "还有",
+       "hái yǒu",
+       "also have"
+      ],
+      [
+       "会",
+       "huì",
+       "would"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Makes sense. What is the next step? I have a meeting this afternoon."
+    }
+   },
+   "options": [
+    {
+     "zh": "我建议下周安排一次技术交流，让双方的工程师一起看看架构，会后我把安全报告发给您。",
+     "py": "wǒ jiàn yì xià zhōu ān pái yī cì jì shù jiāo liú , ràng shuāng fāng de gōng chéng shī yī qǐ kàn kan jià gòu , huì hòu wǒ bǎ ān quán bào gào fā gěi nín .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "下周",
+       "xià zhōu",
+       "next week"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "一次",
+       "yī cì",
+       "once, one session"
+      ],
+      [
+       "技术",
+       "jì shù",
+       "technical"
+      ],
+      [
+       "交流",
+       "jiāo liú",
+       "exchange, discuss"
+      ],
+      [
+       "，"
+      ],
+      [
+       "让",
+       "ràng",
+       "let"
+      ],
+      [
+       "双方",
+       "shuāng fāng",
+       "both sides"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "工程师",
+       "gōng chéng shī",
+       "engineer"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "看看",
+       "kàn kan",
+       "take a look"
+      ],
+      [
+       "架构",
+       "jià gòu",
+       "architecture"
+      ],
+      [
+       "，"
+      ],
+      [
+       "会后",
+       "huì hòu",
+       "after the meeting"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "报告",
+       "bào gào",
+       "report"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I suggest a technical session next week where engineers from both sides review the architecture, and I will send you the security reports afterwards.",
+     "type": "fit",
+     "why": "A date, a format that respects his team, and a deliverable. A clear, low-risk next step."
+    },
+    {
+     "zh": "好的，那我们保持联系。",
+     "py": "hǎo de , nà wǒ men bǎo chí lián xì .",
+     "w": [
+      [
+       "好",
+       "hǎo",
+       "good"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "保持",
+       "bǎo chí",
+       "keep"
+      ],
+      [
+       "联系",
+       "lián xì",
+       "contact"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Okay, let us keep in touch.",
+     "type": "generic",
+     "why": "Friendly but nothing happens next. Propose something concrete."
+    },
+    {
+     "zh": "那您尽快决定吧，我们这个月有优惠。",
+     "py": "nà nín jǐn kuài jué dìng ba , wǒ men zhè ge yuè yǒu yōu huì .",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "尽快",
+       "jǐn kuài",
+       "as soon as possible"
+      ],
+      [
+       "决定",
+       "jué dìng",
+       "decide"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "这个",
+       "zhè ge",
+       "this"
+      ],
+      [
+       "月",
+       "yuè",
+       "month"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "优惠",
+       "yōu huì",
+       "discount, special offer"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Please decide soon, we have a discount this month.",
+     "type": "blunt",
+     "why": "Pressure right after he warmed up. He will cool down again."
+    },
+    {
+     "zh": "您什么时候想谈都可以，我等您通知。",
+     "py": "nín shén me shí hou xiǎng tán dōu kě yǐ , wǒ děng nín tōng zhī .",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "时候",
+       "shí hou",
+       "time, when"
+      ],
+      [
+       "想",
+       "xiǎng",
+       "want, think"
+      ],
+      [
+       "谈",
+       "tán",
+       "talk, discuss"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "等",
+       "děng",
+       "wait for"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "通知",
+       "tōng zhī",
+       "notify"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Whenever you want to talk is fine, I will wait for your notice.",
+     "type": "cave",
+     "why": "You hand over the initiative and wait. Waiting is not selling."
+    }
+   ],
+   "intent": {
+    "en": "Propose a concrete next step with a time, and offer to send the security reports.",
+    "groups": [
+     [
+      "下周",
+      "这周",
+      "本周",
+      "明天",
+      "周"
+     ],
+     [
+      "技术",
+      "工程师",
+      "团队",
+      "架构",
+      "交流",
+      "会议"
+     ],
+     [
+      "报告",
+      "资料",
+      "发给",
+      "邮件",
+      "文件"
+     ]
+    ],
+    "example": {
+     "zh": "我建议下周安排一次技术交流，让双方的工程师一起看看架构，会后我把安全报告发给您。",
+     "py": "wǒ jiàn yì xià zhōu ān pái yī cì jì shù jiāo liú , ràng shuāng fāng de gōng chéng shī yī qǐ kàn kan jià gòu , huì hòu wǒ bǎ ān quán bào gào fā gěi nín .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "建议",
+       "jiàn yì",
+       "suggest"
+      ],
+      [
+       "下周",
+       "xià zhōu",
+       "next week"
+      ],
+      [
+       "安排",
+       "ān pái",
+       "arrange"
+      ],
+      [
+       "一次",
+       "yī cì",
+       "once, one session"
+      ],
+      [
+       "技术",
+       "jì shù",
+       "technical"
+      ],
+      [
+       "交流",
+       "jiāo liú",
+       "exchange, discuss"
+      ],
+      [
+       "，"
+      ],
+      [
+       "让",
+       "ràng",
+       "let"
+      ],
+      [
+       "双方",
+       "shuāng fāng",
+       "both sides"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "工程师",
+       "gōng chéng shī",
+       "engineer"
+      ],
+      [
+       "一起",
+       "yī qǐ",
+       "together"
+      ],
+      [
+       "看看",
+       "kàn kan",
+       "take a look"
+      ],
+      [
+       "架构",
+       "jià gòu",
+       "architecture"
+      ],
+      [
+       "，"
+      ],
+      [
+       "会后",
+       "huì hòu",
+       "after the meeting"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "把",
+       "bǎ",
+       "(object marker)"
+      ],
+      [
+       "安全",
+       "ān quán",
+       "safe, security"
+      ],
+      [
+       "报告",
+       "bào gào",
+       "report"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I suggest a technical session next week where engineers from both sides review the architecture, and I will send you the security reports afterwards."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "加密",
+   "py": "jiā mì",
+   "w": [
+    [
+     "加密",
+     "jiā mì",
+     "encrypt"
+    ]
+   ],
+   "en": "encrypt"
+  },
+  {
+   "zh": "权限",
+   "py": "quán xiàn",
+   "w": [
+    [
+     "权限",
+     "quán xiàn",
+     "permissions"
+    ]
+   ],
+   "en": "permissions"
+  },
+  {
+   "zh": "认证",
+   "py": "rèn zhèng",
+   "w": [
+    [
+     "认证",
+     "rèn zhèng",
+     "certification"
+    ]
+   ],
+   "en": "certification"
+  },
+  {
+   "zh": "报告",
+   "py": "bào gào",
+   "w": [
+    [
+     "报告",
+     "bào gào",
+     "report"
+    ]
+   ],
+   "en": "report"
+  },
+  {
+   "zh": "责任",
+   "py": "zé rèn",
+   "w": [
+    [
+     "责任",
+     "zé rèn",
+     "responsibility"
+    ]
+   ],
+   "en": "responsibility"
+  },
+  {
+   "zh": "合同",
+   "py": "hé tóng",
+   "w": [
+    [
+     "合同",
+     "hé tóng",
+     "contract"
+    ]
+   ],
+   "en": "contract"
+  }
+ ]
+}

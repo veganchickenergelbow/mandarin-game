@@ -1,0 +1,2154 @@
+{
+ "id": "life_mrt_directions",
+ "track": "life",
+ "title": {
+  "zh": "大巴窑地铁站",
+  "en": "Directions at Toa Payoh MRT"
+ },
+ "character": {
+  "id": "tourist",
+  "name": "游客小姐",
+  "role": "Lost visitor at Toa Payoh MRT",
+  "en": "A friendly visitor from China, new to Singapore and a bit anxious about being late. She speaks clear, fairly quick Mandarin and thanks you for every answer."
+ },
+ "goal": "Help a lost visitor get from Toa Payoh to Orchard: which line and how many stops, how to pay, how long it takes, and how to find ION.",
+ "twists": [
+  {
+   "id": "big_suitcase",
+   "en": "She has a big suitcase and needs a lift.",
+   "turn2": {
+    "zh": "要买票吗？我还有一个大行李箱，有电梯吗？",
+    "py": "yào mǎi piào ma ? wǒ hái yǒu yī ge dà xíng lǐ xiāng , yǒu diàn tī ma ?",
+    "w": [
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "买票",
+      "mǎi piào",
+      "buy a ticket"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "还有",
+      "hái yǒu",
+      "also have"
+     ],
+     [
+      "一个",
+      "yī ge",
+      "one (of)"
+     ],
+     [
+      "大",
+      "dà",
+      "big"
+     ],
+     [
+      "行李箱",
+      "xíng lǐ xiāng",
+      "suitcase"
+     ],
+     [
+      "，"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "电梯",
+      "diàn tī",
+      "lift, elevator"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Do I need a ticket? I also have a big suitcase, is there a lift?"
+   },
+   "prompt": "She is worried about the stairs with her suitcase. She relaxes only if you answer both questions: the ticket and the lift.",
+   "group": [
+    "电梯",
+    "升降机"
+   ],
+   "example": {
+    "zh": "不用买票，用银行卡直接刷进去就可以。有电梯，跟着指示牌走就行。",
+    "py": "bù yòng mǎi piào , yòng yín háng kǎ zhí jiē shuā jìn qù jiù kě yǐ . yǒu diàn tī , gēn zhe zhǐ shì pái zǒu jiù xíng .",
+    "w": [
+     [
+      "不用",
+      "bù yòng",
+      "no need to / not using"
+     ],
+     [
+      "买票",
+      "mǎi piào",
+      "buy a ticket"
+     ],
+     [
+      "，"
+     ],
+     [
+      "用",
+      "yòng",
+      "use"
+     ],
+     [
+      "银行卡",
+      "yín háng kǎ",
+      "bank card"
+     ],
+     [
+      "直接",
+      "zhí jiē",
+      "directly"
+     ],
+     [
+      "刷",
+      "shuā",
+      "tap, swipe"
+     ],
+     [
+      "进去",
+      "jìn qù",
+      "go in"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "。"
+     ],
+     [
+      "有",
+      "yǒu",
+      "have"
+     ],
+     [
+      "电梯",
+      "diàn tī",
+      "lift, elevator"
+     ],
+     [
+      "，"
+     ],
+     [
+      "跟着",
+      "gēn zhe",
+      "follow"
+     ],
+     [
+      "指示牌",
+      "zhǐ shì pái",
+      "sign board"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "行",
+      "xíng",
+      "okay"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "No ticket needed, just tap your bank card at the gate. There is a lift, follow the signs."
+   }
+  },
+  {
+   "id": "delay",
+   "en": "She heard an announcement that trains are delayed.",
+   "turn2": {
+    "zh": "要买票吗？我刚听到广播说列车延误了。",
+    "py": "yào mǎi piào ma ? wǒ gāng tīng dào guǎng bō shuō liè chē yán wù le .",
+    "w": [
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "买票",
+      "mǎi piào",
+      "buy a ticket"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "刚",
+      "gāng",
+      "just now"
+     ],
+     [
+      "听到",
+      "tīng dào",
+      "hear"
+     ],
+     [
+      "广播",
+      "guǎng bō",
+      "announcement"
+     ],
+     [
+      "说",
+      "shuō",
+      "say"
+     ],
+     [
+      "列车",
+      "liè chē",
+      "train"
+     ],
+     [
+      "延误",
+      "yán wù",
+      "delayed"
+     ],
+     [
+      "了",
+      "le",
+      "(completed / changed)"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "Do I need a ticket? I just heard an announcement that the trains are delayed."
+   },
+   "prompt": "She is anxious about being late. She calms down if you answer the ticket question and honestly say it may take a few extra minutes.",
+   "group": [
+    "延误",
+    "晚点",
+    "多等",
+    "几分钟"
+   ],
+   "example": {
+    "zh": "不用买票，用银行卡刷进去就可以。列车是有点延误，可能要多等几分钟。",
+    "py": "bù yòng mǎi piào , yòng yín háng kǎ shuā jìn qù jiù kě yǐ . liè chē shì yǒu diǎn yán wù , kě néng yào duō děng jǐ fēn zhōng .",
+    "w": [
+     [
+      "不用",
+      "bù yòng",
+      "no need to / not using"
+     ],
+     [
+      "买票",
+      "mǎi piào",
+      "buy a ticket"
+     ],
+     [
+      "，"
+     ],
+     [
+      "用",
+      "yòng",
+      "use"
+     ],
+     [
+      "银行卡",
+      "yín háng kǎ",
+      "bank card"
+     ],
+     [
+      "刷",
+      "shuā",
+      "tap, swipe"
+     ],
+     [
+      "进去",
+      "jìn qù",
+      "go in"
+     ],
+     [
+      "就",
+      "jiù",
+      "then, just"
+     ],
+     [
+      "可以",
+      "kě yǐ",
+      "can, okay"
+     ],
+     [
+      "。"
+     ],
+     [
+      "列车",
+      "liè chē",
+      "train"
+     ],
+     [
+      "是",
+      "shì",
+      "is"
+     ],
+     [
+      "有点",
+      "yǒu diǎn",
+      "a little"
+     ],
+     [
+      "延误",
+      "yán wù",
+      "delayed"
+     ],
+     [
+      "，"
+     ],
+     [
+      "可能",
+      "kě néng",
+      "maybe, possibly"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "多等",
+      "duō děng",
+      "wait longer"
+     ],
+     [
+      "几分钟",
+      "jǐ fēn zhōng",
+      "a few minutes"
+     ],
+     [
+      "。"
+     ]
+    ],
+    "en": "No ticket needed, tap your bank card. The train is a bit delayed, so you may wait a few extra minutes."
+   }
+  }
+ ],
+ "turns": [
+  {
+   "npc": {
+    "zh": "不好意思，请问去乌节路怎么走？",
+    "py": "bù hǎo yì si , qǐng wèn qù wū jié lù zěn me zǒu ?",
+    "w": [
+     [
+      "不好意思",
+      "bù hǎo yì si",
+      "sorry, excuse me"
+     ],
+     [
+      "，"
+     ],
+     [
+      "请问",
+      "qǐng wèn",
+      "excuse me"
+     ],
+     [
+      "去",
+      "qù",
+      "go"
+     ],
+     [
+      "乌节路",
+      "wū jié lù",
+      "Orchard Road"
+     ],
+     [
+      "怎么",
+      "zěn me",
+      "how"
+     ],
+     [
+      "走",
+      "zǒu",
+      "walk, go"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Excuse me, how do I get to Orchard Road?",
+    "hurried": {
+     "zh": "不好意思，我赶时间，请问去乌节路怎么走？",
+     "py": "bù hǎo yì si , wǒ gǎn shí jiān , qǐng wèn qù wū jié lù zěn me zǒu ?",
+     "w": [
+      [
+       "不好意思",
+       "bù hǎo yì si",
+       "sorry, excuse me"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "赶",
+       "gǎn",
+       "rush"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "，"
+      ],
+      [
+       "请问",
+       "qǐng wèn",
+       "excuse me"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "乌节路",
+       "wū jié lù",
+       "Orchard Road"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "？"
+      ]
+     ],
+     "en": "Excuse me, I am in a hurry. How do I get to Orchard Road?"
+    }
+   },
+   "options": [
+    {
+     "zh": "你坐红线，往市区方向，三站就到乌节站。",
+     "py": "nǐ zuò hóng xiàn , wǎng shì qū fāng xiàng , sān zhàn jiù dào wū jié zhàn .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "红线",
+       "hóng xiàn",
+       "red line"
+      ],
+      [
+       "，"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "市区",
+       "shì qū",
+       "city area"
+      ],
+      [
+       "方向",
+       "fāng xiàng",
+       "direction"
+      ],
+      [
+       "，"
+      ],
+      [
+       "三站",
+       "sān zhàn",
+       "three stops"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "乌节站",
+       "wū jié zhàn",
+       "Orchard station"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Take the red line towards the city, and Orchard is three stops away.",
+     "type": "fit",
+     "why": "Line, direction and number of stops. Everything she needs, in one sentence."
+    },
+    {
+     "zh": "乌节路啊，在那边，坐地铁就可以了。",
+     "py": "wū jié lù a , zài nà bian , zuò dì tiě jiù kě yǐ le .",
+     "w": [
+      [
+       "乌节路",
+       "wū jié lù",
+       "Orchard Road"
+      ],
+      [
+       "啊",
+       "a",
+       "(particle)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "那边",
+       "nà bian",
+       "over there"
+      ],
+      [
+       "，"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "地铁",
+       "dì tiě",
+       "MRT, subway"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Orchard Road? Over there, just take the MRT.",
+     "type": "generic",
+     "why": "True, but she is standing in a station. Which line? Which direction?"
+    },
+    {
+     "zh": "你坐绿线，在东边那一站下车就到了。",
+     "py": "nǐ zuò lǜ xiàn , zài dōng bian nà yī zhàn xià chē jiù dào le .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "绿线",
+       "lǜ xiàn",
+       "green line"
+      ],
+      [
+       "，"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "东边",
+       "dōng bian",
+       "east side"
+      ],
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "一站",
+       "yī zhàn",
+       "one stop"
+      ],
+      [
+       "下车",
+       "xià chē",
+       "get off (a vehicle)"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Take the green line and get off at the eastern stop.",
+     "type": "off",
+     "why": "Wrong line and wrong direction. She would end up somewhere else entirely."
+    },
+    {
+     "zh": "你看地图啊，手机上都有。",
+     "py": "nǐ kàn dì tú a , shǒu jī shàng dōu yǒu .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "地图",
+       "dì tú",
+       "map"
+      ],
+      [
+       "啊",
+       "a",
+       "(particle)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "手机",
+       "shǒu jī",
+       "mobile phone"
+      ],
+      [
+       "上",
+       "shàng",
+       "above, on"
+      ],
+      [
+       "都",
+       "dōu",
+       "all"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Look at the map, it is all on your phone.",
+     "type": "blunt",
+     "why": "She asked you, not her phone. Being helpful costs you ten seconds."
+    }
+   ],
+   "intent": {
+    "en": "Tell her to take the red line towards the city and that Orchard is three stops away.",
+    "groups": [
+     [
+      "红线",
+      "红色"
+     ],
+     [
+      "三站",
+      "3站",
+      "三个站"
+     ],
+     [
+      "市区",
+      "市中心",
+      "往"
+     ]
+    ],
+    "example": {
+     "zh": "你坐红线，往市区方向，三站就到乌节站。",
+     "py": "nǐ zuò hóng xiàn , wǎng shì qū fāng xiàng , sān zhàn jiù dào wū jié zhàn .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "红线",
+       "hóng xiàn",
+       "red line"
+      ],
+      [
+       "，"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "市区",
+       "shì qū",
+       "city area"
+      ],
+      [
+       "方向",
+       "fāng xiàng",
+       "direction"
+      ],
+      [
+       "，"
+      ],
+      [
+       "三站",
+       "sān zhàn",
+       "three stops"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "乌节站",
+       "wū jié zhàn",
+       "Orchard station"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Take the red line towards the city, and Orchard is three stops away."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "那我要买票吗？",
+    "py": "nà wǒ yào mǎi piào ma ?",
+    "w": [
+     [
+      "那",
+      "nà",
+      "in that case"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "买票",
+      "mǎi piào",
+      "buy a ticket"
+     ],
+     [
+      "吗",
+      "ma",
+      "(question)"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "Do I need to buy a ticket?",
+    "hurried": {
+     "zh": "要先买票吗？我只有一张银行卡。",
+     "py": "yào xiān mǎi piào ma ? wǒ zhǐ yǒu yī zhāng yín háng kǎ .",
+     "w": [
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "买票",
+       "mǎi piào",
+       "buy a ticket"
+      ],
+      [
+       "吗",
+       "ma",
+       "(question)"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "只有",
+       "zhǐ yǒu",
+       "only have"
+      ],
+      [
+       "一张",
+       "yī zhāng",
+       "one (card)"
+      ],
+      [
+       "银行卡",
+       "yín háng kǎ",
+       "bank card"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Do I buy a ticket first? I only have a bank card."
+    }
+   },
+   "options": [
+    {
+     "zh": "不用买票，你用银行卡直接刷进站就可以了。",
+     "py": "bù yòng mǎi piào , nǐ yòng yín háng kǎ zhí jiē shuā jìn zhàn jiù kě yǐ le .",
+     "w": [
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "买票",
+       "mǎi piào",
+       "buy a ticket"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "银行卡",
+       "yín háng kǎ",
+       "bank card"
+      ],
+      [
+       "直接",
+       "zhí jiē",
+       "directly"
+      ],
+      [
+       "刷",
+       "shuā",
+       "tap, swipe"
+      ],
+      [
+       "进站",
+       "jìn zhàn",
+       "enter the station"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No ticket needed, just tap your bank card at the gate.",
+     "type": "fit",
+     "why": "Short, clear and exactly what she needs: no ticket, use the card."
+    },
+    {
+     "zh": "可以买票，也可以用别的办法。",
+     "py": "kě yǐ mǎi piào , yě kě yǐ yòng bié de bàn fǎ .",
+     "w": [
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "买票",
+       "mǎi piào",
+       "buy a ticket"
+      ],
+      [
+       "，"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "别的",
+       "bié de",
+       "other"
+      ],
+      [
+       "办法",
+       "bàn fǎ",
+       "way, method"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "You can buy a ticket, or use another way.",
+     "type": "generic",
+     "why": "It does not tell her which to do. A tourist wants one answer."
+    },
+    {
+     "zh": "要的，你得先去便利店买交通卡，再充值。",
+     "py": "yào de , nǐ děi xiān qù biàn lì diàn mǎi jiāo tōng kǎ , zài chōng zhí .",
+     "w": [
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "得",
+       "děi",
+       "must"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "便利店",
+       "biàn lì diàn",
+       "convenience store"
+      ],
+      [
+       "买",
+       "mǎi",
+       "buy"
+      ],
+      [
+       "交通卡",
+       "jiāo tōng kǎ",
+       "travel card"
+      ],
+      [
+       "，"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "充值",
+       "chōng zhí",
+       "top up"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Yes, you first buy a travel card at a shop and top it up.",
+     "type": "off",
+     "why": "A long detour. A bank card works straight at the gate."
+    },
+    {
+     "zh": "你自己看闸机上的标志吧。",
+     "py": "nǐ zì jǐ kàn zhá jī shàng de biāo zhì ba .",
+     "w": [
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "自己",
+       "zì jǐ",
+       "oneself"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "闸机",
+       "zhá jī",
+       "fare gate"
+      ],
+      [
+       "上",
+       "shàng",
+       "above, on"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "标志",
+       "biāo zhì",
+       "sign"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Look at the signs on the gate yourself.",
+     "type": "blunt",
+     "why": "Not wrong, but not helpful either. Just say it."
+    }
+   ],
+   "intent": {
+    "en": "Tell her she does not need a ticket and can tap her bank card at the gate.",
+    "groups": [
+     [
+      "不用",
+      "不需要",
+      "不必",
+      "不要买",
+      "免"
+     ],
+     [
+      "银行卡",
+      "信用卡",
+      "卡",
+      "手机",
+      "刷"
+     ]
+    ],
+    "example": {
+     "zh": "不用买票，你用银行卡直接刷进站就可以了。",
+     "py": "bù yòng mǎi piào , nǐ yòng yín háng kǎ zhí jiē shuā jìn zhàn jiù kě yǐ le .",
+     "w": [
+      [
+       "不用",
+       "bù yòng",
+       "no need to / not using"
+      ],
+      [
+       "买票",
+       "mǎi piào",
+       "buy a ticket"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "用",
+       "yòng",
+       "use"
+      ],
+      [
+       "银行卡",
+       "yín háng kǎ",
+       "bank card"
+      ],
+      [
+       "直接",
+       "zhí jiē",
+       "directly"
+      ],
+      [
+       "刷",
+       "shuā",
+       "tap, swipe"
+      ],
+      [
+       "进站",
+       "jìn zhàn",
+       "enter the station"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "No ticket needed, just tap your bank card at the gate."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "要坐多久才能到？",
+    "py": "yào zuò duō jiǔ cái néng dào ?",
+    "w": [
+     [
+      "要",
+      "yào",
+      "want, need to"
+     ],
+     [
+      "坐",
+      "zuò",
+      "sit, take (a ride)"
+     ],
+     [
+      "多久",
+      "duō jiǔ",
+      "how long"
+     ],
+     [
+      "才",
+      "cái",
+      "only then"
+     ],
+     [
+      "能",
+      "néng",
+      "can"
+     ],
+     [
+      "到",
+      "dào",
+      "until"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "How long will it take?",
+    "hurried": {
+     "zh": "要坐多久？我怕来不及。",
+     "py": "yào zuò duō jiǔ ? wǒ pà lái bù jí .",
+     "w": [
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "坐",
+       "zuò",
+       "sit, take (a ride)"
+      ],
+      [
+       "多久",
+       "duō jiǔ",
+       "how long"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "怕",
+       "pà",
+       "afraid"
+      ],
+      [
+       "来不及",
+       "lái bù jí",
+       "not in time"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "How long is it? I am afraid I will be late."
+    }
+   },
+   "options": [
+    {
+     "zh": "只有三站，大概十分钟就到了。",
+     "py": "zhǐ yǒu sān zhàn , dà gài shí fēn zhōng jiù dào le .",
+     "w": [
+      [
+       "只有",
+       "zhǐ yǒu",
+       "only have"
+      ],
+      [
+       "三站",
+       "sān zhàn",
+       "three stops"
+      ],
+      [
+       "，"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "十分钟",
+       "shí fēn zhōng",
+       "ten minutes"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Only three stops, about ten minutes.",
+     "type": "fit",
+     "why": "A number she can plan with, and it calms her down."
+    },
+    {
+     "zh": "不会太久的，很快。",
+     "py": "bù huì tài jiǔ de , hěn kuài .",
+     "w": [
+      [
+       "不会",
+       "bù huì",
+       "won't"
+      ],
+      [
+       "太久",
+       "tài jiǔ",
+       "too long"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Not too long, it is quick.",
+     "type": "generic",
+     "why": "\"Quick\" means five minutes to some and an hour to others."
+    },
+    {
+     "zh": "大概要一个小时吧，你最好现在就走。",
+     "py": "dà gài yào yī ge xiǎo shí ba , nǐ zuì hǎo xiàn zài jiù zǒu .",
+     "w": [
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "小时",
+       "xiǎo shí",
+       "hour"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "最好",
+       "zuì hǎo",
+       "best, had better"
+      ],
+      [
+       "现在",
+       "xiàn zài",
+       "now"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "About an hour, you had better go now.",
+     "type": "off",
+     "why": "Wrong by a long way. She would panic for nothing."
+    },
+    {
+     "zh": "看交通啦，我也不知道。",
+     "py": "kàn jiāo tōng la , wǒ yě bù zhī dao .",
+     "w": [
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "交通",
+       "jiāo tōng",
+       "traffic"
+      ],
+      [
+       "啦",
+       "la",
+       "(particle)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "不",
+       "bù",
+       "not"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Depends on traffic, I do not know either.",
+     "type": "blunt",
+     "why": "A train does not have traffic. A shrug is not an answer."
+    }
+   ],
+   "intent": {
+    "en": "Tell her it is three stops, about ten minutes.",
+    "groups": [
+     [
+      "三站",
+      "3站",
+      "三个站",
+      "三个"
+     ],
+     [
+      "十分钟",
+      "10分钟",
+      "十来分钟",
+      "十几分钟"
+     ]
+    ],
+    "example": {
+     "zh": "只有三站，大概十分钟就到了。",
+     "py": "zhǐ yǒu sān zhàn , dà gài shí fēn zhōng jiù dào le .",
+     "w": [
+      [
+       "只有",
+       "zhǐ yǒu",
+       "only have"
+      ],
+      [
+       "三站",
+       "sān zhàn",
+       "three stops"
+      ],
+      [
+       "，"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "十分钟",
+       "shí fēn zhōng",
+       "ten minutes"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Only three stops, about ten minutes."
+    }
+   }
+  },
+  {
+   "npc": {
+    "zh": "对了，我想去ION购物中心，它在哪里？",
+    "py": "duì le , wǒ xiǎng qù gòu wù zhōng xīn , tā zài nǎ li ?",
+    "w": [
+     [
+      "对了",
+      "duì le",
+      "by the way"
+     ],
+     [
+      "，"
+     ],
+     [
+      "我",
+      "wǒ",
+      "I, me"
+     ],
+     [
+      "想",
+      "xiǎng",
+      "want, think"
+     ],
+     [
+      "去",
+      "qù",
+      "go"
+     ],
+     [
+      "ION"
+     ],
+     [
+      "购物中心",
+      "gòu wù zhōng xīn",
+      "shopping mall"
+     ],
+     [
+      "，"
+     ],
+     [
+      "它",
+      "tā",
+      "it"
+     ],
+     [
+      "在",
+      "zài",
+      "at, in"
+     ],
+     [
+      "哪里",
+      "nǎ li",
+      "where"
+     ],
+     [
+      "？"
+     ]
+    ],
+    "en": "One more thing, I want to go to the ION shopping mall. Where is it?",
+    "hurried": {
+     "zh": "ION在哪里？我怕找不到。",
+     "py": "zài nǎ li ? wǒ pà zhǎo bù dào .",
+     "w": [
+      [
+       "ION"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "哪里",
+       "nǎ li",
+       "where"
+      ],
+      [
+       "？"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "怕",
+       "pà",
+       "afraid"
+      ],
+      [
+       "找不到",
+       "zhǎo bù dào",
+       "cannot find"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Where is ION? I am afraid I will not find it."
+    }
+   },
+   "options": [
+    {
+     "zh": "就在乌节站的正上面，出站以后跟着指示牌走就可以了。",
+     "py": "jiù zài wū jié zhàn de zhèng shàng mian , chū zhàn yǐ hòu gēn zhe zhǐ shì pái zǒu jiù kě yǐ le .",
+     "w": [
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "乌节站",
+       "wū jié zhàn",
+       "Orchard station"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "正",
+       "zhèng",
+       "right, just"
+      ],
+      [
+       "上面",
+       "shàng mian",
+       "above, on top"
+      ],
+      [
+       "，"
+      ],
+      [
+       "出站",
+       "chū zhàn",
+       "exit the station"
+      ],
+      [
+       "以后",
+       "yǐ hòu",
+       "after, later"
+      ],
+      [
+       "跟着",
+       "gēn zhe",
+       "follow"
+      ],
+      [
+       "指示牌",
+       "zhǐ shì pái",
+       "sign board"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "It is right above Orchard station. After you exit, follow the signs.",
+     "type": "fit",
+     "why": "Where it is, plus how to find it. She can walk there without asking again."
+    },
+    {
+     "zh": "就在那边，很大的，你一看就知道。",
+     "py": "jiù zài nà bian , hěn dà de , nǐ yī kàn jiù zhī dao .",
+     "w": [
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "那边",
+       "nà bian",
+       "over there"
+      ],
+      [
+       "，"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "大",
+       "dà",
+       "big"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "一",
+       "yī",
+       "one"
+      ],
+      [
+       "看",
+       "kàn",
+       "look at"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "It is over there, very big, you will know when you see it.",
+     "type": "generic",
+     "why": "Where is \"over there\"? She cannot see it from underground."
+    },
+    {
+     "zh": "上网查一下就知道了。",
+     "py": "shàng wǎng chá yī xià jiù zhī dao le .",
+     "w": [
+      [
+       "上网",
+       "shàng wǎng",
+       "go online"
+      ],
+      [
+       "查",
+       "chá",
+       "check, search"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "知道",
+       "zhī dao",
+       "know"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "Search online and you will know.",
+     "type": "blunt",
+     "why": "She is asking a local. Say it in one sentence."
+    },
+    {
+     "zh": "我带你去吧，我反正也没什么事。",
+     "py": "wǒ dài nǐ qù ba , wǒ fǎn zhèng yě méi shén me shì .",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "带",
+       "dài",
+       "bring"
+      ],
+      [
+       "你",
+       "nǐ",
+       "you"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "吧",
+       "ba",
+       "(softener)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "反正",
+       "fǎn zhèng",
+       "anyway"
+      ],
+      [
+       "也",
+       "yě",
+       "also"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "什么",
+       "shén me",
+       "what"
+      ],
+      [
+       "事",
+       "shì",
+       "matter, thing"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "I will take you there, I have nothing to do anyway.",
+     "type": "cave",
+     "why": "Kind, but you give up your own day. Clear directions are enough."
+    }
+   ],
+   "intent": {
+    "en": "Tell her ION is right above Orchard station and she should follow the exit signs.",
+    "groups": [
+     [
+      "正上面",
+      "上面",
+      "楼上",
+      "上方",
+      "就在站",
+      "直接",
+      "在站"
+     ],
+     [
+      "指示牌",
+      "指示",
+      "标志",
+      "牌子",
+      "跟着",
+      "出口"
+     ]
+    ],
+    "example": {
+     "zh": "就在乌节站的正上面，出站以后跟着指示牌走就可以了。",
+     "py": "jiù zài wū jié zhàn de zhèng shàng mian , chū zhàn yǐ hòu gēn zhe zhǐ shì pái zǒu jiù kě yǐ le .",
+     "w": [
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "在",
+       "zài",
+       "at, in"
+      ],
+      [
+       "乌节站",
+       "wū jié zhàn",
+       "Orchard station"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "正",
+       "zhèng",
+       "right, just"
+      ],
+      [
+       "上面",
+       "shàng mian",
+       "above, on top"
+      ],
+      [
+       "，"
+      ],
+      [
+       "出站",
+       "chū zhàn",
+       "exit the station"
+      ],
+      [
+       "以后",
+       "yǐ hòu",
+       "after, later"
+      ],
+      [
+       "跟着",
+       "gēn zhe",
+       "follow"
+      ],
+      [
+       "指示牌",
+       "zhǐ shì pái",
+       "sign board"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ],
+     "en": "It is right above Orchard station. After you exit, follow the signs."
+    }
+   }
+  }
+ ],
+ "warmup": [
+  {
+   "zh": "红线",
+   "py": "hóng xiàn",
+   "w": [
+    [
+     "红线",
+     "hóng xiàn",
+     "red line"
+    ]
+   ],
+   "en": "red line"
+  },
+  {
+   "zh": "三站",
+   "py": "sān zhàn",
+   "w": [
+    [
+     "三站",
+     "sān zhàn",
+     "three stops"
+    ]
+   ],
+   "en": "three stops"
+  },
+  {
+   "zh": "银行卡",
+   "py": "yín háng kǎ",
+   "w": [
+    [
+     "银行卡",
+     "yín háng kǎ",
+     "bank card"
+    ]
+   ],
+   "en": "bank card"
+  },
+  {
+   "zh": "乌节路",
+   "py": "wū jié lù",
+   "w": [
+    [
+     "乌节路",
+     "wū jié lù",
+     "Orchard Road"
+    ]
+   ],
+   "en": "Orchard Road"
+  },
+  {
+   "zh": "电梯",
+   "py": "diàn tī",
+   "w": [
+    [
+     "电梯",
+     "diàn tī",
+     "lift, elevator"
+    ]
+   ],
+   "en": "lift, elevator"
+  },
+  {
+   "zh": "指示牌",
+   "py": "zhǐ shì pái",
+   "w": [
+    [
+     "指示牌",
+     "zhǐ shì pái",
+     "sign board"
+    ]
+   ],
+   "en": "sign board"
+  }
+ ]
+}

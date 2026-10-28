@@ -7,8 +7,10 @@ import * as warmup from './screens/warmup.js';
 import * as scene from './screens/scene.js';
 import * as debrief from './screens/debrief.js';
 import * as calibrate from './screens/calibrate.js';
+import * as day from './screens/day.js';
+import * as characters from './screens/characters.js';
 
-const screens = { home, warmup, scene, debrief, calibrate };
+const screens = { home, warmup, scene, debrief, calibrate, day, characters };
 const root = document.getElementById('app');
 const scenesCache = {};
 const session = { added: [] };   // review items added this visit, shown in the debrief
@@ -24,9 +26,13 @@ const ctx = {
     if (!scenesCache.all) {
       const ids = await (await fetch('data/scenes/index.json')).json();
       const list = await Promise.all(ids.map((id) => fetch(`data/scenes/${id}.json`).then((r) => r.json())));
-      scenesCache.all = { work: list.filter((s) => s.track === 'work'), life: list.filter((s) => s.track === 'life') };
+      scenesCache.all = { work: list.filter((s) => s.track === 'work'), life: list.filter((s) => s.track === 'life'), byId: Object.fromEntries(list.map((s) => [s.id, s])) };
     }
     return scenesCache.all;
+  },
+  /** Week 1 plan: {id, title, days:[{day, skill, phrases, work, life}]}. */
+  async week() {
+    return (scenesCache.week ||= await (await fetch('data/weeks/week1.json')).json());
   },
 };
 

@@ -1,0 +1,994 @@
+{
+ "id": "week1",
+ "title": {
+  "zh": "第一周",
+  "en": "Week 1"
+ },
+ "days": [
+  {
+   "day": 1,
+   "skill": {
+    "zh": "礼貌地问",
+    "en": "Asking politely"
+   },
+   "phrases": [
+    {
+     "zh": "不好意思，请问去乌节路怎么走？",
+     "py": "bù hǎo yì si , qǐng wèn qù wū jié lù zěn me zǒu ?",
+     "en": "Excuse me, how do I get to Orchard Road?",
+     "w": [
+      [
+       "不好意思",
+       "bù hǎo yì si",
+       "sorry, excuse me"
+      ],
+      [
+       "，"
+      ],
+      [
+       "请问",
+       "qǐng wèn",
+       "excuse me"
+      ],
+      [
+       "去",
+       "qù",
+       "go"
+      ],
+      [
+       "乌节路",
+       "wū jié lù",
+       "Orchard Road"
+      ],
+      [
+       "怎么",
+       "zěn me",
+       "how"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "？"
+      ]
+     ]
+    },
+    {
+     "zh": "方便问一下，你们每天的数据量大概有多少？",
+     "py": "fāng biàn wèn yī xià , nǐ men měi tiān de shù jù liàng dà gài yǒu duō shao ?",
+     "en": "May I ask, roughly how much data do you have each day?",
+     "w": [
+      [
+       "方便",
+       "fāng biàn",
+       "convenient"
+      ],
+      [
+       "问",
+       "wèn",
+       "ask"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "，"
+      ],
+      [
+       "你们",
+       "nǐ men",
+       "you (plural)"
+      ],
+      [
+       "每天",
+       "měi tiān",
+       "every day"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "数据量",
+       "shù jù liàng",
+       "data volume"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "多少",
+       "duō shao",
+       "how much"
+      ],
+      [
+       "？"
+      ]
+     ]
+    },
+    {
+     "zh": "能不能请您帮忙约一下王总监？",
+     "py": "néng bù néng qǐng nín bāng máng yuē yī xià wáng zǒng jiān ?",
+     "en": "Could you help set up a meeting with Director Wang?",
+     "w": [
+      [
+       "能不能",
+       "néng bù néng",
+       "can or not"
+      ],
+      [
+       "请",
+       "qǐng",
+       "please"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "帮忙",
+       "bāng máng",
+       "help out"
+      ],
+      [
+       "约",
+       "yuē",
+       "arrange, book"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "王总监",
+       "wáng zǒng jiān",
+       "Director Wang"
+      ],
+      [
+       "？"
+      ]
+     ]
+    },
+    {
+     "zh": "只有三站，大概十分钟就到了。",
+     "py": "zhǐ yǒu sān zhàn , dà gài shí fēn zhōng jiù dào le .",
+     "en": "Only three stops, about ten minutes.",
+     "w": [
+      [
+       "只有",
+       "zhǐ yǒu",
+       "only have"
+      ],
+      [
+       "三站",
+       "sān zhàn",
+       "three stops"
+      ],
+      [
+       "，"
+      ],
+      [
+       "大概",
+       "dà gài",
+       "roughly"
+      ],
+      [
+       "十分钟",
+       "shí fēn zhōng",
+       "ten minutes"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ]
+    }
+   ],
+   "work": "work_lin_intro_call",
+   "life": "life_mrt_directions"
+  },
+  {
+   "day": 2,
+   "skill": {
+    "zh": "用证据让人放心",
+    "en": "Reassuring with evidence"
+   },
+   "phrases": [
+    {
+     "zh": "您问得很实际。",
+     "py": "nín wèn de hěn shí jì .",
+     "en": "A very practical question.",
+     "w": [
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "问得",
+       "wèn de",
+       "asked (so)"
+      ],
+      [
+       "很",
+       "hěn",
+       "very"
+      ],
+      [
+       "实际",
+       "shí jì",
+       "practical"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "我们是端到端加密，权限可以细到每一列。",
+     "py": "wǒ men shì duān dào duān jiā mì , quán xiàn kě yǐ xì dào měi yī liè .",
+     "en": "We use end-to-end encryption, with permissions down to each column.",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "是",
+       "shì",
+       "is"
+      ],
+      [
+       "端到端",
+       "duān dào duān",
+       "end to end"
+      ],
+      [
+       "加密",
+       "jiā mì",
+       "encrypt"
+      ],
+      [
+       "，"
+      ],
+      [
+       "权限",
+       "quán xiàn",
+       "permissions"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "细到",
+       "xì dào",
+       "down to the detail of"
+      ],
+      [
+       "每",
+       "měi",
+       "every"
+      ],
+      [
+       "一",
+       "yī",
+       "one"
+      ],
+      [
+       "列",
+       "liè",
+       "column"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "相关报告会后发给您。",
+     "py": "xiāng guān bào gào huì hòu fā gěi nín .",
+     "en": "We will send the related reports after the meeting.",
+     "w": [
+      [
+       "相关",
+       "xiāng guān",
+       "related"
+      ],
+      [
+       "报告",
+       "bào gào",
+       "report"
+      ],
+      [
+       "会后",
+       "huì hòu",
+       "after the meeting"
+      ],
+      [
+       "发给",
+       "fā gěi",
+       "send to"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "两天了，昨天量过体温，有三十八度。",
+     "py": "liǎng tiān le , zuó tiān liàng guo tǐ wēn , yǒu sān shí bā dù .",
+     "en": "Two days. I took my temperature yesterday and it was 38 degrees.",
+     "w": [
+      [
+       "两天",
+       "liǎng tiān",
+       "two days"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "昨天",
+       "zuó tiān",
+       "yesterday"
+      ],
+      [
+       "量",
+       "liàng",
+       "measure"
+      ],
+      [
+       "过",
+       "guo",
+       "(experience marker)"
+      ],
+      [
+       "体温",
+       "tǐ wēn",
+       "body temperature"
+      ],
+      [
+       "，"
+      ],
+      [
+       "有",
+       "yǒu",
+       "have"
+      ],
+      [
+       "三十八度",
+       "sān shí bā dù",
+       "38 degrees"
+      ],
+      [
+       "。"
+      ]
+     ]
+    }
+   ],
+   "work": "work_wang_security",
+   "life": "life_clinic_gp"
+  },
+  {
+   "day": 3,
+   "skill": {
+    "zh": "分步骤、降风险",
+    "en": "Sequencing and lowering risk"
+   },
+   "phrases": [
+    {
+     "zh": "我们先拿一个报表做试点。",
+     "py": "wǒ men xiān ná yī ge bào biǎo zuò shì diǎn .",
+     "en": "First we take one report as a pilot.",
+     "w": [
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "拿",
+       "ná",
+       "take"
+      ],
+      [
+       "一个",
+       "yī ge",
+       "one (of)"
+      ],
+      [
+       "报表",
+       "bào biǎo",
+       "report (data)"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "试点",
+       "shì diǎn",
+       "pilot (trial run)"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "新旧系统并行跑，没问题再往下走。",
+     "py": "xīn jiù xì tǒng bìng xíng pǎo , méi wèn tí zài wǎng xià zǒu .",
+     "en": "Run old and new in parallel, and continue if there is no problem.",
+     "w": [
+      [
+       "新旧",
+       "xīn jiù",
+       "new and old"
+      ],
+      [
+       "系统",
+       "xì tǒng",
+       "system"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "，"
+      ],
+      [
+       "没",
+       "méi",
+       "not have"
+      ],
+      [
+       "问题",
+       "wèn tí",
+       "questions"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "往",
+       "wǎng",
+       "towards"
+      ],
+      [
+       "下",
+       "xià",
+       "next, down"
+      ],
+      [
+       "走",
+       "zǒu",
+       "walk, go"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "先花一周做准备，再并行跑几周。",
+     "py": "xiān huā yī zhōu zuò zhǔn bèi , zài bìng xíng pǎo jǐ zhōu .",
+     "en": "First a week of preparation, then a few weeks in parallel.",
+     "w": [
+      [
+       "先",
+       "xiān",
+       "first"
+      ],
+      [
+       "花",
+       "huā",
+       "spend"
+      ],
+      [
+       "一周",
+       "yī zhōu",
+       "one week"
+      ],
+      [
+       "做",
+       "zuò",
+       "do, make"
+      ],
+      [
+       "准备",
+       "zhǔn bèi",
+       "prepare"
+      ],
+      [
+       "，"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "并行",
+       "bìng xíng",
+       "in parallel"
+      ],
+      [
+       "跑",
+       "pǎo",
+       "run"
+      ],
+      [
+       "几周",
+       "jǐ zhōu",
+       "a few weeks"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "前面右转，然后到红绿灯再左转。",
+     "py": "qián mian yòu zhuǎn , rán hòu dào hóng lǜ dēng zài zuǒ zhuǎn .",
+     "en": "Turn right ahead, then turn left at the traffic light.",
+     "w": [
+      [
+       "前面",
+       "qián mian",
+       "ahead, in front"
+      ],
+      [
+       "右转",
+       "yòu zhuǎn",
+       "turn right"
+      ],
+      [
+       "，"
+      ],
+      [
+       "然后",
+       "rán hòu",
+       "then"
+      ],
+      [
+       "到",
+       "dào",
+       "until"
+      ],
+      [
+       "红绿灯",
+       "hóng lǜ dēng",
+       "traffic light"
+      ],
+      [
+       "再",
+       "zài",
+       "further, again"
+      ],
+      [
+       "左转",
+       "zuǒ zhuǎn",
+       "turn left"
+      ],
+      [
+       "。"
+      ]
+     ]
+    }
+   ],
+   "work": "work_wang_migration",
+   "life": "life_grab_ride"
+  },
+  {
+   "day": 4,
+   "skill": {
+    "zh": "委婉地不同意",
+    "en": "Disagreeing softly"
+   },
+   "phrases": [
+    {
+     "zh": "我理解您的顾虑，不过我们可以算一下总成本。",
+     "py": "wǒ lǐ jiě nín de gù lǜ , bù guò wǒ men kě yǐ suàn yī xià zǒng chéng běn .",
+     "en": "I understand your concern, but we can work out the total cost.",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "的",
+       "de",
+       "(particle: of, 's)"
+      ],
+      [
+       "顾虑",
+       "gù lǜ",
+       "concern"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不过",
+       "bù guò",
+       "but, however"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "可以",
+       "kě yǐ",
+       "can, okay"
+      ],
+      [
+       "算",
+       "suàn",
+       "calculate"
+      ],
+      [
+       "一下",
+       "yī xià",
+       "a little, once"
+      ],
+      [
+       "总成本",
+       "zǒng chéng běn",
+       "total cost"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "确实有点吵，不过我理解装修需要时间。",
+     "py": "què shí yǒu diǎn chǎo , bù guò wǒ lǐ jiě zhuāng xiū xū yào shí jiān .",
+     "en": "It is a bit noisy, but I understand renovation takes time.",
+     "w": [
+      [
+       "确实",
+       "què shí",
+       "indeed"
+      ],
+      [
+       "有点",
+       "yǒu diǎn",
+       "a little"
+      ],
+      [
+       "吵",
+       "chǎo",
+       "noisy"
+      ],
+      [
+       "，"
+      ],
+      [
+       "不过",
+       "bù guò",
+       "but, however"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "理解",
+       "lǐ jiě",
+       "understand"
+      ],
+      [
+       "装修",
+       "zhuāng xiū",
+       "renovation"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "时间",
+       "shí jiān",
+       "time"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "我明白，几个星期很快就过去了。",
+     "py": "wǒ míng bai , jǐ ge xīng qī hěn kuài jiù guò qu le .",
+     "en": "I understand, a few weeks go by quickly.",
+     "w": [
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "明白",
+       "míng bai",
+       "understood"
+      ],
+      [
+       "，"
+      ],
+      [
+       "几个",
+       "jǐ ge",
+       "a few"
+      ],
+      [
+       "星期",
+       "xīng qī",
+       "week"
+      ],
+      [
+       "很快",
+       "hěn kuài",
+       "very fast"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "过去",
+       "guò qu",
+       "pass by"
+      ],
+      [
+       "了",
+       "le",
+       "(completed / changed)"
+      ],
+      [
+       "。"
+      ]
+     ]
+    }
+   ],
+   "work": "work_huang_price",
+   "life": "life_hdb_neighbour"
+  },
+  {
+   "day": 5,
+   "skill": {
+    "zh": "争取对方承诺",
+    "en": "Asking for commitment"
+   },
+   "phrases": [
+    {
+     "zh": "下个月一号开始怎么样？",
+     "py": "xià gè yuè yī hào kāi shǐ zěn me yàng ?",
+     "en": "How about starting on the first of next month?",
+     "w": [
+      [
+       "下个月",
+       "xià gè yuè",
+       "next month"
+      ],
+      [
+       "一号",
+       "yī hào",
+       "the 1st"
+      ],
+      [
+       "开始",
+       "kāi shǐ",
+       "start"
+      ],
+      [
+       "怎么样",
+       "zěn me yàng",
+       "how about"
+      ],
+      [
+       "？"
+      ]
+     ]
+    },
+    {
+     "zh": "除了您，还需要谁签字？",
+     "py": "chú le nín , hái xū yào shéi qiān zì ?",
+     "en": "Besides you, who else needs to sign?",
+     "w": [
+      [
+       "除了",
+       "chú le",
+       "apart from"
+      ],
+      [
+       "您",
+       "nín",
+       "you (polite)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "还",
+       "hái",
+       "still"
+      ],
+      [
+       "需要",
+       "xū yào",
+       "need"
+      ],
+      [
+       "谁",
+       "shéi",
+       "who"
+      ],
+      [
+       "签字",
+       "qiān zì",
+       "sign (a document)"
+      ],
+      [
+       "？"
+      ]
+     ]
+    },
+    {
+     "zh": "那我们就这么定了。",
+     "py": "nà wǒ men jiù zhè me dìng le .",
+     "en": "Then it is settled.",
+     "w": [
+      [
+       "那",
+       "nà",
+       "in that case"
+      ],
+      [
+       "我们",
+       "wǒ men",
+       "we"
+      ],
+      [
+       "就",
+       "jiù",
+       "then, just"
+      ],
+      [
+       "这么",
+       "zhè me",
+       "so, like this"
+      ],
+      [
+       "定了",
+       "dìng le",
+       "settled"
+      ],
+      [
+       "。"
+      ]
+     ]
+    },
+    {
+     "zh": "阿姨，我要一份鸡饭，打包。",
+     "py": "ā yí , wǒ yào yī fèn jī fàn , dǎ bāo .",
+     "en": "Auntie, I would like one chicken rice, takeaway.",
+     "w": [
+      [
+       "阿姨",
+       "ā yí",
+       "auntie (polite address)"
+      ],
+      [
+       "，"
+      ],
+      [
+       "我",
+       "wǒ",
+       "I, me"
+      ],
+      [
+       "要",
+       "yào",
+       "want, need to"
+      ],
+      [
+       "一份",
+       "yī fèn",
+       "one portion"
+      ],
+      [
+       "鸡饭",
+       "jī fàn",
+       "chicken rice"
+      ],
+      [
+       "，"
+      ],
+      [
+       "打包",
+       "dǎ bāo",
+       "takeaway"
+      ],
+      [
+       "。"
+      ]
+     ]
+    }
+   ],
+   "work": "work_li_close",
+   "life": "life_hawker_chicken_rice"
+  }
+ ]
+}

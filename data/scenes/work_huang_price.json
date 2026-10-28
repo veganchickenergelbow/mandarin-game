@@ -3,6 +3,7 @@
   "track": "work",
   "title": {"zh": "报价太贵了", "en": "\"Your quote is too expensive\""},
   "character": {
+    "id": "huang",
     "name": "黄总",
     "role": "Finance Director, Lion City Logistics",
     "en": "Mr Huang is careful, numbers-first and politely hard to impress. He speaks short, direct sentences and respects people who stay calm and bring a clear argument. You are selling him a cloud data platform."

@@ -99,3 +99,16 @@ textarea { min-height: 150px; font-size: 13px; }
 .card.cal { background: var(--warn-bg); }
 .rangebar { height: 14px; border-radius: 8px; background: var(--soft); position: relative; margin: 8px 0; }
 .rangebar i { position: absolute; top: 0; bottom: 0; background: var(--mint); border-radius: 8px; }
+
+/* week strip, day screen, characters */
+.strip { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 2px 8px; margin: 0 -2px; }
+.day { flex: none; width: 124px; scroll-snap-align: start; text-align: left; background: var(--card); border: 2px solid var(--line); border-radius: 16px; box-shadow: 0 3px 0 var(--line); padding: 10px; display: grid; gap: 4px; align-content: start; min-height: 112px; }
+.day:active { transform: translateY(3px); box-shadow: none; }
+.day.cur { border-color: var(--mint); box-shadow: 0 3px 0 var(--mint-d); }
+.day.done { background: var(--good-bg); }
+.day.next { opacity: .6; }
+.day .dn { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 13px; }
+.day .sk { font-size: 14px; line-height: 1.25; }
+.phrase { display: flex; align-items: center; gap: 10px; border-top: 2px solid var(--line); padding-top: 10px; }
+.phrase:first-of-type { border-top: 0; padding-top: 0; }
+.hearts { letter-spacing: 1px; }
