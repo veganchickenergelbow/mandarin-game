@@ -1,0 +1,310 @@
+{
+  "id": "work_huang_price",
+  "track": "work",
+  "title": {"zh": "报价太贵了", "en": "\"Your quote is too expensive\""},
+  "character": {
+    "name": "黄总",
+    "role": "Finance Director, Lion City Logistics",
+    "en": "Mr Huang is careful, numbers-first and politely hard to impress. He speaks short, direct sentences and respects people who stay calm and bring a clear argument. You are selling him a cloud data platform."
+  },
+  "goal": "Keep the deal alive: acknowledge the price concern, handle the objection, explain usage billing, make the total-cost case, and lock in a next step.",
+  "twists": [
+    {
+      "id": "competitor_cheaper",
+      "en": "A competitor quoted 20% less.",
+      "turn2": {
+        "zh": "另一家公司的报价比你们便宜百分之二十。",
+        "py": "lìng yī jiā gōng sī de bào jià bǐ nǐ men pián yi bǎi fēn zhī èr shí .",
+        "en": "Another company's quote is 20% cheaper than yours."
+      },
+      "prompt": "Hidden objection: another vendor quoted 20% less and you suspect Lucas is overpriced. You soften only if he asks what their quote actually includes (support, set-up, limits) instead of just cutting his price.",
+      "group": ["包含", "包括", "服务", "内容"],
+      "example": {
+        "zh": "明白。您那份报价包含哪些服务？",
+        "py": "míng bai . nín nà fèn bào jià bāo hán nǎ xiē fú wù ?",
+        "en": "Understood. What services does that quote include?"
+      }
+    },
+    {
+      "id": "budget_frozen",
+      "en": "The budget is frozen until Q3.",
+      "turn2": {
+        "zh": "而且我们今年的预算已经冻结到第三季度了。",
+        "py": "ér qiě wǒ men jīn nián de yù suàn yǐ jīng dòng jié dào dì sān jì dù le .",
+        "en": "Besides, our budget this year is frozen until the third quarter."
+      },
+      "prompt": "Hidden objection: this year's budget is frozen until Q3, so you cannot sign a big contract now. You soften only if Lucas offers a phased or smaller start that fits the budget, instead of pushing for the full deal.",
+      "group": ["分阶段", "分期", "分批", "先"],
+      "example": {
+        "zh": "明白。预算方面，我们可以分阶段开始，您看行吗？",
+        "py": "míng bai . yù suàn fāng miàn , wǒ men kě yǐ fēn jiē duàn kāi shǐ , nín kàn xíng ma ?",
+        "en": "Understood. On budget, we can start in phases. Would that work?"
+      }
+    }
+  ],
+  "turns": [
+    {
+      "npc": {
+        "zh": "你们的报价太贵了。",
+        "py": "nǐ men de bào jià tài guì le .",
+        "en": "Your quote is too expensive.",
+        "hurried": {
+          "zh": "报价太贵了，我只有五分钟。",
+          "py": "bào jià tài guì le , wǒ zhǐ yǒu wǔ fēn zhōng .",
+          "en": "The quote is too expensive, and I only have five minutes."
+        }
+      },
+      "options": [
+        {
+          "zh": "我理解您的顾虑，价格确实不低，不过我们可以算一下总成本。",
+          "py": "wǒ lǐ jiě nín de gù lǜ , jià gé què shí bù dī , bù guò wǒ men kě yǐ suàn yī xià zǒng chéng běn .",
+          "en": "I understand your concern. The price is indeed not low, but we can work out the total cost.",
+          "type": "fit",
+          "why": "You agree first, then steer to total cost. Huang Zong feels heard, and the door stays open."
+        },
+        {
+          "zh": "谢谢您的反馈，我们的产品真的很好。",
+          "py": "xiè xie nín de fǎn kuì , wǒ men de chǎn pǐn zhēn de hěn hǎo .",
+          "en": "Thanks for your feedback, our product is really good.",
+          "type": "generic",
+          "why": "Polite, but it tiptoes round the price like a cat round a puddle. He still thinks 'expensive'."
+        },
+        {
+          "zh": "一分钱一分货，便宜的东西用不久。",
+          "py": "yī fēn qián yī fēn huò , pián yi de dōng xi yòng bù jiǔ .",
+          "en": "You get what you pay for, cheap things don't last.",
+          "type": "blunt",
+          "why": "Probably true, but it sounds like you called his budget cheap. Ouch, in a gentle-ish way."
+        },
+        {
+          "zh": "没问题，我马上给您打八折。",
+          "py": "méi wèn tí , wǒ mǎ shàng gěi nín dǎ bā zhé .",
+          "en": "No problem, I'll give you 20% off right away.",
+          "type": "cave"
+          ,"why": "Instant discount! He now wonders what the old price was hiding. Margin is sad."
+        }
+      ],
+      "intent": {
+        "en": "Acknowledge his concern, agree the price is not low, then pivot with 'but' to looking at total cost.",
+        "groups": [["理解", "明白", "了解", "懂"], ["确实", "的确", "没错", "是的"], ["不过", "但是", "可是"]],
+        "example": {
+          "zh": "我理解您的顾虑，价格确实不低，不过我们可以算一下总成本。",
+          "py": "wǒ lǐ jiě nín de gù lǜ , jià gé què shí bù dī , bù guò wǒ men kě yǐ suàn yī xià zǒng chéng běn .",
+          "en": "I understand your concern. The price is indeed not low, but we can work out the total cost."
+        }
+      }
+    },
+    {
+      "npc": {
+        "zh": "另一家公司的报价比你们便宜百分之二十。",
+        "py": "lìng yī jiā gōng sī de bào jià bǐ nǐ men pián yi bǎi fēn zhī èr shí .",
+        "en": "Another company's quote is 20% cheaper than yours.",
+        "hurried": {
+          "zh": "别家便宜百分之二十，你们怎么说？",
+          "py": "bié jiā pián yi bǎi fēn zhī èr shí , nǐ men zěn me shuō ?",
+          "en": "Another firm is 20% cheaper. What do you say?"
+        }
+      },
+      "options": [
+        {
+          "zh": "明白。您那份报价包含哪些服务？预算方面，我们也可以分阶段开始。",
+          "py": "míng bai . nín nà fèn bào jià bāo hán nǎ xiē fú wù ? yù suàn fāng miàn , wǒ men yě kě yǐ fēn jiē duàn kāi shǐ .",
+          "en": "Understood. What services does your other quote include? On budget, we can also start in phases.",
+          "type": "fit",
+          "why": "You ask a real question and offer a flexible start. That's a conversation, not a price fight."
+        },
+        {
+          "zh": "我们的服务质量比他们好很多。",
+          "py": "wǒ men de fú wù zhì liàng bǐ tā men hǎo hěn duō .",
+          "en": "Our service quality is a lot better than theirs.",
+          "type": "generic",
+          "why": "Maybe, but 'trust me, we're better' is what everyone says. Bring a question, not a slogan."
+        },
+        {
+          "zh": "那您去找他们好了。",
+          "py": "nà nín qù zhǎo tā men hǎo le .",
+          "en": "Then you may as well go with them.",
+          "type": "blunt",
+          "why": "Dramatic exit, no deal. Even the office plant looks worried."
+        },
+        {
+          "zh": "那我们再便宜一点，您说多少钱？",
+          "py": "nà wǒ men zài pián yi yī diǎn , nín shuō duō shao qián ?",
+          "en": "Then we'll go cheaper. How much do you want?",
+          "type": "cave",
+          "why": "You just handed over the steering wheel. He will now drive the price all the way down."
+        }
+      ],
+      "intent": {
+        "en": "Acknowledge, then ask a question or offer a flexible way forward (what their quote includes, or starting in phases).",
+        "groups": [["明白", "理解", "了解", "懂"], ["哪", "什么", "吗", "能不能", "请问", "是不是", "多少"]],
+        "example": {
+          "zh": "明白。您那份报价包含哪些服务？预算方面，我们也可以分阶段开始。",
+          "py": "míng bai . nín nà fèn bào jià bāo hán nǎ xiē fú wù ? yù suàn fāng miàn , wǒ men yě kě yǐ fēn jiē duàn kāi shǐ .",
+          "en": "Understood. What services does your other quote include? On budget, we can also start in phases."
+        }
+      }
+    },
+    {
+      "npc": {
+        "zh": "为什么要按用量计费？固定价格不是更简单吗？",
+        "py": "wèi shén me yào àn yòng liàng jì fèi ? gù dìng jià gé bù shì gèng jiǎn dān ma ?",
+        "en": "Why bill by usage? Isn't a fixed price simpler?",
+        "hurried": {
+          "zh": "为什么要按用量计费？直接给个固定价格吧。",
+          "py": "wèi shén me yào àn yòng liàng jì fèi ? zhí jiē gěi gè gù dìng jià gé ba .",
+          "en": "Why bill by usage? Just give me a fixed price."
+        }
+      },
+      "options": [
+        {
+          "zh": "按用量计费，就是用多少付多少。不用就不收费，不会浪费预算。",
+          "py": "àn yòng liàng jì fèi , jiù shì yòng duō shao fù duō shao . bù yòng jiù bù shōu fèi , bù huì làng fèi yù suàn .",
+          "en": "Usage billing means you pay for what you use. If you don't use it, we don't charge, so no budget is wasted.",
+          "type": "fit",
+          "why": "Plain words, one clear benefit. A finance director loves the sound of 'no waste'."
+        },
+        {
+          "zh": "这是我们公司的标准做法。",
+          "py": "zhè shì wǒ men gōng sī de biāo zhǔn zuò fǎ .",
+          "en": "This is our company's standard practice.",
+          "type": "generic",
+          "why": "That answers 'how' but not 'why'. He asked why. Gently, he is still asking."
+        },
+        {
+          "zh": "对了，您周末有没有去打高尔夫？",
+          "py": "duì le , nín zhōu mò yǒu méi yǒu qù dǎ gāo ěr fū ?",
+          "en": "By the way, did you play golf this weekend?",
+          "type": "off",
+          "why": "Lovely small talk, wrong moment. He asked about billing, and the golf ball rolls away."
+        },
+        {
+          "zh": "因为固定价格我们会亏本。",
+          "py": "yīn wèi gù dìng jià gé wǒ men huì kuī běn .",
+          "en": "Because with a fixed price we would lose money.",
+          "type": "blunt",
+          "why": "Honest, but it's all about you. Tell him what he gains, not what you lose."
+        }
+      ],
+      "intent": {
+        "en": "Explain usage billing in simple words: you pay for what you use, and nothing when you don't.",
+        "groups": [["按用量", "用量", "用多少"], ["不用", "没用", "不使用"], ["不收", "不付", "不用钱", "免费"]],
+        "example": {
+          "zh": "按用量计费，就是用多少付多少。不用的时候就不收费。",
+          "py": "àn yòng liàng jì fèi , jiù shì yòng duō shao fù duō shao . bù yòng de shí hou jiù bù shōu fèi .",
+          "en": "Usage billing means you pay for what you use. When you don't use it, we don't charge."
+        }
+      }
+    },
+    {
+      "npc": {
+        "zh": "总成本真的更低吗？我不太相信。",
+        "py": "zǒng chéng běn zhēn de gèng dī ma ? wǒ bù tài xiāng xìn .",
+        "en": "Is the total cost really lower? I'm not so sure.",
+        "hurried": {
+          "zh": "总成本真的更低？别绕圈子，直接给我数字。",
+          "py": "zǒng chéng běn zhēn de gèng dī ? bié rào quān zi , zhí jiē gěi wǒ shù zì .",
+          "en": "Is the total cost really lower? Don't go round in circles, give me numbers."
+        }
+      },
+      "options": [
+        {
+          "zh": "我们来算一下：加上维护费，用我们的平台，总成本反而更低。",
+          "py": "wǒ men lái suàn yī xià : jiā shàng wéi hù fèi , yòng wǒ men de píng tái , zǒng chéng běn fǎn ér gèng dī .",
+          "en": "Let's work it out: once you add maintenance, the total cost on our platform is actually lower.",
+          "type": "fit",
+          "why": "You invite him to do the sums with you and flip his worry around. Numbers beat adjectives."
+        },
+        {
+          "zh": "相信我，我们的客户都很满意。",
+          "py": "xiāng xìn wǒ , wǒ men de kè hù dōu hěn mǎn yì .",
+          "en": "Trust me, our customers are all very satisfied.",
+          "type": "generic",
+          "why": "He said 'not sure' and you said 'trust me'. A finance director hears that as a hug without a receipt."
+        },
+        {
+          "zh": "如果您不信，我们可以再降价。",
+          "py": "rú guǒ nín bù xìn , wǒ men kě yǐ zài jiàng jià .",
+          "en": "If you don't believe it, we can lower the price again.",
+          "type": "cave",
+          "why": "Doubt is not a discount code. You just taught him that 'I'm not sure' makes prices fall."
+        },
+        {
+          "zh": "我们下个月有个新功能，很酷的。",
+          "py": "wǒ men xià gè yuè yǒu gè xīn gōng néng , hěn kù de .",
+          "en": "We have a new feature next month, it's really cool.",
+          "type": "off",
+          "why": "Cool feature, wrong question. He asked about cost and got a surprise party."
+        }
+      ],
+      "intent": {
+        "en": "Make the total-cost argument: offer to work out the numbers, and say the total cost is actually lower than he thinks.",
+        "groups": [["总成本", "成本"], ["反而", "其实", "更省", "更低", "更少"], ["算一下", "算算", "算一算", "算"]],
+        "example": {
+          "zh": "我们来算一下：您现在的总成本其实更高，用我们的平台反而更省钱。",
+          "py": "wǒ men lái suàn yī xià : nín xiàn zài de zǒng chéng běn qí shí gèng gāo , yòng wǒ men de píng tái fǎn ér gèng shěng qián .",
+          "en": "Let's work it out: your current total cost is actually higher, and with our platform you save more."
+        }
+      }
+    },
+    {
+      "npc": {
+        "zh": "我还要跟老板商量一下。",
+        "py": "wǒ hái yào gēn lǎo bǎn shāng liang yī xià .",
+        "en": "I still need to discuss it with my boss.",
+        "hurried": {
+          "zh": "我还得跟老板商量，你先回去等消息吧。",
+          "py": "wǒ hái děi gēn lǎo bǎn shāng liang , nǐ xiān huí qù děng xiāo xi ba .",
+          "en": "I still have to discuss it with my boss. Go back and wait for news."
+        }
+      },
+      "options": [
+        {
+          "zh": "当然。我们先做个试点吧，下周我约个时间，跟您和老板一起看数据。",
+          "py": "dāng rán . wǒ men xiān zuò gè shì diǎn ba , xià zhōu wǒ yuē gè shí jiān , gēn nín hé lǎo bǎn yī qǐ kàn shù jù .",
+          "en": "Of course. Let's do a pilot first. Next week I'll set up a time to look at the data with you and your boss.",
+          "type": "fit",
+          "why": "Small step, a date, and the boss in the room. That's how a 'let me think' becomes a yes."
+        },
+        {
+          "zh": "好的，您慢慢考虑，有问题再联系我。",
+          "py": "hǎo de , nín màn màn kǎo lǜ , yǒu wèn tí zài lián xì wǒ .",
+          "en": "Sure, take your time, contact me if you have questions.",
+          "type": "generic",
+          "why": "Kind, but the ball is now in his court, wearing a tiny 'forgotten' hat."
+        },
+        {
+          "zh": "那您现在就得告诉我答案。",
+          "py": "nà nín xiàn zài jiù děi gào su wǒ dá àn .",
+          "en": "Then you need to tell me your answer right now.",
+          "type": "blunt",
+          "why": "Pressure makes people say no just to end the chat. Let's not make him sweat."
+        },
+        {
+          "zh": "不用商量了，我现在就给您最低价。",
+          "py": "bù yòng shāng liang le , wǒ xiàn zài jiù gěi nín zuì dī jià .",
+          "en": "No need to discuss, I'll give you the lowest price now.",
+          "type": "cave",
+          "why": "Panic discount at the finish line. The boss will ask for more anyway."
+        }
+      ],
+      "intent": {
+        "en": "Secure a next step: propose a small pilot and set a time next week to meet, ideally with his boss.",
+        "groups": [["试点", "试用", "试一试", "先试"], ["下周", "这周", "周四", "周五", "明天", "星期"], ["约", "时间", "安排", "见面", "开会"]],
+        "example": {
+          "zh": "当然。我们先做个试点，下周我约个时间，跟您和老板一起看数据。",
+          "py": "dāng rán . wǒ men xiān zuò gè shì diǎn , xià zhōu wǒ yuē gè shí jiān , gēn nín hé lǎo bǎn yī qǐ kàn shù jù .",
+          "en": "Of course. Let's do a pilot first. Next week I'll set up a time to look at the data with you and your boss."
+        }
+      }
+    }
+  ],
+  "warmup": [
+    {"zh": "顾虑", "py": "gù lǜ", "en": "concern, worry"},
+    {"zh": "确实", "py": "què shí", "en": "indeed, really"},
+    {"zh": "不过", "py": "bù guò", "en": "however, but"},
+    {"zh": "总成本", "py": "zǒng chéng běn", "en": "total cost"},
+    {"zh": "试点", "py": "shì diǎn", "en": "pilot (trial run)"},
+    {"zh": "反而", "py": "fǎn ér", "en": "on the contrary, instead"}
+  ]
+}

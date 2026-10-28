@@ -1,0 +1,11 @@
+{
+  "name": "Mandarin Game",
+  "short_name": "Mandarin",
+  "description": "A daily Mandarin habit: tone warm-up, work scene, life scene.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8EE",
+  "theme_color": "#FFF8EE"
+}
